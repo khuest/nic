@@ -1,0 +1,104 @@
+<!-- ==============================
+  Gacha Quiz Page Container
+=============================== -->
+<div id="quiz-gacha-container">
+
+  <!-- 1. Big top frame (landscape for video) -->
+  <section id="gacha-top-frame">
+    <div class="gacha-big-frame">
+      <div class="frame-content">
+        <!-- Initial state: looping video background -->
+        <div class="initial-state" id="initial-state">
+          <!-- Video background -->
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="{{ site.baseurl }}/assets/images/quiz/universe-within.mp4" type="video/mp4">
+            <div class="video-fallback">
+              <p>🌌 Cosmo Within Theory</p>
+            </div>
+          </video>
+        </div>
+        
+        <!-- Quiz state: shows when card is drawn -->
+        <div class="quiz-state" id="quiz-state" style="display: none;">
+          <div id="quiz-content">
+            <!-- Quiz will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Bottom section with deck (left) and drawn card area (right) -->
+  <h2 class="gacha-section-title">What is your...</h2>
+  
+  <section id="gacha-bottom-section">
+    
+    <!-- Left Column: Stacked deck of cards -->
+    <div class="gacha-column">
+      <div id="gacha-deck">
+        <h3></h3>
+        <div class="deck-stack">
+          <!-- Single stacked deck representing all quizzes -->
+          <div class="deck-pile">
+            {% for quiz in site.data.quiz %}
+              <div class="card-in-deck" data-slug="{{ quiz[1].slug }}" data-title="{{ quiz[1].title }}" style="z-index: {{ forloop.rindex }};">
+                <img src="{{ site.baseurl }}/assets/images/quiz/cardback.png" alt="Card back" class="cardback-image">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <button class="attempt-btn" id="draw-card-btn">Draw Card</button>
+      </div>
+    </div>
+
+    <!-- Right Column: Empty space for flipped card -->
+    <div class="gacha-column">
+      <div id="gacha-drawn-area">
+        <div class="drawn-card-space">
+          <div class="empty-space" id="empty-space">
+            <h3>Flip a card to begin</h3>
+            <div class="empty-card-placeholder">
+              ❓
+            </div>
+          </div>
+          
+          <!-- Flipped card will appear here -->
+          <div class="drawn-card" id="drawn-card" style="display: none;">
+            <div class="card-frame">
+              <img src="{{ site.baseurl }}/assets/images/quiz/cardfront-frame.png" 
+                  alt="Card frame" 
+                  class="card-frame-img">
+
+              <!-- Inner slot for quiz picture -->
+              <img id="drawn-picture" 
+                  src="" 
+                  alt="Quiz cover" 
+                  class="card-picture">
+
+              <!-- Overlayed text -->
+              <!-- <div class="card-overlay">
+                <h4 id="drawn-title"></h4>
+              </div> -->
+            </div>
+          </div>
+
+        </div>
+        <button class="attempt-btn" id="play-card-btn" style="display: none;">Play Card</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 3. Dropdown for all quizzes -->
+  <section id="gacha-dropdown-section">
+    <h3>Browse All Quizzes</h3>
+    <label for="quiz-selector">Don't like randomness? Pick manually:</label>
+    <select id="quiz-selector">
+      <option value="">Select a quiz...</option>
+      {% for quiz in site.data.quiz %}
+        <option value="{{ quiz[1].slug }}">{{ quiz[1].title }}</option>
+      {% endfor %}
+    </select>
+  </section>
+
+</div>

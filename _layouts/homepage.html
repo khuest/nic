@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  {% include header.html %}
+
+  {% unless page.hero_style == "none" %}
+    {% if page.hero_title or page.title %}
+      <section class="hero hero--{{ page.hero_style | default: 'standard' }}">
+        <div class="hero__content">
+          <h1 class="hero__title">{{ page.hero_title | default: page.title }}</h1>
+          {% if page.hero_subtitle %}
+            <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
+          {% endif %}
+          {% if page.pill %}
+            <div class="pill">{{ page.pill }}</div>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endunless %}
+
+  <main class="main--{{ page.hero_style | default: 'standard' }}">
+    <div class="text-container">
+      {{ content }}
+    </div>
+    <!-- STARFIELD CONTENT DIRECTLY IN LAYOUT -->
+    <div class="starfield-realm-map">
+      <canvas id="starfield-new"></canvas>
+      
+      <div class="starfield-planets-container">
+        {% for planet in site.data.planets %}
+        
+          <div class="starfield-planet" 
+               id="starfield-{{ planet.id }}" 
+               data-title="{{ planet.emoji }} {{ planet.name }}"
+               data-text="{{ planet.popup.description }}"
+               data-config="{{ planet | jsonify | escape }}"
+               style="left: {{ planet.position.x }}%; 
+                      top: {{ planet.position.y }}%; 
+                      --base-size: {{ planet.size }}px;
+                      --hover-scale: {{ planet.hover_scale | default: 1.2 }};
+                      --float-speed: {{ planet.animation.float_speed | default: 3 }}s;
+                      --float-amplitude: {{ planet.animation.float_amplitude | default: 8 }}px;">
+            
+            {% for layer in planet.layers %}
+              <div class="starfield-planet-layer"
+                   data-layer-index="{{ forloop.index0 }}"
+                   style="--layer-size: calc(var(--base-size) * {{ layer.size_multiplier | default: 1.0 }});
+                          --layer-opacity: {{ layer.opacity | default: 1.0 }};
+                          --layer-z: {{ layer.z_index | default: forloop.index }};
+                          {% if layer.position_offset %}
+                            --offset-x: {{ layer.position_offset.x | default: 0 }}px;
+                            --offset-y: {{ layer.position_offset.y | default: 0 }}px;
+                          {% endif %}
+                          {% if layer.rotation %}
+                            --rotation: {{ layer.rotation }}deg;
+                          {% endif %}
+                          {% if layer.mask %}
+                            --mask: {{ layer.mask }};
+                          {% endif %}
+                          --blend-mode: {{ layer.blend_mode | default: 'normal' }};">
+                
+                <img src="{{ site.baseurl }}/assets/images/{{ layer.image }}" 
+                     alt="{{ planet.name }} layer {{ forloop.index }}" 
+                     class="starfield-layer-image">
+              </div>
+            {% endfor %}
+            
+            <!-- Planet emoji label -->
+            <div class="starfield-planet-label">{{ planet.emoji }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="starfield-popup" class="starfield-popup-overlay">
+      <span id="starfield-close">&times;</span>
+      <h3 id="starfield-title"></h3>
+      <p id="starfield-text"></p>
+    </div>
+
+    <div class="text-container">
+      <br>
+      <!-- Closing note below starfield -->
+      {% if page.closing_note %}
+        <p class="homepage-closing-note">{{ page.closing_note }}</p>
+      {% endif %}
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  {% include xp.html %}
+  
+</body>
+</html>
+  
+</body>
+</html>

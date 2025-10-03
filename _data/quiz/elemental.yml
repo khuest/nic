@@ -1,0 +1,173 @@
+title: "What Elemental Are You?"
+card-title: "Elemental"
+slug: "elemental"
+description: "Discover your inner elemental nature - Fire, Water, Earth, or Air?"
+picture: "elemental.png"
+
+questions:
+  - id: q1
+    text: "How do you typically react to stress?"
+    image: "stress.jpg"
+    options:
+      - text: "I get fired up and tackle it head-on 🔥"
+        value: "fire"
+      - text: "I go with the flow and adapt 🌊"
+        value: "water"
+      - text: "I stay grounded and work through it methodically 🌍"
+        value: "earth"
+      - text: "I step back and think it through from all angles 💨"
+        value: "air"
+
+  - id: q2
+    text: "What's your ideal vacation?"
+    image: "vacation.jpg"
+    options:
+      - text: "Adventure sports and high-energy activities"
+        value: "fire"
+      - text: "Beach resort or lakeside retreat"
+        value: "water"
+      - text: "Hiking in mountains or camping in nature"
+        value: "earth"
+      - text: "City exploration and cultural experiences"
+        value: "air"
+
+  - id: q3
+    text: "In a group project, you're most likely to:"
+    image: "teamwork.jpg"
+    options:
+      - text: "Take charge and drive everyone forward"
+        value: "fire"
+      - text: "Keep the peace and help others collaborate"
+        value: "water"
+      - text: "Do the steady, reliable work that needs doing"
+        value: "earth"
+      - text: "Come up with creative ideas and solutions"
+        value: "air"
+
+  - id: q4
+    text: "What season resonates with you most?"
+    image: "seasons.jpg"
+    options:
+      - text: "Summer - vibrant, intense, full of energy ☀️"
+        value: "fire"
+      - text: "Spring - flowing, renewing, gentle growth 🌱"
+        value: "water"
+      - text: "Autumn - grounding, harvest, preparation 🍂"
+        value: "earth"
+      - text: "Winter - clear, contemplative, spacious ❄️"
+        value: "air"
+
+  - id: q5
+    text: "Your communication style is:"
+    image: "communication.jpg"
+    options:
+      - text: "Direct, passionate, and inspiring"
+        value: "fire"
+      - text: "Empathetic, intuitive, and flowing"
+        value: "water"
+      - text: "Practical, reliable, and straightforward"
+        value: "earth"
+      - text: "Intellectual, articulate, and thought-provoking"
+        value: "air"
+
+  - id: q6
+    text: "What motivates you most in life?"
+    image: "life-motivation.jpg"
+    options:
+      - text: "Achievement and making an impact"
+        value: "fire"
+      - text: "Connection and emotional fulfillment"
+        value: "water"
+      - text: "Security and building something lasting"
+        value: "earth"
+      - text: "Knowledge and understanding the world"
+        value: "air"
+
+  - id: q7
+    text: "Your workspace looks like:"
+    image: "workspace.jpg"
+    options:
+      - text: "Dynamic and energizing with bold colors"
+        value: "fire"
+      - text: "Comfortable and flowing with soft textures"
+        value: "water"
+      - text: "Organized and practical with natural materials"
+        value: "earth"
+      - text: "Minimalist and airy with lots of light"
+        value: "air"
+
+  - id: q8
+    text: "When faced with a difficult decision, you:"
+    image: "decisions.jpg"
+    options:
+      - text: "Trust your gut and act quickly"
+        value: "fire"
+        cf_value: "Se"  # Extraverted Sensing - immediate action on present data
+      - text: "Consider how it affects everyone involved"
+        value: "water"
+        cf_value: "Fe"  # Extraverted Feeling - group harmony focus
+      - text: "Look at practical outcomes and long-term effects"
+        value: "earth"
+        cf_value: "Te"  # Extraverted Thinking - practical results focus
+      - text: "Analyze all possibilities and gather more information"
+        value: "air"
+        cf_value: "Ti"  # Introverted Thinking
+
+  - id: q9
+    text: "Your ideal evening is:"
+    image: "evening.jpg"
+    options:
+      - text: "An exciting event or trying something new"
+        value: "fire"
+      - text: "Cozy time with loved ones or a good book"
+        value: "water"
+      - text: "Working on a hobby or organizing your space"
+        value: "earth"
+      - text: "Deep conversations or learning something fascinating"
+        value: "air"
+
+  - id: q10
+    text: "People describe you as:"
+    image: "personality-traits.jpg"
+    options:
+      - text: "Energetic, bold, and inspiring"
+        value: "fire"
+      - text: "Compassionate, intuitive, and calming"
+        value: "water"
+      - text: "Dependable, practical, and steady"
+        value: "earth"
+      - text: "Curious, articulate, and innovative"
+        value: "air"
+
+results:
+  fire:
+    title: "Blazing Fire 🔥"
+    description: "You are the spark that ignites passion and drives change. Like fire, you bring energy, warmth, and transformation wherever you go. Your enthusiasm is contagious, and you have a natural ability to motivate others to action. You're not afraid to take risks or stand up for what you believe in. Your presence lights up any room, and people are drawn to your confidence and zest for life."
+    image: "fire.jpg"
+    traits: ["Passionate", "Energetic", "Courageous", "Inspiring", "Dynamic"]
+    element_powers: ["Transformation", "Leadership", "Motivation", "Innovation", "Courage"]
+    redirect: "/persona/fire.html"
+    
+  water:
+    title: "Flowing Water 🌊"
+    description: "You embody the fluid nature of water - adaptable, nurturing, and deeply intuitive. Like water, you have the power to heal and cleanse, bringing emotional balance to those around you. You understand the importance of going with the flow while also knowing when to be persistent like a river carving through rock. Your empathy runs deep, and you have an innate ability to understand others' emotions."
+    image: "water.jpg"
+    traits: ["Empathetic", "Adaptable", "Intuitive", "Nurturing", "Peaceful"]
+    element_powers: ["Healing", "Emotional Intelligence", "Flexibility", "Purification", "Flow"]
+    redirect: "/persona/water.html"
+    
+  earth:
+    title: "Grounding Earth 🌍"
+    description: "You are the foundation upon which others can build their dreams. Like the earth itself, you provide stability, nourishment, and unwavering support. Your practical wisdom and steady presence make you the rock that friends and family lean on. You understand the value of patience, persistence, and hard work. You have a deep connection to the natural world and find strength in simplicity."
+    image: "earth.jpg"
+    traits: ["Stable", "Reliable", "Practical", "Nurturing", "Patient"]
+    element_powers: ["Grounding", "Endurance", "Growth", "Manifestation", "Strength"]
+    redirect: "/persona/earth.html"
+    
+  air:
+    title: "Free-Flowing Air 💨"
+    description: "You are the breath of fresh perspective that brings new ideas and innovation. Like air, you're constantly in motion, curious about everything, and able to see connections others miss. Your mind is sharp and agile, always seeking to understand and communicate complex concepts. You value freedom and intellectual stimulation above all else. Your ability to think outside the box makes you an invaluable problem-solver."
+    image: "air.jpg"
+    traits: ["Intellectual", "Creative", "Independent", "Communicative", "Visionary"]
+    element_powers: ["Clarity", "Innovation", "Communication", "Freedom", "Perspective"]
+    redirect: "/persona/air.html"

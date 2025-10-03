@@ -1,0 +1,193 @@
+/* ====================================
+ Header + nav + dropdown + hamburger
+==================================== */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  z-index: 10000;
+}
+
+header .wrap.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 20px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+header .logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  transition: opacity 0.4s ease; 
+}
+
+.brand {
+  transition: opacity 0.3s ease; 
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  margin-left: 16px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.menu a.cta {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger div {
+  height: 4px;
+  background-color: var(--text);
+  border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+  header .wrap.nav {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  header .logo {
+    height: 36px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: var(--card);
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 9999;
+  }
+
+  .menu.open {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ==============================
+   Dropdown & Header Menu
+============================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  background: var(--card);
+  color: var(--text);
+  cursor: help;
+  border-radius: 8px;
+  margin-left: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.dropbtn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* directly below button */
+  left: 0;
+  background-color: var(--card);
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  z-index: 10;
+  padding: 4px 0; /* small padding inside */
+}
+
+.dropdown-content a {
+  color: var(--text);
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Tooltip styling */
+.tooltip {
+  visibility: hidden;
+  background-color: var(--card);
+  color: var(--text);
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: none;
+  height: 8px;
+  z-index: 6000;
+  pointer-events: auto;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+}
+
+.dropbtn:hover .tooltip {
+  visibility: visible;
+}
+
+/* Mobile: show tooltip when it has the 'show' class */
+@media (hover: none) and (pointer: coarse) {
+  .tooltip.show {
+    visibility: visible;
+  }
+}

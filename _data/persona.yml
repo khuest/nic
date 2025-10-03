@@ -1,0 +1,216 @@
+creative-performer:
+  type: Outfit/Armor/Creature
+  image: cp-01.png
+  image_alt_text: "A flamboyant mask with phoenix feathers"
+  color_name: "Cherry Blossom Pink"
+  color_hex: "#EA9EA9"
+  element: "Fire"
+  mythical_creature: "Phoenix"
+  symbol: "🎭 The Mask"
+  vibe: "Passion, rebirth, flare"
+  energy: 3
+  intuition: 4
+  sensing: 8
+  thinking: 2
+  feeling: 7
+  requirements:
+    - High Feeling or Sensing
+    - Moderate energy
+  abilities:
+    - Perform artistic acts
+    - Inspire and captivate audiences
+  stat_gains:
+    - Fame
+    - Emotional resonance
+  upgrades:
+    - Stronger stage presence with practice
+    - Enhanced adaptability through shadow integration
+  enchantments:
+    - Fire motif unlocks “Phoenix Rebirth” (resilience after failure)
+  tagline: "Ignite the stage, rise like fire!"
+
+social-butterfly:
+  type: Outfit/Armor/Creature
+  image: sb-01.png
+  image_alt_text: "A light silk robe with wing motifs"
+  color_name: "Peach Puff"
+  color_hex: "#FACEB4"
+  element: "Air"
+  mythical_creature: "Sylph"
+  symbol: "🕊️ The Wing"
+  vibe: "Charm, movement, connection"
+  energy: 5
+  intuition: 3
+  sensing: 6
+  thinking: 2
+  feeling: 8
+  requirements:
+    - High Feeling
+    - Moderate energy
+  abilities:
+    - Spark lively conversations
+    - Bridge social gaps
+  stat_gains:
+    - Expanded network
+    - Charm allies
+  upgrades:
+    - Greater persuasion with awareness
+    - Social ease improves under stress
+  enchantments:
+    - Air motif grants “Wings of Freedom” (swift recovery in conflict)
+  tagline: "Every room is your sky to soar!"
+
+gadget-tinker:
+  type: Outfit/Armor/Creature
+  image: gt-01.png
+  image_alt_text: "Mechanical gear plating with glowing circuits"
+  color_name: "Lemon Chiffon"
+  color_hex: "#FFFCCC"
+  element: "Lightning"
+  mythical_creature: "Celestial Automaton"
+  symbol: "⚡ The Circuit"
+  vibe: "Innovation, spark, divine logic"
+  energy: 2
+  intuition: 7
+  sensing: 5
+  thinking: 8
+  feeling: 3
+  requirements:
+    - High Thinking
+    - High Intuition
+  abilities:
+    - Invent or repair devices
+    - Solve technical puzzles
+  stat_gains:
+    - Innovation
+    - Problem-solving speed
+  upgrades:
+    - Increased creativity with repetition
+    - Efficiency boost when shadow aspects are integrated
+  enchantments:
+    - Lightning motif unlocks “Overclock” (temporary surge in power)
+  tagline: "Turn sparks into wonders!"
+
+charming-naturalist:
+  type: Outfit/Armor/Creature
+  image: cn-01.png
+  image_alt_text: "Leaf-woven armor infused with earthy patterns"
+  color_name: "Mint Green"
+  color_hex: "#B5F5B0"
+  element: "Earth"
+  mythical_creature: "Earthkin"
+  symbol: "🌿 The Leaf"
+  vibe: "Growth, grounding, harmony"
+  energy: 4
+  intuition: 5
+  sensing: 9
+  thinking: 3
+  feeling: 6
+  requirements:
+    - High Sensing
+    - Balanced energy
+  abilities:
+    - Nurture plants or wildlife
+    - Restore balance in groups
+  stat_gains:
+    - Vitality
+    - Harmony
+  upgrades:
+    - Stronger healing presence through practice
+    - Greater ecological intuition over time
+  enchantments:
+    - Earth motif unlocks “Verdant Renewal” (slow regeneration)
+  tagline: "Rooted in growth, flowing with life."
+
+corporate-climber:
+  type: Outfit/Armor/Creature
+  image: cc-01.png
+  image_alt_text: "Formal armor with polished metallic finish"
+  color_name: "Powder Blue"
+  color_hex: "#B5E5EF"
+  element: "Metal"
+  mythical_creature: "Eastern Dragon"
+  symbol: "🏯 The Tower"
+  vibe: "Strategy, legacy, ambition"
+  energy: 7
+  intuition: 4
+  sensing: 6
+  thinking: 9
+  feeling: 2
+  requirements:
+    - High Thinking
+    - High energy
+  abilities:
+    - Execute tactical moves
+    - Consolidate power
+  stat_gains:
+    - Influence
+    - Stability
+  upgrades:
+    - Higher authority as Persona strengthens
+    - Sharper foresight with integration
+  enchantments:
+    - Metal motif grants “Dragon’s Scales” (defensive resilience)
+  tagline: "Step by step, the tower is yours."
+
+streetwise-rogue:
+  type: Outfit/Armor/Creature
+  image: sr-01.png
+  image_alt_text: "Shadowy cloak with claw-mark insignia"
+  color_name: "Periwinkle Blue"
+  color_hex: "#AAAEEE"
+  element: "Shadow"
+  mythical_creature: "Chimera"
+  symbol: "🐾 The Claw"
+  vibe: "Adaptation, survival, trickery"
+  energy: 2
+  intuition: 7
+  sensing: 6
+  thinking: 5
+  feeling: 4
+  requirements:
+    - High Intuition or Sensing
+    - Low starting energy acceptable
+  abilities:
+    - Slip through danger
+    - Deceive opponents
+  stat_gains:
+    - Survival edge
+    - Street-level adaptability
+  upgrades:
+    - More cunning with experience
+    - Stronger improvisation under pressure
+  enchantments:
+    - Shadow motif grants “Cloak of Night” (temporary invisibility)
+  tagline: "Trick the night, survive the game."
+
+stargazing-dreamer:
+  type: Outfit/Armor/Creature
+  image: sd-01.png
+  image_alt_text: "Flowing robes shimmering with starry light"
+  color_name: "Lavender Blue"
+  color_hex: "#B5BBF5"
+  element: "Aether"
+  mythical_creature: "Unicorn"
+  symbol: "🌠 The Star"
+  vibe: "Vision, transcendence, purity"
+  energy: 1
+  intuition: 9
+  sensing: 2
+  thinking: 7
+  feeling: 5
+  requirements:
+    - High Intuition
+    - Low energy tolerance
+  abilities:
+    - Contemplate visions
+    - Channel foresight
+  stat_gains:
+    - Clarity
+    - Long-term insight
+  upgrades:
+    - Deeper visions with practice
+    - Broader transcendence when shadow integrated
+  enchantments:
+    - Aether motif unlocks “Starlight Path” (guidance in chaos)
+  tagline: "Eyes on the stars, feet on the path."

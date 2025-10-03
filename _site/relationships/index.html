@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>RE:route</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="A ship of many — navigating the seas of human connection, where every relationship is an encounter and a lesson.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/eekhue-core/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/eekhue-core/assets/css/base.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/header.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/footer.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  
+    
+      <link rel="stylesheet" href="/eekhue-core/assets/css/forms.css">
+    
+  
+
+  <!-- Social / OG Meta Tags -->
+  
+    
+    
+    
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RE:route ⛵">
+    <meta property="og:description" content="Every bond is a voyage — encounters, conflicts, and crossings that shape us.">
+    <meta property="og:image" content="/eekhue-core/assets/images/default-og-image.png">
+    <meta property="og:url" content="http://localhost:4000/eekhue-core/relationships/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RE:route ⛵">
+    <meta name="twitter:description" content="Every bond is a voyage — encounters, conflicts, and crossings that shape us.">
+    <meta name="twitter:image" content="/eekhue-core/assets/images/default-og-image.png">
+  
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "/eekhue-core";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    [{"message":"I want a better life!","button":"YES!!","xp":5},{"message":"I can grow through challenges!","button":"Absolutely!","xp":5},{"message":"My shadow doesn’t define me!","button":"Shine on!","xp":5},{"message":"Integration makes me stronger!","button":"True!","xp":5},{"message":"I choose to evolve today!","button":"LET'S GO!","xp":5},{"message":"Every step forward matters!","button":"Step On!","xp":5},{"message":"I am more than my fears!","button":"Fearless!","xp":5},{"message":"Growth begins with me!","button":"Start Now!","xp":5},{"message":"I embrace who I am becoming!","button":"Own It!","xp":5},{"message":"My story is still being written!","button":"Keep Writing!","xp":5},{"message":"I carry the strength of my journey!","button":"Carry On!","xp":5},{"message":"Hope fuels my transformation!","button":"Ignite!","xp":5},{"message":"No setback can stop me!","button":"Rise Again!","xp":5},{"message":"The path is mine to walk!","button":"Walk It!","xp":5}]
+  </script>
+
+  <script src="/eekhue-core/assets/js/header.js" defer></script>  
+  <script src="/eekhue-core/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  
+    
+      <script src="/eekhue-core/assets/js/" defer></script>
+    
+  
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/eekhue-core/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  
+<body>
+  <!-- Header / Top Navigation -->
+<header>
+  <div class="wrap nav">
+    <div class="brand-logo">
+      <a href="/eekhue-core/" class="brand-logo">
+        <img src="/eekhue-core/assets/images/eekhue-logo.png" alt="Logo" class="logo" />
+        <div class="brand">EekHue</div>
+      </a>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="/eekhue-core/quiz/">What Are You?</a>
+
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
+        <button class="dropbtn">Darkness–Light ▼
+          <span class="tooltip">Explore personality insights</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/eekhue-core/persona/">Persona</a>
+          <a href="/eekhue-core/self/">Self</a>
+          <a href="/eekhue-core/shadow/">Shadow</a>
+          <a href="/eekhue-core/growth/">RE:equip</a>
+          <a href="/eekhue-core/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+  
+    
+      <section class="hero hero--minimal">
+        <div class="hero__content">
+          <h1 class="hero__title">RE:route ⛵</h1>
+          
+            <p class="hero__subtitle">Every bond is a voyage — encounters, conflicts, and crossings that shape us.</p>
+          
+          
+        </div>
+      </section>
+    
+  
+
+  <main class="main--minimal">
+    <h2 id="-reroute--the-ship-of-many">⛵ RE:route – The Ship of Many</h2>
+<hr />
+<blockquote>
+  <p>“The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed.” – Carl Jung</p>
+</blockquote>
+
+<p>RE:route imagines relationships as a great ship carrying multitudes.<br />
+Onboard are companions, rivals, mentors, strangers — each encounter a wave, a storm, or a guiding star.</p>
+
+<ul>
+  <li>Some passengers stay for the whole journey.</li>
+  <li>Some appear only for a fleeting moment.</li>
+  <li>Some offer encouragement, others bring conflict.</li>
+  <li>All bring opportunities: a test, a trigger, a reminder, a chance to grow.</li>
+</ul>
+
+<p>Every relationship is part of a <strong>cognitive dance</strong>: patterns of projection, resonance, and reaction.</p>
+
+<p><br /></p>
+
+<h2 id="why-relationships">Why Relationships?</h2>
+<hr />
+<p>Unlike solitary growth, relationships are accelerators:</p>
+
+<ul>
+  <li>They expose what we cannot see in ourselves.</li>
+  <li>They test whether our growth is embodied or just theory.</li>
+  <li>They provide <strong>knowledge transfer</strong> — wisdom passed between people.</li>
+  <li>They remind us we are never sailing alone.</li>
+</ul>
+
+<p>In Jungian terms, relationships are fertile grounds for individuation, often surfacing the Shadow and activating archetypal dynamics.</p>
+
+<p><br /></p>
+
+<h2 id="a-living-voyage">A Living Voyage</h2>
+<hr />
+<p>RE:route is not therapy. It is not a clinical model.<br />
+It is a <strong>navigational framework</strong> — a way of mapping the complex seas of human bonds through Jungian and archetypal lenses.</p>
+
+<p>⚠️ <strong>Disclaimer</strong>:</p>
+<ul>
+  <li>This is <strong>not peer-reviewed research</strong>.</li>
+  <li>It is <strong>not a substitute for counselling or therapy</strong>.</li>
+  <li>It is a space for <strong>reflection, exploration, and shared dialogue</strong>.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="call-for-volunteers-">Call for Volunteers ✨</h2>
+<hr />
+<p>To refine this voyage, I am inviting:</p>
+
+<ul>
+  <li><strong>Pairs</strong> → Life partners, business partners, or close friends.</li>
+  <li><strong>Families</strong> → Parent–child, siblings, or multi-generational groups.</li>
+  <li><strong>Teams</strong> → Workgroups, guilds, or communities navigating trust &amp; tension.</li>
+</ul>
+
+<p>Solo voyagers may be accepted, but priority is given to pairs or groups.</p>
+
+<p><br /></p>
+
+<h2 id="how-it-works">How It Works</h2>
+<hr />
+<ol>
+  <li><strong>Sign up as a volunteer</strong> (form below).</li>
+  <li><strong>Choose your context</strong> (partner, family, friends, or team).</li>
+  <li><strong>Receive exercises &amp; prompts</strong> designed to spark reflection.</li>
+  <li><strong>Share feedback</strong> — what connected, what resisted, what surprised you.</li>
+</ol>
+
+<p>This is a <strong>co-learning journey</strong>.<br />
+By joining, you don’t just explore your own relationships — you help shape a map for others.</p>
+
+<p><br /></p>
+
+<div class="cta-box"> <h2>🌟 Want to Board the Voyage?</h2> <p>Be among the first to explore this new approach to relationship work. Sign up below to volunteer as a pair, family, or group.</p> </div>
+
+<form action="https://formspree.io/f/yourFormID" method="POST" class="signup-form" id="signup">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required="" />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="_replyto" required="" />
+  </div>
+
+  <div class="form-group">
+    <label for="type">Participation Type</label>
+    <select id="type" name="type" required="">
+      <option value="">Choose your participation type...</option>
+      <option value="pair">Pair (partner/friend)</option>
+      <option value="family">Family</option>
+      <option value="team">Team</option>
+      <option value="solo">Solo (waitlist)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message (optional)</label>
+    <textarea id="message" name="message" rows="4" placeholder="Tell us about your relationship context or any questions you have..."></textarea>
+  </div>
+
+  <!-- Required hidden inputs -->
+  <input type="hidden" name="_subject" value="New RE:route Volunteer Signup" />
+  <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you" />
+
+  <button type="submit" class="btn btn-primary btn-submit">Apply to Volunteer</button>
+</form>
+
+<p><br /><br /></p>
+
+<div class="references">
+<h2>References</h2>
+  <ul>
+    <li>Jung, C. G. (1960). *The Structure and Dynamics of the Psyche* (Collected Works, Vol. 8). Princeton University Press.<br />
+      <span class="ref-note">→ On projection, transference, and the dynamics that shape relationships.</span>
+    </li>
+    <li>Jung, C. G. (1963). *Memories, Dreams, Reflections*. Vintage Books.<br />
+      <span class="ref-note">→ Jung's reflections on encounters, relationships, and the transformative power of human connection.</span>
+    </li>
+    <li>Beebe, J. (2004). *Psychological Types, Jung's Model of Typology, and the Eight-Function Model*. In A. Sands (Ed.), *Personality Type: An Owner's Manual*.<br />
+      <span class="ref-note">→ Introduces the archetypal roles of the eight functions, showing how conflict, projection, and resonance play out in relationships.</span>
+    </li>
+    <li>Nardi, D. (2011). *Neuroscience of Personality: Brain Savvy Insights for All Types of People*. Radiance House.<br />
+      <span class="ref-note">→ Explores how different people show distinct neural engagement patterns, helping explain why interactions can feel harmonious, draining, or energizing.</span>
+    </li>
+  </ul>
+<p class="ref-more"><a href="/eekhue-core/references/">See all references →</a></p>
+</div>
+
+  </main>
+
+  <footer>
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      
+      <!-- Project Info -->
+      <div class="footer-col">
+        <h4>Project</h4>
+        <nav>
+          <a href="/eekhue-core/about/">About</a>
+          <a href="/eekhue-core/contact/">Contact</a>
+          <a href="/eekhue-core/disclaimer/">Disclaimer</a>
+        </nav>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-col">
+        <h4>Community</h4>
+        <nav>
+          <a href="#">Discord (Invite only)</a>
+          <a href="https://github.com/astra-timinikey/eekhue-core">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Extras
+      <div class="footer-col">
+        <h4>Extras</h4>
+        <nav>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+        </nav>
+      </div>
+      -->
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EekHue: Persona Explorer</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+/* ==============================
+  :root variables
+============================== */
+:root {
+  --bg: #0b1020;
+  --card: #121a33;
+  --text: #e8ecf3;
+  --muted: #9fb0c7;
+  --accent: #7aa2f7;
+  --accent-dark: #1e2a5a;
+  --accent-light: #a0c0ff;
+  --border: #24314f;
+  --shadow: 0 6px 30px rgba(0,0,0,.35);
+  --radius: 16px;
+  --maxw: 960px;
+}
+  
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --text: #0e1726;
+    --muted: #586273;
+    --accent: #2563eb;
+    --border: #e6eaf2;
+    --shadow: 0 6px 30px rgba(0,0,0,.08);
+  }
+}
+  
+  /* ==============================
+     Reset & Body
+     ============================== */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; }
+  body { background: var(--bg); color: var(--text); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  
+  /* ==============================
+     Layout Wrappers
+     ============================== */
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  
+/* ==============================
+   Hero Section
+   ============================== */
+
+/* Base hero styling */
+.hero {
+  padding: 72px 20px 36px;
+  text-align: center;
+  position: relative;
+}
+
+.hero__content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: clamp(16px, 2.6vw, 20px);
+  color: var(--muted);
+  margin: 0 auto 22px;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* Hero style variations */
+.hero--minimal {
+  padding: 40px 20px 24px;
+  text-align: left;
+  background: transparent;
+}
+
+.hero--minimal .hero__title {
+  font-size: clamp(24px, 4vw, 36px);
+  margin-bottom: 8px;
+}
+
+.hero--minimal .hero__subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 16px;
+  max-width: none;
+}
+
+.hero--dramatic {
+  padding: 96px 20px 72px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--accent-dark), var(--card));
+  border-bottom: 1px solid var(--border);
+}
+
+.hero--dramatic .hero__title {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 16px;
+}
+
+.hero--text-heavy {
+  padding: 48px 20px 32px;
+  text-align: left;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero--text-heavy .hero__title {
+  font-size: clamp(26px, 4.5vw, 40px);
+  margin-bottom: 12px;
+}
+
+.hero--compact {
+  padding: 32px 20px 20px;
+  text-align: center;
+}
+
+.hero--compact .hero__title {
+  font-size: clamp(22px, 3.5vw, 32px);
+  margin-bottom: 8px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero { padding: 48px 16px 24px; }
+  .hero--minimal { padding: 24px 16px 16px; }
+  .hero--dramatic { padding: 64px 16px 48px; }
+  .hero--text-heavy { padding: 32px 16px 20px; }
+  .hero--compact { padding: 20px 16px 12px; }
+}
+
+/* H1 styling for pages without heroes */
+h1:not(.hero__title) {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+/* Keep your existing pill styling */
+.pill { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  padding: 8px 12px; 
+  border: 1px solid var(--border); 
+  background: var(--card); 
+  border-radius: 999px; 
+  font-size: 14px; 
+}
+  
+
+/* ====================================
+  Main content + buttons + outputs
+==================================== */
+main {
+  margin-left: 0;
+  padding: 40px 20px;
+  display: flex;                /* ⬅️ make it flex */
+  flex-direction: column;       /* stack children vertically */
+  align-items: center;          /* horizontally center children */
+  text-align: left;             /* ⬅️ default text left-aligned */
+}
+
+main > * {
+  max-width: var(--maxw);       /* ⬅️ limit width */
+  width: 100%;                  /* take full available space */
+}
+
+/* Default: center aligned main (for standard, dramatic, compact) */
+main[class^="main--"] {
+  margin-left: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center children */
+  text-align: center;    /* center text */
+}
+
+main[class^="main--"] > * {
+  max-width: var(--maxw);
+  width: 100%;
+}
+
+/* Left-aligned main when hero is minimal or text-heavy */
+main.main--minimal,
+main.main--text-heavy {
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+  
+.self-page main {
+  margin-left: 0; /* no offset needed */
+}
+
+.text-container {
+  max-width: 700px;
+  margin: 0 auto;   /* horizontally center container */
+  text-align: center;
+}
+
+.homepage-closing-note {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  margin: 2rem 0;
+  color: var(--text);
+  font-style: italic;
+  font-size: 1.2rem;
+  background-color: var(--accent-dark);
+  box-shadow: var(--shadow);
+}
+
+/* ==============================
+  Markdown Elements
+============================== */
+main h1, main h2, main h3, main h4, main h5, main h6,
+main p, main ul, main ol, main pre, main blockquote {
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1rem 0;
+  color: var(--text);
+}
+
+.hero-accent {
+  max-width: 300px;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: var(--card);
+}
+tr:nth-child(even) {
+  background-color: color-mix(in hsl, var(--card) 90%, transparent);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+  margin: 12px 0;
+  list-style-position: inside;
+  line-height: 1.6;
+  color: var(--text);
+}
+ul ul, ol ol {
+  margin-left: 20px; /* Nested lists */
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--card);
+  color: var(--text);
+  padding: 16px;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  margin: 16px 0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+}
+
+/* Inline code */
+code {
+  background-color: var(--accent-light);
+  color: var(--bg);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+}
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Images & media */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+video, audio {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  color: var(--muted);
+  margin: 12px 0;
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+  border-radius: 6px;
+}
+
+/* Horizontal rule (divider) */
+hr {
+  border: none;
+  height: 2px;
+  background: var(--border);
+  margin: 0rem auto;
+  max-width: var(--maxw);
+}
+
+.references {
+  max-width: 720px;
+  margin: 2rem auto;
+  text-align: left;        /* keeps it clean inside center-aligned layouts */
+}
+
+.references h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.references ul,
+.references ol {
+  padding-left: 1rem;       /* tighten the indent */
+  margin: 0.5rem 0;         /* smaller top/bottom spacing */
+  line-height: 1.3;         /* slightly tighter line spacing */
+  font-size: 0.75rem;       /* make text a bit smaller */
+}
+
+.references li {
+  margin-bottom: 0.5rem;    /* reduce spacing between items */
+}
+
+
+.references .ref-note {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.references .ref-more {
+  margin-top: 1.5rem;
+  text-align: right;
+}

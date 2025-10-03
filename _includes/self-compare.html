@@ -1,0 +1,65 @@
+<!-- Self Compare Component -->
+<div class="compare-section">
+  <div class="compare-instructions">
+    <p><strong>Select 2 cards to compare:</strong> Click on any personality type card and choose "Add to Compare".</p>
+  </div>
+
+  <div class="compare-container">
+    <!-- Left comparison slot -->
+    <div class="compare-slot compare-slot-left">
+      <div class="compare-placeholder">
+        <span class="compare-placeholder-icon">👤</span>
+        <p>Select first card</p>
+      </div>
+      <!-- Selected card will appear here -->
+      <div class="compare-card-display" id="compare-card-1" style="display: none;">
+        <!-- Card content will be dynamically inserted -->
+      </div>
+    </div>
+
+    <!-- VS divider -->
+    <div class="compare-divider">
+      <span class="vs-text">VS</span>
+    </div>
+
+    <!-- Right comparison slot -->
+    <div class="compare-slot compare-slot-right">
+      <div class="compare-placeholder">
+        <span class="compare-placeholder-icon">👤</span>
+        <p>Select second card</p>
+      </div>
+      <!-- Selected card will appear here -->
+      <div class="compare-card-display" id="compare-card-2" style="display: none;">
+        <!-- Card content will be dynamically inserted -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Clear selections button -->
+  <div class="compare-actions">
+    <button id="clear-compare" class="btn-clear-compare" style="display: none;">
+      Clear Selection
+    </button>
+  </div>
+</div>
+
+<!-- Card Action Popup Menu -->
+<div id="card-popup-menu" class="card-popup-menu" style="display: none;">
+  <div class="popup-menu-content">
+    <button class="popup-menu-item" id="popup-view-details">
+      <span class="popup-icon">👁️</span>
+      View Details
+    </button>
+    <button class="popup-menu-item" id="popup-add-compare">
+      <span class="popup-icon">⚖️</span>
+      Add to Compare
+    </button>
+    <button class="popup-menu-item" id="popup-remove-compare" style="display: none;">
+      <span class="popup-icon">✖️</span>
+      Remove from Compare
+    </button>
+  </div>
+</div>
+
+<!-- Backdrop for popup -->
+<div id="popup-backdrop" class="popup-backdrop" style="display: none;"></div>

@@ -1,0 +1,173 @@
+title: "Which Magical School House Do You Belong In?"
+card-title: "Magical School"
+slug: "magical-house"
+description: "Discover your true magical house - are you a Scholar, Guardian, Mystic, or Adventurer?"
+picture: "magical-house.png"
+
+questions:
+  - id: q1
+    text: "You discover a mysterious locked door in the school. What do you do?"
+    image: "mysterious-door.jpg"
+    options:
+      - text: "Research the door's history in the library first"
+        value: "scholar"
+      - text: "Report it to a teacher for everyone's safety"
+        value: "guardian"
+      - text: "Meditate near it to sense its magical energy"
+        value: "mystic"
+      - text: "Try every spell you know until it opens"
+        value: "adventurer"
+
+  - id: q2
+    text: "Your favorite magical subject would be:"
+    image: "magical-subjects.jpg"
+    options:
+      - text: "Theoretical Magic & Ancient Runes"
+        value: "scholar"
+      - text: "Protective Charms & Healing Arts"
+        value: "guardian"
+      - text: "Divination & Spirit Communication"
+        value: "mystic"
+      - text: "Battle Magic & Transformation Spells"
+        value: "adventurer"
+
+  - id: q3
+    text: "When working on a group spell, you naturally:"
+    image: "group-magic.jpg"
+    options:
+      - text: "Explain the theory behind why it works"
+        value: "scholar"
+      - text: "Make sure everyone is safe and included"
+        value: "guardian"
+      - text: "Feel the group's energy and guide the flow"
+        value: "mystic"
+      - text: "Jump in and try new variations spontaneously"
+        value: "adventurer"
+
+  - id: q4
+    text: "Your magical familiar would most likely be:"
+    image: "familiars.jpg"
+    options:
+      - text: "An owl - wise and observant 🦉"
+        value: "scholar"
+      - text: "A loyal dog - protective and caring 🐕"
+        value: "guardian"
+      - text: "A cat - intuitive and mysterious 🐱"
+        value: "mystic"
+      - text: "A dragon - bold and unpredictable 🐲"
+        value: "adventurer"
+
+  - id: q5
+    text: "You're assigned a challenging magical research project. Your approach:"
+    image: "research-project.jpg"
+    options:
+      - text: "Create a detailed plan and study systematically"
+        value: "scholar"
+      - text: "Form a study group to help everyone succeed"
+        value: "guardian"
+      - text: "Follow your intuition and see where it leads"
+        value: "mystic"
+      - text: "Dive into the most exciting part immediately"
+        value: "adventurer"
+
+  - id: q6
+    text: "In a magical crisis, your first instinct is to:"
+    image: "magical-crisis.jpg"
+    options:
+      - text: "Analyze what went wrong and find the logical solution"
+        value: "scholar"
+      - text: "Protect others and minimize harm"
+        value: "guardian"
+      - text: "Trust your inner voice to guide the right action"
+        value: "mystic"
+      - text: "Act quickly with whatever magic feels right"
+        value: "adventurer"
+
+  - id: q7
+    text: "Your ideal magical workspace has:"
+    image: "magical-workspace.jpg"
+    options:
+      - text: "Organized books, charts, and reference materials"
+        value: "scholar"
+      - text: "Comfortable seating and safety equipment"
+        value: "guardian"
+      - text: "Crystals, candles, and flowing energy"
+        value: "mystic"
+      - text: "Various magical tools ready for experimentation"
+        value: "adventurer"
+
+  - id: q8
+    text: "When learning a new spell, you prefer to:"
+    image: "spell-learning.jpg"
+    options:
+      - text: "Understand every component before attempting it"
+        value: "scholar"
+        cf_value: "Ti"
+      - text: "Practice with supervision until it's completely safe"
+        value: "guardian"
+        cf_value: "Si"
+      - text: "Feel your way through it with intuitive guidance"
+        value: "mystic"
+        cf_value: "Ni"
+      - text: "Try it immediately and learn by doing"
+        value: "adventurer"
+        cf_value: "Se"
+
+  - id: q9
+    text: "What motivates your magical studies most?"
+    image: "magical-motivation.jpg"
+    options:
+      - text: "The pursuit of knowledge and understanding"
+        value: "scholar"
+      - text: "Using magic to help and protect others"
+        value: "guardian"
+      - text: "Connecting with the deeper mysteries of existence"
+        value: "mystic"
+      - text: "The thrill of discovering what's possible"
+        value: "adventurer"
+
+  - id: q10
+    text: "Your magical graduation thesis would focus on:"
+    image: "thesis-topic.jpg"
+    options:
+      - text: "A comprehensive analysis of magical theory"
+        value: "scholar"
+      - text: "Developing better protective magical systems"
+        value: "guardian"
+      - text: "Exploring the spiritual dimensions of magic"
+        value: "mystic"
+      - text: "Creating innovative new magical applications"
+        value: "adventurer"
+
+results:
+  scholar:
+    title: "House of Scholars 📚"
+    description: "You belong to the prestigious House of Scholars, where knowledge is power and understanding unlocks all doors. Your analytical mind and thirst for learning make you a natural researcher and teacher. You approach magic through careful study and logical analysis, believing that true mastery comes from understanding the fundamental principles. Others seek you out for your wisdom and ability to explain complex magical concepts clearly."
+    image: "scholar.jpg"
+    traits: ["Analytical", "Curious", "Methodical", "Wise", "Articulate"]
+    house_powers: ["Ancient Knowledge", "Spell Analysis", "Magical Research", "Teaching Mastery", "Theoretical Innovation"]
+    redirect: "/persona/scholar.html"
+    
+  guardian:
+    title: "House of Guardians 🛡️"
+    description: "You belong to the noble House of Guardians, protectors of the magical world and champions of those in need. Your strong sense of duty and natural caring make you a trusted ally and reliable friend. You see magic as a responsibility - a gift to be used for the greater good. Your protective instincts and practical approach to magic make you invaluable in times of crisis, and others feel safe in your presence."
+    image: "guardian.jpg"
+    traits: ["Protective", "Loyal", "Practical", "Caring", "Reliable"]
+    house_powers: ["Protective Shields", "Healing Magic", "Group Harmony", "Crisis Leadership", "Defensive Mastery"]
+    redirect: "/persona/guardian.html"
+    
+  mystic:
+    title: "House of Mystics 🔮"
+    description: "You belong to the enigmatic House of Mystics, where intuition guides and inner wisdom illuminates the path forward. Your deep connection to the spiritual aspects of magic allows you to perceive truths others miss. You understand that magic is more than technique - it's about harmony with the universe's natural flow. Your mystical insights and ability to sense hidden connections make you a bridge between the seen and unseen worlds."
+    image: "mystic.jpg"
+    traits: ["Intuitive", "Spiritual", "Perceptive", "Harmonious", "Insightful"]
+    house_powers: ["Prophetic Vision", "Energy Reading", "Spiritual Communication", "Natural Harmony", "Mystical Insight"]
+    redirect: "/persona/mystic.html"
+    
+  adventurer:
+    title: "House of Adventurers ⚡"
+    description: "You belong to the dynamic House of Adventurers, where boldness meets magic and innovation knows no bounds. Your natural courage and love of exploration drive you to push magical boundaries and discover new possibilities. You believe magic should be experienced, not just studied, and your willingness to take risks often leads to breakthrough discoveries. Others are inspired by your fearless spirit and ability to turn theory into thrilling reality."
+    image: "adventurer.jpg"
+    traits: ["Bold", "Innovative", "Spontaneous", "Courageous", "Experimental"]
+    house_powers: ["Combat Magic", "Magical Innovation", "Risk Assessment", "Quick Adaptation", "Breakthrough Discovery"]
+    redirect: "/persona/adventurer.html"

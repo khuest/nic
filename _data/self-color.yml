@@ -1,0 +1,63 @@
+INTJ:
+  header_color: "#6D5A72"   # Deep Dusty Plum
+  body_color: "#E9E4EC"     # Light Plum Mist
+
+INTP:
+  header_color: "#8A7099"   # Muted Mauve
+  body_color: "#F0E9F4"     # Pale Lavender Gray
+
+ENTJ:
+  header_color: "#A38FAE"   # Ash Plum
+  body_color: "#F5F1F7"     # Soft Lilac Gray
+
+ENTP:
+  header_color: "#BFA5C9"   # Soft Lilac
+  body_color: "#F9F5FA"     # Whisper Lilac
+
+INFJ:
+  header_color: "#5E4635"   # Dark Clay
+  body_color: "#EDE6E1"     # Clay Mist
+
+INFP:
+  header_color: "#8E735B"   # Clay Stone
+  body_color: "#F4ECE7"     # Pale Clay Sand
+
+ENFJ:
+  header_color: "#B4977A"   # Light Earth
+  body_color: "#F8F3ED"     # Warm Sand
+
+ENFP:
+  header_color: "#D7CCC8"   # Pale Sandstone
+  body_color: "#FBF8F7"     # Soft Sand Veil
+
+ISTJ:
+  header_color: "#726141"   # Antique Bronze
+  body_color: "#EDE9E3"     # Bronze Mist
+
+ISFJ:
+  header_color: "#9C8B6E"   # Muted Oat
+  body_color: "#F3F0EA"     # Pale Oat Beige
+
+ESTJ:
+  header_color: "#C2B280"   # Classic Sand
+  body_color: "#F8F6F1"     # Sand Veil
+
+ESFJ:
+  header_color: "#E1C699"   # Golden Beige
+  body_color: "#FBF9F5"     # Soft Golden Haze
+
+ISTP:
+  header_color: "#5C3D3D"   # Walnut Rose
+  body_color: "#EFE9E9"     # Rose Mist
+
+ISFP:
+  header_color: "#8B5C5C"   # Dusty Rosewood
+  body_color: "#F5ECEC"     # Pale Rose Veil
+
+ESTP:
+  header_color: "#B27272"   # Clay Rose
+  body_color: "#F8F0F0"     # Soft Blush Rose
+
+ESFP:
+  header_color: "#D9A5A5"   # Soft Blush Clay
+  body_color: "#FBF6F6"     # Faint Blush Mist

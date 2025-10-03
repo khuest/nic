@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  {% include header.html %}
+
+  {% unless page.hero_style == "none" %}
+    {% if page.hero_title or page.title %}
+      <section class="hero hero--{{ page.hero_style | default: 'standard' }}">
+        <div class="hero__content">
+          <h1 class="hero__title">{{ page.hero_title | default: page.title }}</h1>
+          {% if page.hero_subtitle %}
+            <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
+          {% endif %}
+          {% if page.pill %}
+            <div class="pill">{{ page.pill }}</div>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endunless %}
+
+  <main class="main--{{ page.hero_style | default: 'standard' }}">
+    {{ content }}
+    <section class="further-reading">
+    <h3>Further Reading</h3>
+    <table class="reading-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Visionaries (NT)</td>
+          <td>
+            <a href="{{ '/self/INTJ.md' | relative_url }}">INTJ</a>,
+            <a href="{{ '/self/INTP.md' | relative_url }}">INTP</a>,
+            <a href="{{ '/self/ENTJ.md' | relative_url }}">ENTJ</a>,
+            <a href="{{ '/self/ENTP.md' | relative_url }}">ENTP</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Dreamers (NF)</td>
+          <td>
+            <a href="{{ '/self/INFJ.md' | relative_url }}">INFJ</a>,
+            <a href="{{ '/self/INFP.md' | relative_url }}">INFP</a>,
+            <a href="{{ '/self/ENFJ.md' | relative_url }}">ENFJ</a>,
+            <a href="{{ '/self/ENFP.md' | relative_url }}">ENFP</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Builders (ST)</td>
+          <td>
+            <a href="{{ '/self/ISTJ.md' | relative_url }}">ISTJ</a>,
+            <a href="{{ '/self/ISTP.md' | relative_url }}">ISTP</a>,
+            <a href="{{ '/self/ESTJ.md' | relative_url }}">ESTJ</a>,
+            <a href="{{ '/self/ESTP.md' | relative_url }}">ESTP</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Caretakers (SF)</td>
+          <td>
+            <a href="{{ '/self/ISFJ.md' | relative_url }}">ISFJ</a>,
+            <a href="{{ '/self/ISFP.md' | relative_url }}">ISFP</a>,
+            <a href="{{ '/self/ESFJ.md' | relative_url }}">ESFJ</a>,
+            <a href="{{ '/self/ESFP.md' | relative_url }}">ESFP</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+/* ==============================
+   Grid for Self
+============================== */
+.grid {
+  display: grid;
+  gap: 18px;
+  padding: 30px 20px 60px;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: calc(4 * 200px + 3 * 18px);
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); max-width: calc(2 * 200px + 1 * 18px); }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; justify-items: center;}
+}
+
+/* ==============================
+   Self Card
+============================== */
+.card-link { text-decoration: none; color: inherit; display: block; }
+.card-link:hover { text-decoration: none; }
+
+/* Card container */
+.card {
+  background: #fdfdfb;
+  border: 3px solid #000;
+  border-radius: 14px;
+  width: 200px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px rgba(0,0,0,.25);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 500px; /* optional: limit so it's not too wide */
+    margin: 0 auto;   /* center the card */
+  }
+}
+
+/* Hover glow and lift */
+.card-link:hover .card {
+  transform: translateY(-6px);
+  cursor: pointer;
+  box-shadow: 
+    0 0 8px 2px rgba(0,0,0,0.25),
+    0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
+}
+
+/* ==============================
+   Card Header
+============================== */
+.card-header {
+  background: var(--header-color);
+  color: var(--card);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  height: 24px;        /* fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: clamp(10px, 2vw, 14px); /* min 10px, scales with viewport, max 14px */
+}
+
+
+
+/* ==============================
+   Artwork
+============================== */
+.card img {
+  width: 100%;
+  height: 144px;      /* fixed height */
+  object-fit: cover;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+
+}
+
+.card img::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+/* ==============================
+   Stats row
+============================== */
+.card-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff8;
+  border-bottom: 1px solid #000;
+  padding: 4px 2px;
+  font-size: clamp(0.55rem,1.2vw,0.75rem);
+  font-weight: bold;
+  color: #111;
+  text-shadow: 0 0 1px #fff;
+  white-space: nowrap;
+  height: 20px;      /* fixed height */
+}
+
+/* ==============================
+   Card body
+============================== */
+.card-body {
+  background: var(--body-color);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: #222;
+  font-size: clamp(0.55rem,1.2vw,0.75rem);
+  overflow: hidden;
+}
+
+/* Hooks: always top, fills space above tagline */
+.card-hooks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 6px 0;
+  font-size: clamp(0.5rem,1vw,0.65rem);
+  line-height: 1.3;
+  color: #222;
+  flex-grow: 1;
+}
+
+/* Tagline: always bottom, fixed height */
+.card-flavor {
+  font-style: italic;
+  font-size: clamp(0.45rem,0.9vw,0.6rem);
+  color: #444;
+  border-top: 1px solid var(--border, #000);
+  margin: 0;
+  padding-top: 4px;
+  text-align: center;
+  flex-shrink: 0;
+  height: 32px; /* fixed height for uniformity */
+}
+
+  

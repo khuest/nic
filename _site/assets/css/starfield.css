@@ -1,0 +1,50 @@
+/* ============================== STARFIELD SYSTEM 
+============================== */
+#starfield-new { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; z-index: 1; }
+
+.starfield-realm-map { position: relative; width: 100%; height: 600px; border-radius: var(--radius); overflow: hidden; background: url("/eekhue-core/assets/images/cosmic-bg.jpg") center/cover no-repeat; margin: 0; }
+
+@media (max-width: 768px) { .starfield-realm-map { height: 400px; } }
+@media (max-width: 480px) { .starfield-realm-map { height: 320px; } }
+.starfield-planets-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 20px; z-index: 2; }
+
+.starfield-planet { position: absolute; width: var(--base-size); height: var(--base-size); cursor: pointer; display: flex; align-items: flex-end; justify-content: center; z-index: 2; transform: translate(-50%, -50%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease; animation: starfieldPlanetFloat var(--float-speed) ease-in-out infinite; }
+
+.starfield-planet:hover { transform: translate(-50%, -50%) scale(var(--hover-scale)); filter: brightness(1.2) drop-shadow(0 0 20px rgba(122, 162, 247, 0.6)); }
+
+.starfield-planet-layer { position: absolute; top: 50%; left: 50%; width: var(--layer-size); height: var(--layer-size); opacity: var(--layer-opacity); z-index: var(--layer-z); transform: translate(-50%, -50%) translate(var(--offset-x, 0px), var(--offset-y, 0px)) rotate(var(--rotation, 0deg)); mix-blend-mode: var(--blend-mode); pointer-events: none; border-radius: 50%; }
+
+/* Apply mask if specified */
+.starfield-planet-layer[style*="--mask"] .starfield-layer-image { mask: var(--mask); -webkit-mask: var(--mask); }
+
+.starfield-layer-image { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+/* New Planet Label (emoji) - HIDDEN FOR NOW */
+.starfield-planet-label { display: none; /* Hide labels to prevent clutter */ position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); font-size: 1.2rem; text-shadow: 0 0 4px #000; color: var(--text); z-index: 10; pointer-events: none; }
+
+@keyframes starfieldPlanetFloat { 0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(var(--float-amplitude)); } }
+/* Special animations for Shadow planet (now smoke is layer 0, planet is layer 1) */
+#starfield-shadow .starfield-planet-layer[data-layer-index="0"] .starfield-layer-image { animation: starfieldSmokeFloat 6s ease-in-out infinite; }
+
+#starfield-shadow:hover .starfield-planet-layer[data-layer-index="0"] .starfield-layer-image { animation: starfieldSmokeFloat 3s ease-in-out infinite, starfieldShadowPulse 2s ease-in-out infinite; }
+
+@keyframes starfieldSmokeFloat { 0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+  33% { transform: translateY(-3px) rotate(1deg); opacity: 0.9; }
+  66% { transform: translateY(2px) rotate(-1deg); opacity: 0.6; } }
+@keyframes starfieldShadowPulse { 0%, 100% { filter: opacity(0.7); }
+  50% { filter: opacity(1); } }
+/* Responsive sizing */
+@media (max-width: 768px) { .starfield-planet { --base-size: calc(var(--base-size) * 0.7); /* Less aggressive shrinking */ }
+  .starfield-planet-label { font-size: 1rem; } }
+@media (max-width: 480px) { .starfield-planet { --base-size: calc(var(--base-size) * 0.55); /* Less aggressive shrinking */ }
+  .starfield-planet-label { font-size: 0.9rem; bottom: -6px; } }
+.starfield-popup-overlay { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); background: var(--card); color: var(--text); padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow); width: 340px; max-width: 90%; transition: transform 0.3s ease; z-index: 1000; backdrop-filter: blur(10px); border: 1px solid rgba(122, 162, 247, 0.3); }
+
+.starfield-popup-overlay.starfield-active { transform: translate(-50%, -50%) scale(1); }
+
+.starfield-popup-overlay h3 { margin-top: 0; color: var(--accent); }
+
+#starfield-close { position: absolute; top: 12px; right: 16px; font-size: 24px; cursor: pointer; color: var(--muted); transition: color 0.2s ease; }
+
+#starfield-close:hover { color: var(--accent); }

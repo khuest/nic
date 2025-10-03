@@ -1,0 +1,43 @@
+xp_messages:
+  - message: "I want a better life!"
+    button: "YES!!"
+    xp: 5
+  - message: "I can grow through challenges!"
+    button: "Absolutely!"
+    xp: 5
+  - message: "My shadow doesn’t define me!"
+    button: "Shine on!"
+    xp: 5
+  - message: "Integration makes me stronger!"
+    button: "True!"
+    xp: 5
+  - message: "I choose to evolve today!"
+    button: "LET'S GO!"
+    xp: 5
+  - message: "Every step forward matters!"
+    button: "Step On!"
+    xp: 5
+  - message: "I am more than my fears!"
+    button: "Fearless!"
+    xp: 5
+  - message: "Growth begins with me!"
+    button: "Start Now!"
+    xp: 5
+  - message: "I embrace who I am becoming!"
+    button: "Own It!"
+    xp: 5
+  - message: "My story is still being written!"
+    button: "Keep Writing!"
+    xp: 5
+  - message: "I carry the strength of my journey!"
+    button: "Carry On!"
+    xp: 5
+  - message: "Hope fuels my transformation!"
+    button: "Ignite!"
+    xp: 5
+  - message: "No setback can stop me!"
+    button: "Rise Again!"
+    xp: 5
+  - message: "The path is mine to walk!"
+    button: "Walk It!"
+    xp: 5

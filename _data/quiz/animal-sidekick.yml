@@ -1,0 +1,104 @@
+title: "Which Animal Sidekick Are You?"
+card-title: "Animal Sidekick"
+slug: "animal-sidekick"
+description: "Are you the loyal dog, the clever fox, the wise owl, or the adventurous monkey? Find out which sidekick spirit matches your vibe."
+picture: "animal-sidekick.png"
+
+questions:
+  - id: q1
+    text: "How do you usually support your friends?"
+    image: "support.jpg"
+    options:
+      - text: "By always being there for them 🐶"
+        value: "dog"
+      - text: "By giving smart solutions 🦊"
+        value: "fox"
+      - text: "By offering calm advice 🦉"
+        value: "owl"
+      - text: "By keeping things fun 🐒"
+        value: "monkey"
+
+  - id: q2
+    text: "What’s your best trait?"
+    image: "trait.jpg"
+    options:
+      - text: "Loyalty"
+        value: "dog"
+      - text: "Cleverness"
+        value: "fox"
+      - text: "Wisdom"
+        value: "owl"
+      - text: "Playfulness"
+        value: "monkey"
+
+  - id: q3
+    text: "In a tricky situation, you..."
+    image: "situation.jpg"
+    options:
+      - text: "Stay by your friend’s side"
+        value: "dog"
+      - text: "Find a creative loophole"
+        value: "fox"
+      - text: "Think it through carefully"
+        value: "owl"
+      - text: "Make a joke and lighten the mood"
+        value: "monkey"
+
+  - id: q4
+    text: "What’s your adventure style?"
+    image: "adventure.jpg"
+    options:
+      - text: "Slow and steady with the group"
+        value: "dog"
+      - text: "Quick, sneaky, and clever"
+        value: "fox"
+      - text: "Methodical and observant"
+        value: "owl"
+      - text: "Wild, spontaneous, and fun"
+        value: "monkey"
+
+  - id: q5
+    text: "Which gift would you bring to a team?"
+    image: "gift.jpg"
+    options:
+      - text: "Unshakable loyalty"
+        value: "dog"
+      - text: "Smart strategies"
+        value: "fox"
+      - text: "Deep perspective"
+        value: "owl"
+      - text: "Comic relief and energy"
+        value: "monkey"
+
+results:
+  dog:
+    title: "The Loyal Dog 🐶"
+    description: "You’re faithful, dependable, and always have your friends’ backs. Like the classic sidekick dog, you bring warmth and safety to any journey. You’re the glue that keeps the team together."
+    image: "dog.jpg"
+    traits: ["Loyal", "Friendly", "Protective", "Reliable", "Supportive"]
+    sidekick_powers: ["Unbreakable Bond", "Fearless Protection", "Heart of Gold", "Team Spirit", "Comforting Presence"]
+    redirect: "/persona/dog.html"
+
+  fox:
+    title: "The Clever Fox 🦊"
+    description: "You’re sharp, witty, and full of clever tricks. Like the fox sidekick, you always find a way out of tight spots. Your friends admire your quick thinking and resourcefulness."
+    image: "fox.jpg"
+    traits: ["Clever", "Witty", "Resourceful", "Agile", "Adaptive"]
+    sidekick_powers: ["Problem Solver", "Quick Reflexes", "Creative Thinking", "Strategic Mind", "Survivor’s Instinct"]
+    redirect: "/persona/fox.html"
+
+  owl:
+    title: "The Wise Owl 🦉"
+    description: "You’re observant, thoughtful, and full of quiet wisdom. Like the owl sidekick, you guide your friends with calm clarity. People turn to you when they need perspective or reassurance."
+    image: "owl.jpg"
+    traits: ["Wise", "Calm", "Observant", "Patient", "Supportive"]
+    sidekick_powers: ["Night Vision", "Clear Perspective", "Guiding Voice", "Deep Intuition", "Steady Calm"]
+    redirect: "/persona/owl.html"
+
+  monkey:
+    title: "The Adventurous Monkey 🐒"
+    description: "You’re energetic, playful, and always ready for mischief. Like the monkey sidekick, you keep spirits high and make every adventure unforgettable. Life with you is anything but boring."
+    image: "monkey.jpg"
+    traits: ["Playful", "Energetic", "Adventurous", "Mischievous", "Joyful"]
+    sidekick_powers: ["Agility", "Comic Relief", "Boundless Energy", "Cheer Booster", "Curiosity Spark"]
+    redirect: "/persona/monkey.html"

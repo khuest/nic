@@ -1,0 +1,482 @@
+# MBTI Comparison Data - Extraverted Types (E)
+# Based on Beebe's 8-Function Model + Intra-Ego Dynamics
+
+ENFJ:
+  stack: "Fe-Ni-Se-Ti / Fi-Ne-Si-Te"
+  differences:
+    hero_function:
+      title: "Fe Hero – Inspirational Leadership"
+      description: "Organizes people toward collective emotional growth"
+      examples:
+        - "Naturally takes charge of group dynamics, ensures everyone included"
+        - "Inspires teams with vision of who they could become together"
+    
+    inferior_function:
+      title: "Ti Inferior – Logic Insecurity"
+      description: "Doubts own analytical reasoning, fears being illogical"
+      examples:
+        - "Defensive when logic questioned: 'I know this makes sense!'"
+        - "Under stress: becomes coldly analytical or completely scattered"
+    
+    parent_function:
+      title: "Ni Parent – Strategic Foresight"
+      description: "Protects Fe with future vision for people's growth"
+      examples:
+        - "Sees where individuals and teams are heading long-term"
+        - "Plans interventions to guide people toward potential"
+    
+    hero_child_loop:
+      title: "Fe-Se Loop – Performative Action"
+      description: "Bypasses reflection, acts on immediate group needs"
+      examples:
+        - "Constantly doing for others without checking if helpful"
+        - "Becomes charismatic performer without substance"
+    
+    overgiving_parent:
+      title: "Ni Overextension – Prophetic Burden"
+      description: "Exhausted from bearing everyone's future vision"
+      examples:
+        - "Feels responsible for orchestrating everyone's growth path"
+        - "Burnt out from guiding entire community alone"
+    
+    inferior_overwhelm:
+      title: "Ti Overload → Se Escape"
+      description: "Logical criticism triggers sensory indulgence"
+      examples:
+        - "When called illogical: binge-watches shows or shops impulsively"
+        - "Escapes into physical distraction from analytical shame"
+
+  similarities:
+    shared_with_enfp:
+      title: "Both Extraverted Intuitive Feelers"
+      points:
+        - "Energized by connecting with people"
+        - "See potential in others naturally"
+        - "Value authentic emotional expression"
+    
+    shared_with_infj:
+      title: "Both Fe-Ni Users"
+      points:
+        - "Guide others toward growth vision"
+        - "Feel responsible for harmony and potential"
+        - "Use metaphorical communication"
+
+ESFJ:
+  stack: "Fe-Si-Ne-Ti / Fi-Se-Ni-Te"
+  differences:
+    hero_function:
+      title: "Fe Hero – Community Builder"
+      description: "Creates belonging through social tradition and care"
+      examples:
+        - "Organizes family gatherings, ensures everyone feels included"
+        - "Remembers birthdays, preferences, and ensures proper celebration"
+    
+    inferior_function:
+      title: "Ti Inferior – Analytical Avoidance"
+      description: "Uncomfortable with detached logic, fears being stupid"
+      examples:
+        - "Feels attacked when someone questions their reasoning"
+        - "Under stress: becomes pedantic or dismisses logic entirely"
+    
+    parent_function:
+      title: "Si Parent – Traditional Care"
+      description: "Protects Fe through proven methods of nurture"
+      examples:
+        - "Maintains family recipes and rituals that bring comfort"
+        - "Guides through 'this is how we've always done it lovingly'"
+    
+    hero_child_loop:
+      title: "Fe-Ne Loop – Anxious People-Pleasing"
+      description: "Bypasses grounded care, scattered seeking approval"
+      examples:
+        - "Says yes to everything, exhausted trying to make everyone happy"
+        - "Anxiously imagines all ways people might be upset"
+    
+    overgiving_parent:
+      title: "Si Overextension – Tradition Fatigue"
+      description: "Exhausted maintaining all rituals alone"
+      examples:
+        - "Plans every holiday perfectly while others just show up"
+        - "Burnt out being keeper of all family traditions"
+    
+    inferior_overwhelm:
+      title: "Ti Overload → Ne Catastrophizing"
+      description: "Logical criticism triggers possibility spiral"
+      examples:
+        - "When called out on logic: 'Now everyone thinks I'm dumb!'"
+        - "Sees all possible ways they've failed socially"
+
+  similarities:
+    shared_with_isfj:
+      title: "Both Fe-Si Users"
+      points:
+        - "Maintain traditions for community comfort"
+        - "Remember personal details about everyone"
+        - "Value stability and proper procedures"
+    
+    shared_with_enfj:
+      title: "Both Fe Heroes"
+      points:
+        - "Organize social harmony naturally"
+        - "Feel responsible for group well-being"
+        - "Both struggle with Ti inferior"
+
+ENTJ:
+  stack: "Te-Ni-Se-Fi / Ti-Ne-Si-Fe"
+  differences:
+    hero_function:
+      title: "Te Hero – Executive Command"
+      description: "Organizes external world with decisive authority"
+      examples:
+        - "Takes charge immediately in any situation without hesitation"
+        - "Fires off clear directives and expects swift execution"
+    
+    inferior_function:
+      title: "Fi Inferior – Values Blindness"
+      description: "Disconnected from personal feelings, dismisses emotion"
+      examples:
+        - "Doesn't know what they truly want emotionally beyond goals"
+        - "Under stress: explosive emotional outburst or cold shutdown"
+    
+    parent_function:
+      title: "Ni Parent – Strategic Vision"
+      description: "Protects Te with long-term pattern recognition"
+      examples:
+        - "Plans multiple contingencies for future scenarios"
+        - "Guides team toward vision with confident foresight"
+    
+    hero_child_loop:
+      title: "Te-Se Loop – Domineering Action"
+      description: "Bypasses reflection, forces immediate results"
+      examples:
+        - "Steamrolls others' input, acts fast without strategic pause"
+        - "Becomes tyrannical, demanding action without vision"
+    
+    overgiving_parent:
+      title: "Ni Overextension – Vision Burden"
+      description: "Exhausted bearing strategic responsibility alone"
+      examples:
+        - "Feels like only one seeing where things are headed"
+        - "Burnt out planning everything while others coast"
+    
+    inferior_overwhelm:
+      title: "Fi Overload → Se Indulgence"
+      description: "Emotional vulnerability triggers sensory escape"
+      examples:
+        - "When feelings surface: works out excessively or parties hard"
+        - "Physical action to avoid emotional processing"
+
+  similarities:
+    shared_with_estj:
+      title: "Both Te Heroes"
+      points:
+        - "Take charge decisively and naturally"
+        - "Value efficiency and results above feelings"
+        - "Impatient with emotional processing"
+    
+    shared_with_intj:
+      title: "Both Te-Ni Users"
+      points:
+        - "Strategic execution focus"
+        - "Plan ahead with confidence"
+        - "Both struggle with Fi inferior"
+
+ESTJ:
+  stack: "Te-Si-Ne-Fi / Ti-Se-Ni-Fe"
+  differences:
+    hero_function:
+      title: "Te Hero – Standard Enforcer"
+      description: "Organizes world through proven efficient procedures"
+      examples:
+        - "Implements clear rules and ensures everyone follows them"
+        - "Runs meetings with tight agenda and decisive outcomes"
+    
+    inferior_function:
+      title: "Fi Inferior – Emotional Rigidity"
+      description: "Dismisses personal values as weakness or distraction"
+      examples:
+        - "Uncomfortable when asked how they really feel about something"
+        - "Under stress: rigid moral judgment or complete emotional collapse"
+    
+    parent_function:
+      title: "Si Parent – Traditional Structure"
+      description: "Protects Te through established methods"
+      examples:
+        - "Guides with 'this is the proven way that works'"
+        - "Maintains organizational memory and standards"
+    
+    hero_child_loop:
+      title: "Te-Ne Loop – Controlling Anxiety"
+      description: "Bypasses Si grounding, micromanages possibilities"
+      examples:
+        - "Tries to control every potential outcome, exhausting everyone"
+        - "Anxiously sees all ways things could fail, demands fixes"
+    
+    overgiving_parent:
+      title: "Si Overextension – Procedural Exhaustion"
+      description: "Burnt out maintaining all systems alone"
+      examples:
+        - "Only one ensuring procedures followed correctly"
+        - "Exhausted being sole keeper of organizational standards"
+    
+    inferior_overwhelm:
+      title: "Fi Overload → Ne Catastrophizing"
+      description: "Emotional vulnerability triggers possibility anxiety"
+      examples:
+        - "When forced to share feelings: 'Everyone will think I'm weak!'"
+        - "Sees all ways emotions could destroy their authority"
+
+  similarities:
+    shared_with_istj:
+      title: "Both Te-Si Users"
+      points:
+        - "Value proven efficient methods"
+        - "Maintain organizational standards"
+        - "Prefer structure and predictability"
+    
+    shared_with_entj:
+      title: "Both Te Heroes"
+      points:
+        - "Command situations naturally"
+        - "Execute decisively"
+        - "Both struggle with Fi inferior"
+
+ENTP:
+  stack: "Ne-Ti-Fe-Si / Ni-Te-Fi-Se"
+  differences:
+    hero_function:
+      title: "Ne Hero – Intellectual Explorer"
+      description: "Sees all possibilities, challenges every assumption"
+      examples:
+        - "Debates every side of argument just to explore ideas"
+        - "Starts multiple projects simultaneously with enthusiasm"
+    
+    inferior_function:
+      title: "Si Inferior – Routine Rejection"
+      description: "Bored by repetition, forgets details and commitments"
+      examples:
+        - "Loses belongings constantly, forgets appointments regularly"
+        - "Under stress: obsesses over health or replays past failures"
+    
+    parent_function:
+      title: "Ti Parent – Logical Precision"
+      description: "Protects Ne exploration with analytical rigor"
+      examples:
+        - "Debates to refine ideas, finds logical inconsistencies playfully"
+        - "Guides others through intellectual exploration"
+    
+    hero_child_loop:
+      title: "Ne-Fe Loop – Scattered Socializing"
+      description: "Bypasses analysis, charms without depth"
+      examples:
+        - "Entertaining everyone with ideas but no follow-through"
+        - "Becomes superficial networker, no real connection"
+    
+    overgiving_parent:
+      title: "Ti Overextension – Analysis Exhaustion"
+      description: "Burnt out analyzing everything for everyone"
+      examples:
+        - "Constantly explaining logic to others until drained"
+        - "Exhausted being everyone's intellectual troubleshooter"
+    
+    inferior_overwhelm:
+      title: "Si Overload → Fe Desperation"
+      description: "Routine demands trigger social seeking"
+      examples:
+        - "When forced into boring tasks: seeks social validation frantically"
+        - "Escapes monotony through excessive socializing"
+
+  similarities:
+    shared_with_enfp:
+      title: "Both Ne Heroes"
+      points:
+        - "Explore possibilities enthusiastically"
+        - "Resist routine and convention"
+        - "Start many things, finish few"
+    
+    shared_with_intp:
+      title: "Both Ne-Ti Users"
+      points:
+        - "Debate intellectually for fun"
+        - "Question everything logically"
+        - "Value exploring ideas over executing"
+
+ENFP:
+  stack: "Ne-Fi-Te-Si / Ni-Fe-Ti-Se"
+  differences:
+    hero_function:
+      title: "Ne Hero – Authentic Exploration"
+      description: "Seeks all possibilities aligned with personal values"
+      examples:
+        - "Explores every path that feels meaningful and exciting"
+        - "Connects with strangers enthusiastically, finding potential everywhere"
+    
+    inferior_function:
+      title: "Si Inferior – Detail Chaos"
+      description: "Forgets practical details, bored by routine maintenance"
+      examples:
+        - "Loses keys, misses deadlines, forgets to pay bills regularly"
+        - "Under stress: fixates on bodily discomfort or past mistakes"
+    
+    parent_function:
+      title: "Fi Parent – Values Protection"
+      description: "Protects Ne with authentic personal compass"
+      examples:
+        - "Guides others to discover their true authentic path"
+        - "Ensures explorations align with what truly matters"
+    
+    hero_child_loop:
+      title: "Ne-Te Loop – Scattered Productivity"
+      description: "Bypasses values check, chases efficiency without meaning"
+      examples:
+        - "Starts ten businesses because they 'should' be profitable"
+        - "Becomes empty productivity machine without authentic purpose"
+    
+    overgiving_parent:
+      title: "Fi Overextension – Values Exhaustion"
+      description: "Burnt out championing everyone's authentic journey"
+      examples:
+        - "Feels responsible for validating everyone's personal truth"
+        - "Exhausted being everyone's authenticity cheerleader"
+    
+    inferior_overwhelm:
+      title: "Si Overload → Te Rigidity"
+      description: "Routine demands trigger harsh efficiency mode"
+      examples:
+        - "When forced into boring tasks: becomes coldly task-focused"
+        - "Escapes detail anxiety through rigid scheduling"
+
+  similarities:
+    shared_with_entp:
+      title: "Both Ne Heroes"
+      points:
+        - "Explore possibilities with enthusiasm"
+        - "Resist boring routine"
+        - "Both struggle with Si inferior"
+    
+    shared_with_infp:
+      title: "Both Ne-Fi Users"
+      points:
+        - "Value authentic exploration"
+        - "Make decisions from personal values"
+        - "Seek meaningful connections"
+
+ESTP:
+  stack: "Se-Ti-Fe-Ni / Si-Te-Fi-Ne"
+  differences:
+    hero_function:
+      title: "Se Hero – Action Master"
+      description: "Dominates present moment through immediate tactical action"
+      examples:
+        - "Thrives in crisis situations, reacts with precision and speed"
+        - "Jumps into physical challenges without hesitation"
+    
+    inferior_function:
+      title: "Ni Inferior – Future Blindness"
+      description: "Dismisses long-term consequences, lives for now"
+      examples:
+        - "Doesn't see patterns until repeated many times"
+        - "Under stress: paranoid about single dark inevitable future"
+    
+    parent_function:
+      title: "Ti Parent – Tactical Logic"
+      description: "Protects Se with instant analytical assessment"
+      examples:
+        - "Analyzes situations on-the-fly for immediate advantage"
+        - "Guides others through crisis with calm logical precision"
+    
+    hero_child_loop:
+      title: "Se-Fe Loop – Reckless Performance"
+      description: "Bypasses logic, acts for social thrills"
+      examples:
+        - "Does dangerous stunts purely for audience reaction"
+        - "Becomes empty performer chasing external validation"
+    
+    overgiving_parent:
+      title: "Ti Overextension – Analysis Fatigue"
+      description: "Exhausted being the tactical problem-solver always"
+      examples:
+        - "Always the one handling emergencies logically"
+        - "Burnt out from being everyone's crisis manager"
+    
+    inferior_overwhelm:
+      title: "Ni Overload → Fe Seeking"
+      description: "Future pressure triggers social validation seeking"
+      examples:
+        - "When forced to plan ahead: parties excessively to avoid"
+        - "Escapes future anxiety through social distraction"
+
+  similarities:
+    shared_with_esfp:
+      title: "Both Se Heroes"
+      points:
+        - "Master present-moment action"
+        - "Energized by sensory experiences"
+        - "Both struggle with Ni inferior"
+    
+    shared_with_istp:
+      title: "Both Se-Ti Users"
+      points:
+        - "Solve problems through hands-on action"
+        - "Tactical and precise"
+        - "Detached analytical approach"
+
+ESFP:
+  stack: "Se-Fi-Te-Ni / Si-Fe-Ti-Ne"
+  differences:
+    hero_function:
+      title: "Se Hero – Joyful Presence"
+      description: "Creates excitement through authentic sensory expression"
+      examples:
+        - "Lights up rooms naturally with energy and warmth"
+        - "Performs, entertains, and connects through immediate presence"
+    
+    inferior_function:
+      title: "Ni Inferior – Pattern Avoidance"
+      description: "Dismisses abstract meanings, prefers concrete now"
+      examples:
+        - "Doesn't plan ahead: 'I'll handle it when it happens!'"
+        - "Under stress: convinced of single dark prophetic outcome"
+    
+    parent_function:
+      title: "Fi Parent – Authentic Care"
+      description: "Protects Se with genuine personal values"
+      examples:
+        - "Cares through real, unfiltered emotional presence"
+        - "Guides others to be themselves in the moment"
+    
+    hero_child_loop:
+      title: "Se-Te Loop – Shallow Productivity"
+      description: "Bypasses values, chases results without meaning"
+      examples:
+        - "Becomes focused on appearances and efficiency without heart"
+        - "Empty social climbing or material accumulation"
+    
+    overgiving_parent:
+      title: "Fi Overextension – Authenticity Exhaustion"
+      description: "Burnt out being emotionally real for everyone"
+      examples:
+        - "Feels responsible for keeping everyone genuine and uplifted"
+        - "Exhausted from being everyone's authentic energy source"
+    
+    inferior_overwhelm:
+      title: "Ni Overload → Te Control"
+      description: "Future pressure triggers rigid efficiency demands"
+      examples:
+        - "When forced to plan long-term: becomes harshly organized"
+        - "Escapes pattern anxiety through controlling tasks"
+
+  similarities:
+    shared_with_estp:
+      title: "Both Se Heroes"
+      points:
+        - "Thrive in immediate action"
+        - "Energized by sensory experiences"
+        - "Live fully in present moment"
+    
+    shared_with_isfp:
+      title: "Both Se-Fi Users"
+      points:
+        - "Express authentically through action"
+        - "Value genuine emotional presence"
+        - "Create through sensory experience"

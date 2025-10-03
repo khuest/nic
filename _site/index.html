@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>Explore The Cosmos Within</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="Discover your Self. Explore your Shadow. Grow your Persona. Navigate your the Cosmos Within.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/eekhue-core/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/eekhue-core/assets/css/base.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/header.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/footer.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  
+    
+      <link rel="stylesheet" href="/eekhue-core/assets/css/starfield.css">
+    
+  
+
+  <!-- Social / OG Meta Tags -->
+  
+    
+    
+    
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cosmos Within Theory">
+    <meta property="og:description" content="A gamified journey through your inner universe.">
+    <meta property="og:image" content="/eekhue-core/assets/images/home-hero.png">
+    <meta property="og:url" content="http://localhost:4000/eekhue-core/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cosmos Within Theory">
+    <meta name="twitter:description" content="A gamified journey through your inner universe.">
+    <meta name="twitter:image" content="/eekhue-core/assets/images/home-hero.png">
+  
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "/eekhue-core";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    [{"message":"I want a better life!","button":"YES!!","xp":5},{"message":"I can grow through challenges!","button":"Absolutely!","xp":5},{"message":"My shadow doesn’t define me!","button":"Shine on!","xp":5},{"message":"Integration makes me stronger!","button":"True!","xp":5},{"message":"I choose to evolve today!","button":"LET'S GO!","xp":5},{"message":"Every step forward matters!","button":"Step On!","xp":5},{"message":"I am more than my fears!","button":"Fearless!","xp":5},{"message":"Growth begins with me!","button":"Start Now!","xp":5},{"message":"I embrace who I am becoming!","button":"Own It!","xp":5},{"message":"My story is still being written!","button":"Keep Writing!","xp":5},{"message":"I carry the strength of my journey!","button":"Carry On!","xp":5},{"message":"Hope fuels my transformation!","button":"Ignite!","xp":5},{"message":"No setback can stop me!","button":"Rise Again!","xp":5},{"message":"The path is mine to walk!","button":"Walk It!","xp":5}]
+  </script>
+
+  <script src="/eekhue-core/assets/js/header.js" defer></script>  
+  <script src="/eekhue-core/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  
+    
+      <script src="/eekhue-core/assets/js/starfield.js" defer></script>
+    
+  
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/eekhue-core/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  
+<body>
+  <!-- Header / Top Navigation -->
+<header>
+  <div class="wrap nav">
+    <div class="brand-logo">
+      <a href="/eekhue-core/" class="brand-logo">
+        <img src="/eekhue-core/assets/images/eekhue-logo.png" alt="Logo" class="logo" />
+        <div class="brand">EekHue</div>
+      </a>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="/eekhue-core/quiz/">What Are You?</a>
+
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
+        <button class="dropbtn">Darkness–Light ▼
+          <span class="tooltip">Explore personality insights</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/eekhue-core/persona/">Persona</a>
+          <a href="/eekhue-core/self/">Self</a>
+          <a href="/eekhue-core/shadow/">Shadow</a>
+          <a href="/eekhue-core/growth/">RE:equip</a>
+          <a href="/eekhue-core/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+  
+    
+      <section class="hero hero--dramatic">
+        <div class="hero__content">
+          <h1 class="hero__title">Cosmos Within Theory</h1>
+          
+            <p class="hero__subtitle">A gamified journey through your inner universe.</p>
+          
+          
+            <div class="pill">🔬 New Theory</div>
+          
+        </div>
+      </section>
+    
+  
+
+  <main class="main--dramatic">
+    <div class="text-container">
+      <h2 id="-the-questions-we-ask">❓ The Questions We Ask</h2>
+
+<p>Why does our inner world feel as infinite as the universe itself?</p>
+
+<p>What hidden forces shape the Self, the Persona, and the Shadow?</p>
+
+<p>How do we navigate these realms to grow and connect?</p>
+
+<p><br /><br /></p>
+<h2 id="-the-idea">💡 The Idea</h2>
+
+<p>This platform is a framework for exploring the vast universe within each of us.</p>
+
+<p>What feels small — the inner world — reveals itself as infinite and complex when explored deeply.</p>
+
+<p>Psychology meets play: archetypes, functions, and growth become an interactive, gamified adventure.</p>
+
+<p>Inspired by the works of Carl Jung, John Beebe, and Dario Nardi, it transforms exploration of Self, Persona, Shadow, Growth, and Relationships into a journey you can experience.</p>
+
+<p><br /><br /></p>
+<h2 id="-explore-the-realms">🌌 Explore the Realms</h2>
+
+    </div>
+    <!-- STARFIELD CONTENT DIRECTLY IN LAYOUT -->
+    <div class="starfield-realm-map">
+      <canvas id="starfield-new"></canvas>
+      
+      <div class="starfield-planets-container">
+        
+        
+          <div class="starfield-planet" 
+               id="starfield-persona" 
+               data-title="🛡️ Persona"
+               data-text="Style vibrant Persona outfits to shine in any moment — from galas to daily challenges. Mix and match looks to express your Self, naturally and authentically."
+               data-config="{&quot;name&quot;:&quot;Persona&quot;,&quot;id&quot;:&quot;persona&quot;,&quot;emoji&quot;:&quot;🛡️&quot;,&quot;position&quot;:{&quot;x&quot;:25,&quot;y&quot;:10},&quot;size&quot;:86,&quot;hover_scale&quot;:1.35,&quot;animation&quot;:{&quot;float_speed&quot;:2.8,&quot;float_amplitude&quot;:6},&quot;layers&quot;:[{&quot;image&quot;:&quot;planet-chromora.png&quot;,&quot;size_multiplier&quot;:1.1,&quot;opacity&quot;:1.0,&quot;blend_mode&quot;:&quot;normal&quot;,&quot;z_index&quot;:1}],&quot;popup&quot;:{&quot;title&quot;:&quot;🛡️ Persona&quot;,&quot;description&quot;:&quot;Style vibrant Persona outfits to shine in any moment — from galas to daily challenges. Mix and match looks to express your Self, naturally and authentically.&quot;}}"
+               style="left: 25%; 
+                      top: 10%; 
+                      --base-size: 86px;
+                      --hover-scale: 1.35;
+                      --float-speed: 2.8s;
+                      --float-amplitude: 6px;">
+            
+            
+              <div class="starfield-planet-layer"
+                   data-layer-index="0"
+                   style="--layer-size: calc(var(--base-size) * 1.1);
+                          --layer-opacity: 1.0;
+                          --layer-z: 1;
+                          
+                          
+                          
+                          --blend-mode: normal;">
+                
+                <img src="/eekhue-core/assets/images/planet-chromora.png" 
+                     alt="Persona layer 1" 
+                     class="starfield-layer-image">
+              </div>
+            
+            
+            <!-- Planet emoji label -->
+            <div class="starfield-planet-label">🛡️</div>
+          </div>
+        
+        
+          <div class="starfield-planet" 
+               id="starfield-self" 
+               data-title="🌀 Self"
+               data-text="16 unique cards revealing cognitive blueprint. Discover your core functions and see how your unique energy flows."
+               data-config="{&quot;name&quot;:&quot;Self&quot;,&quot;id&quot;:&quot;self&quot;,&quot;emoji&quot;:&quot;🌀&quot;,&quot;position&quot;:{&quot;x&quot;:65,&quot;y&quot;:15},&quot;size&quot;:88,&quot;hover_scale&quot;:1.25,&quot;animation&quot;:{&quot;float_speed&quot;:3.2,&quot;float_amplitude&quot;:8},&quot;layers&quot;:[{&quot;image&quot;:&quot;planet-auren.png&quot;,&quot;size_multiplier&quot;:1.1,&quot;opacity&quot;:1.0,&quot;blend_mode&quot;:&quot;normal&quot;,&quot;z_index&quot;:1}],&quot;popup&quot;:{&quot;title&quot;:&quot;🌀 Self&quot;,&quot;description&quot;:&quot;16 unique cards revealing cognitive blueprint. Discover your core functions and see how your unique energy flows.&quot;}}"
+               style="left: 65%; 
+                      top: 15%; 
+                      --base-size: 88px;
+                      --hover-scale: 1.25;
+                      --float-speed: 3.2s;
+                      --float-amplitude: 8px;">
+            
+            
+              <div class="starfield-planet-layer"
+                   data-layer-index="0"
+                   style="--layer-size: calc(var(--base-size) * 1.1);
+                          --layer-opacity: 1.0;
+                          --layer-z: 1;
+                          
+                          
+                          
+                          --blend-mode: normal;">
+                
+                <img src="/eekhue-core/assets/images/planet-auren.png" 
+                     alt="Self layer 1" 
+                     class="starfield-layer-image">
+              </div>
+            
+            
+            <!-- Planet emoji label -->
+            <div class="starfield-planet-label">🌀</div>
+          </div>
+        
+        
+          <div class="starfield-planet" 
+               id="starfield-shadow" 
+               data-title="🌑 Shadow"
+               data-text="Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side reveals itself in daily life."
+               data-config="{&quot;name&quot;:&quot;Shadow&quot;,&quot;id&quot;:&quot;shadow&quot;,&quot;emoji&quot;:&quot;🌑&quot;,&quot;position&quot;:{&quot;x&quot;:15,&quot;y&quot;:65},&quot;size&quot;:87,&quot;hover_scale&quot;:1.3,&quot;animation&quot;:{&quot;float_speed&quot;:4.1,&quot;float_amplitude&quot;:12},&quot;layers&quot;:[{&quot;image&quot;:&quot;planet-shadow-smoke.png&quot;,&quot;size_multiplier&quot;:1.2,&quot;opacity&quot;:0.7,&quot;blend_mode&quot;:&quot;screen&quot;,&quot;z_index&quot;:1,&quot;animation&quot;:{&quot;type&quot;:&quot;float&quot;,&quot;duration&quot;:6,&quot;direction&quot;:&quot;vertical&quot;}},{&quot;image&quot;:&quot;planet-shadow.png&quot;,&quot;size_multiplier&quot;:1.0,&quot;opacity&quot;:1.0,&quot;blend_mode&quot;:&quot;normal&quot;,&quot;z_index&quot;:2}],&quot;popup&quot;:{&quot;title&quot;:&quot;🌑 Shadow&quot;,&quot;description&quot;:&quot;Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side reveals itself in daily life.&quot;}}"
+               style="left: 15%; 
+                      top: 65%; 
+                      --base-size: 87px;
+                      --hover-scale: 1.3;
+                      --float-speed: 4.1s;
+                      --float-amplitude: 12px;">
+            
+            
+              <div class="starfield-planet-layer"
+                   data-layer-index="0"
+                   style="--layer-size: calc(var(--base-size) * 1.2);
+                          --layer-opacity: 0.7;
+                          --layer-z: 1;
+                          
+                          
+                          
+                          --blend-mode: screen;">
+                
+                <img src="/eekhue-core/assets/images/planet-shadow-smoke.png" 
+                     alt="Shadow layer 1" 
+                     class="starfield-layer-image">
+              </div>
+            
+              <div class="starfield-planet-layer"
+                   data-layer-index="1"
+                   style="--layer-size: calc(var(--base-size) * 1.0);
+                          --layer-opacity: 1.0;
+                          --layer-z: 2;
+                          
+                          
+                          
+                          --blend-mode: normal;">
+                
+                <img src="/eekhue-core/assets/images/planet-shadow.png" 
+                     alt="Shadow layer 2" 
+                     class="starfield-layer-image">
+              </div>
+            
+            
+            <!-- Planet emoji label -->
+            <div class="starfield-planet-label">🌑</div>
+          </div>
+        
+        
+          <div class="starfield-planet" 
+               id="starfield-reequip" 
+               data-title="⚔️ RE:equip"
+               data-text="Level up by integrating personas, wielding shadow powers, and summoning your spirit entity. A growth system for strength and awareness."
+               data-config="{&quot;name&quot;:&quot;RE:equip&quot;,&quot;id&quot;:&quot;reequip&quot;,&quot;emoji&quot;:&quot;⚔️&quot;,&quot;position&quot;:{&quot;x&quot;:40,&quot;y&quot;:40},&quot;size&quot;:120,&quot;hover_scale&quot;:1.2,&quot;animation&quot;:{&quot;float_speed&quot;:3.5,&quot;float_amplitude&quot;:10},&quot;layers&quot;:[{&quot;image&quot;:&quot;planet-solumbria.png&quot;,&quot;size_multiplier&quot;:0.9,&quot;opacity&quot;:1.0,&quot;blend_mode&quot;:&quot;normal&quot;,&quot;z_index&quot;:1}],&quot;popup&quot;:{&quot;title&quot;:&quot;⚔️ RE:equip&quot;,&quot;description&quot;:&quot;Level up by integrating personas, wielding shadow powers, and summoning your spirit entity. A growth system for strength and awareness.&quot;}}"
+               style="left: 40%; 
+                      top: 40%; 
+                      --base-size: 120px;
+                      --hover-scale: 1.2;
+                      --float-speed: 3.5s;
+                      --float-amplitude: 10px;">
+            
+            
+              <div class="starfield-planet-layer"
+                   data-layer-index="0"
+                   style="--layer-size: calc(var(--base-size) * 0.9);
+                          --layer-opacity: 1.0;
+                          --layer-z: 1;
+                          
+                          
+                          
+                          --blend-mode: normal;">
+                
+                <img src="/eekhue-core/assets/images/planet-solumbria.png" 
+                     alt="RE:equip layer 1" 
+                     class="starfield-layer-image">
+              </div>
+            
+            
+            <!-- Planet emoji label -->
+            <div class="starfield-planet-label">⚔️</div>
+          </div>
+        
+        
+          <div class="starfield-planet" 
+               id="starfield-reroute" 
+               data-title="🧭 RE:route"
+               data-text="Navigate intersecting worlds of human connection. Chart courses through how different cognition interact, clash, or harmonize."
+               data-config="{&quot;name&quot;:&quot;RE:route&quot;,&quot;id&quot;:&quot;reroute&quot;,&quot;emoji&quot;:&quot;🧭&quot;,&quot;position&quot;:{&quot;x&quot;:80,&quot;y&quot;:60},&quot;size&quot;:149,&quot;hover_scale&quot;:1.28,&quot;animation&quot;:{&quot;float_speed&quot;:2.4,&quot;float_amplitude&quot;:7},&quot;layers&quot;:[{&quot;image&quot;:&quot;planet-aquylox.png&quot;,&quot;size_multiplier&quot;:0.7,&quot;opacity&quot;:1.0,&quot;blend_mode&quot;:&quot;normal&quot;,&quot;z_index&quot;:1}],&quot;popup&quot;:{&quot;title&quot;:&quot;🧭 RE:route&quot;,&quot;description&quot;:&quot;Navigate intersecting worlds of human connection. Chart courses through how different cognition interact, clash, or harmonize.&quot;}}"
+               style="left: 80%; 
+                      top: 60%; 
+                      --base-size: 149px;
+                      --hover-scale: 1.28;
+                      --float-speed: 2.4s;
+                      --float-amplitude: 7px;">
+            
+            
+              <div class="starfield-planet-layer"
+                   data-layer-index="0"
+                   style="--layer-size: calc(var(--base-size) * 0.7);
+                          --layer-opacity: 1.0;
+                          --layer-z: 1;
+                          
+                          
+                          
+                          --blend-mode: normal;">
+                
+                <img src="/eekhue-core/assets/images/planet-aquylox.png" 
+                     alt="RE:route layer 1" 
+                     class="starfield-layer-image">
+              </div>
+            
+            
+            <!-- Planet emoji label -->
+            <div class="starfield-planet-label">🧭</div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div id="starfield-popup" class="starfield-popup-overlay">
+      <span id="starfield-close">&times;</span>
+      <h3 id="starfield-title"></h3>
+      <p id="starfield-text"></p>
+    </div>
+
+    <div class="text-container">
+      <br>
+      <!-- Closing note below starfield -->
+      
+        <p class="homepage-closing-note">Choose a realm from the menu above — explore, gain XP, and unlock the secrets of your cosmos.</p>
+      
+    </div>
+  </main>
+
+  <footer>
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      
+      <!-- Project Info -->
+      <div class="footer-col">
+        <h4>Project</h4>
+        <nav>
+          <a href="/eekhue-core/about/">About</a>
+          <a href="/eekhue-core/contact/">Contact</a>
+          <a href="/eekhue-core/disclaimer/">Disclaimer</a>
+        </nav>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-col">
+        <h4>Community</h4>
+        <nav>
+          <a href="#">Discord (Invite only)</a>
+          <a href="https://github.com/astra-timinikey/eekhue-core">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Extras
+      <div class="footer-col">
+        <h4>Extras</h4>
+        <nav>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+        </nav>
+      </div>
+      -->
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EekHue: Persona Explorer</p>
+    </div>
+  </div>
+</footer>
+
+  
+  <!-- XP Progress Bar -->
+<div class="xp-bar-container">
+  <div class="xp-bar-fill" id="xpFill"></div>
+</div>
+<div class="xp-label" id="xpLabel">XP: 0%</div>
+<div class="xp-message" id="xpMessage">Begin your journey...</div>
+
+<!-- Badge placeholder for messages -->
+<div class="xp-badge" id="xpBadge"></div>
+  
+</body>
+</html>
+  
+</body>
+</html>

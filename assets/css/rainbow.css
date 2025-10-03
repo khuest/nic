@@ -1,0 +1,201 @@
+/* ==============================
+   Rainbow Section Container
+============================== */
+
+.rainbow-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* Container for rainbow buttons */
+.rainbow-bar {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: 60px; /* Make it taller for easier clicking */
+  margin: 20px auto; /* Center the rainbow bar */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Individual rainbow button styling */
+.rainbow-bar button {
+  flex: 1; /* Equal width */
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0; /* Hide any text */
+}
+
+/* Hover effects for buttons */
+.rainbow-bar button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  z-index: 2;
+}
+
+/* Active state for buttons */
+.rainbow-bar button:active {
+  transform: scale(0.98);
+}
+
+/* Rainbow colors for buttons */
+.rainbow-bar button.red    { background: #EA9EA9; } /* Cherry Blossom Pink */
+.rainbow-bar button.orange { background: #FACEB4; } /* Peach Puff */
+.rainbow-bar button.yellow { background: #FFFCCC; } /* Lemon Chiffon */
+.rainbow-bar button.green  { background: #B5F5B0; } /* Mint Green */
+.rainbow-bar button.blue   { background: #B5E5EF; } /* Powder Blue */
+.rainbow-bar button.indigo { background: #AAAEEE; } /* Periwinkle Blue */
+.rainbow-bar button.violet { background: #B5BBF5; } /* Lavender Blue */
+
+/* ==============================
+   Persona Cards Container & Cards
+============================== */
+
+/* Instructions text */
+.rainbow-instructions {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 10px 0;
+}
+
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+
+@media (hover: none) and (pointer: coarse) {
+  .desktop-only { display: none; }
+  .mobile-only { display: inline; }
+}
+
+/* Container needs relative positioning for absolute cards */
+.persona-cards {
+  position: relative;
+  width: 100%;
+  min-height: 450px; /* Give more space for the floating cards */
+  margin: 30px auto;
+  max-width: 800px; /* Center and limit width */
+}
+
+/* Individual card styling */
+.persona-card {
+  position: absolute;
+  top: 20px; /* Start from top instead of center */
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  width: 320px; /* Made slightly wider */
+  max-height: 400px; /* Limit height */
+  background: #fdfdfb;
+  border: 3px solid #000;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 15px rgba(0,0,0,.25);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+/* Active card state */
+.persona-card.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Card header */
+.persona-card h3 {
+  margin: 0;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: var(--header-color, #666);
+  border-bottom: 2px solid #000;
+}
+
+/* Card content area */
+.persona-content {
+  flex-grow: 1;
+  padding: 15px;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #222;
+  background: var(--body-color, #f8f8f8);
+  line-height: 1.5;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Card body (legacy support) */
+.persona-card p {
+  padding: 15px;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #222;
+  background: var(--body-color, #f8f8f8);
+  line-height: 1.5;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Stats section */
+.persona-stats h4 {
+  margin: 10px 0 5px 0;
+  font-size: 0.85rem;
+  color: var(--header-color, #666);
+}
+
+.persona-stats ul {
+  margin: 0 0 10px 0;
+  padding-left: 15px;
+  font-size: 0.8rem;
+}
+
+.persona-stats li {
+  margin-bottom: 3px;
+}
+
+/* Card hover effect */
+.persona-card.active:hover {
+  box-shadow: 
+    0 0 10px 3px rgba(0,0,0,0.25),
+    0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
+  transform: translateX(-50%) scale(1.03);
+}
+
+/* Rainbow Color Themes for Cards */
+#creative-performer   { --header-color: #e63946; --body-color: #ffe5e5; } /* Red */
+#social-butterfly    { --header-color: #ff9f1c; --body-color: #fff2e0; } /* Orange */
+#gadget-tinker       { --header-color: #ffd60a; --body-color: #fffbe5; } /* Yellow */
+#charming-naturalist { --header-color: #2ec4b6; --body-color: #e5fafa; } /* Green */
+#corporate-climber   { --header-color: #4361ee; --body-color: #e8f0ff; } /* Blue */
+#streetwise-rogue    { --header-color: #5a189a; --body-color: #f3e8ff; } /* Indigo */
+#stargazing-dreamer  { --header-color: #7209b7; --body-color: #f8e5ff; } /* Violet */
+
+/* ==============================
+   Mobile Responsive
+============================== */
+
+@media (max-width: 768px) {
+  .persona-card {
+    width: 90vw;
+    max-width: 320px;
+    height: 420px;
+  }
+  
+  .rainbow-bar {
+    height: 50px;
+    margin: 15px 0;
+  }
+  
+  .persona-cards {
+    min-height: 350px;
+  }
+}

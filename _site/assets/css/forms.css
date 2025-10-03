@@ -1,0 +1,233 @@
+/* ==============================
+  CTA Box Component
+============================== */
+.cta-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.cta-box:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 35px rgba(122, 162, 247, 0.15);
+}
+
+.cta-box h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cta-box p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ==============================
+  Form Styling
+============================== */
+.signup-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* Labels */
+.signup-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Input Fields */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form select,
+.signup-form textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: calc(var(--radius) * 0.5);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(122, 162, 247, 0.1);
+  background: var(--card);
+}
+
+/* Select Dropdown */
+.signup-form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23586273' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+/* Textarea */
+.signup-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+.signup-form textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* ==============================
+  Button Styling
+============================== */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: calc(var(--radius) * 0.5);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(122, 162, 247, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(122, 162, 247, 0.2);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* ==============================
+  Form States & Validation
+============================== */
+.signup-form input:invalid,
+.signup-form select:invalid {
+  border-color: #ef4444;
+}
+
+.signup-form input:valid,
+.signup-form select:valid {
+  border-color: #22c55e;
+}
+
+/* Focus states for accessibility */
+.signup-form input:focus-visible,
+.signup-form select:focus-visible,
+.signup-form textarea:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ==============================
+  Responsive Design
+============================== */
+@media (max-width: 768px) {
+  .cta-box,
+  .signup-form {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .cta-box h2 {
+    font-size: 1.25rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .btn-submit {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* ==============================
+  Loading State for Forms
+============================== */
+.signup-form.loading .btn-submit {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.signup-form.loading .btn-submit::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

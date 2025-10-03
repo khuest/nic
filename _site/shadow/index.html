@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>Shadow Analysis</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="A space to explore your hidden patterns, blindspots, and shadow states.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/eekhue-core/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/eekhue-core/assets/css/base.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/header.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/footer.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  
+    
+      <link rel="stylesheet" href="/eekhue-core/assets/css/">
+    
+  
+
+  <!-- Social / OG Meta Tags -->
+  
+    
+    
+    
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shadow Work 🌑">
+    <meta property="og:description" content="Confront the unseen and reclaim hidden strengths.">
+    <meta property="og:image" content="/eekhue-core/assets/images/default-og-image.png">
+    <meta property="og:url" content="http://localhost:4000/eekhue-core/shadow/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shadow Work 🌑">
+    <meta name="twitter:description" content="Confront the unseen and reclaim hidden strengths.">
+    <meta name="twitter:image" content="/eekhue-core/assets/images/default-og-image.png">
+  
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "/eekhue-core";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    [{"message":"I want a better life!","button":"YES!!","xp":5},{"message":"I can grow through challenges!","button":"Absolutely!","xp":5},{"message":"My shadow doesn’t define me!","button":"Shine on!","xp":5},{"message":"Integration makes me stronger!","button":"True!","xp":5},{"message":"I choose to evolve today!","button":"LET'S GO!","xp":5},{"message":"Every step forward matters!","button":"Step On!","xp":5},{"message":"I am more than my fears!","button":"Fearless!","xp":5},{"message":"Growth begins with me!","button":"Start Now!","xp":5},{"message":"I embrace who I am becoming!","button":"Own It!","xp":5},{"message":"My story is still being written!","button":"Keep Writing!","xp":5},{"message":"I carry the strength of my journey!","button":"Carry On!","xp":5},{"message":"Hope fuels my transformation!","button":"Ignite!","xp":5},{"message":"No setback can stop me!","button":"Rise Again!","xp":5},{"message":"The path is mine to walk!","button":"Walk It!","xp":5}]
+  </script>
+
+  <script src="/eekhue-core/assets/js/header.js" defer></script>  
+  <script src="/eekhue-core/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  
+    
+      <script src="/eekhue-core/assets/js/" defer></script>
+    
+  
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/eekhue-core/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  
+<body>
+  <!-- Header / Top Navigation -->
+<header>
+  <div class="wrap nav">
+    <div class="brand-logo">
+      <a href="/eekhue-core/" class="brand-logo">
+        <img src="/eekhue-core/assets/images/eekhue-logo.png" alt="Logo" class="logo" />
+        <div class="brand">EekHue</div>
+      </a>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="/eekhue-core/quiz/">What Are You?</a>
+
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
+        <button class="dropbtn">Darkness–Light ▼
+          <span class="tooltip">Explore personality insights</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/eekhue-core/persona/">Persona</a>
+          <a href="/eekhue-core/self/">Self</a>
+          <a href="/eekhue-core/shadow/">Shadow</a>
+          <a href="/eekhue-core/growth/">RE:equip</a>
+          <a href="/eekhue-core/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+  
+    
+      <section class="hero hero--dramatic">
+        <div class="hero__content">
+          <h1 class="hero__title">Shadow Work 🌑</h1>
+          
+            <p class="hero__subtitle">Confront the unseen and reclaim hidden strengths.</p>
+          
+          
+        </div>
+      </section>
+    
+  
+
+  <main class="main--dramatic">
+    <h2 id="-the-shadow-in-everyday-life">🌑 The Shadow in Everyday Life</h2>
+<hr />
+<p>The Shadow is not an abstract idea — it shows up in the smallest moments.</p>
+
+<p>It’s the smile that hides exhaustion.<br />
+It’s the anger you swear isn’t yours, until you see it blazing in someone else.<br />
+It’s the endless projects abandoned before anyone can judge them.<br />
+It’s the praise you crave and resent at the same time.<br />
+It’s the part of you that whispers at night: <em>“What if they knew?”</em></p>
+
+<p>We bury it.<br />
+We project it.<br />
+We sometimes dare to face it.</p>
+
+<p>The Shadow is always here — shaping choices, fueling conflicts, and waiting for its turn to be seen.</p>
+
+<p><br /></p>
+
+<h2 id="-disowned-shadows">🌀 Disowned Shadows</h2>
+<hr />
+<blockquote>
+  "The shadow is a moral problem that challenges the whole ego-personality,
+  for no one can become conscious of the shadow without considerable moral effort."  
+  — C.G. Jung, *Collected Works*, Vol. 7
+</blockquote>
+
+<p>Moments we repress, deny, or silence — yet they spill out in slips and stress.</p>
+
+<div class="carousel disowned-carousel">
+  <div class="carousel-track">
+    <div class="slide">Placeholder: Scene 1</div>
+    <div class="slide">Placeholder: Scene 2</div>
+    <div class="slide">Placeholder: Scene 3</div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<p><br /></p>
+
+<h2 id="-projected-shadows">🔮 Projected Shadows</h2>
+<hr />
+<blockquote>
+  "The shadow, when it is not realized, is projected: that is, it is always thrust somewhere else, 
+  into a neighbor, into the opponent, into another nation, and so forth."  
+  — C.G. Jung, *Collected Works*, Vol. 7
+</blockquote>
+
+<p>What we refuse to own inside ourselves, we hurl at others.<br />
+Projection is the ego’s defense mechanism: to keep the mask intact, it exports what doesn’t fit.<br />
+Blame, envy, and judgment all carry hidden reflections.<br />
+The more hostile our reaction, the more it points to something disowned within.</p>
+
+<div class="carousel disowned-carousel">
+  <div class="carousel-track">
+    <div class="slide">Placeholder: Scene 1</div>
+    <div class="slide">Placeholder: Scene 2</div>
+    <div class="slide">Placeholder: Scene 3</div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<p><br /></p>
+
+<h2 id="-integrating-shadows">🌱 Integrating Shadows</h2>
+<hr />
+<blockquote>
+  "To confront a person with his shadow is to show him his own light. Once one has experienced a few times 
+  what it is like to stand judgingly between the opposites, one begins to understand what is meant by the self. 
+  Anyone who perceives his shadow and his light simultaneously sees himself from two sides and thus gets in the middle."  
+  — C.G. Jung, *Collected Works*, Vol. 7
+</blockquote>
+
+<p>Integration is the rare state where the Shadow is recognized as “mine too.”<br />
+Instead of splitting or projecting, the disowned parts are consciously reclaimed.<br />
+This is the beginning of individuation: weakness transforms into resource, 
+confusion into clarity, and the hidden becomes usable.<br />
+The Shadow is no longer an enemy — it becomes an ally within the Self.</p>
+
+<div class="carousel disowned-carousel">
+  <div class="carousel-track">
+    <div class="slide">Placeholder: Scene 1</div>
+    <div class="slide">Placeholder: Scene 2</div>
+    <div class="slide">Placeholder: Scene 3</div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<p><br /></p>
+
+<h2 id="️-disclaimer">⚠️ Disclaimer</h2>
+<hr />
+<p>Shadow work is not always comfortable.<br />
+The reflections shown here are <strong>metaphors for inner dynamics</strong>, not medical or clinical advice.<br />
+If the material feels overwhelming, pause and return when you are ready.<br />
+Take care of yourself first.</p>
+
+<p><br /></p>
+
+<h2 id="️-want-to-go-deeper">✉️ Want to Go Deeper?</h2>
+<hr />
+<p>If these glimpses stirred something in you — that’s the point.<br />
+The Shadow is easiest to spot in others, hardest to own in ourselves.</p>
+
+<p><br /><br /></p>
+
+<div class="references">
+<h2>References</h2>
+  <ul>
+    <li>Jung, C. G. (1968). *The Archetypes and the Collective Unconscious* (Collected Works, Vol. 9, Part 1). Princeton University Press.  <br />
+      <span class="ref-note">→ On the role of archetypes and the unconscious in shaping shadow material.</span>
+    </li>
+    <li>Jung, C. G. (1957). *The Practice of Psychotherapy* (Collected Works, Vol. 16). Princeton University Press.  <br />
+      <span class="ref-note">→ Discusses projection, disowned aspects, and the therapeutic encounter with the shadow.</span>
+    </li>
+    <li>Beebe, J. (1994). *Integrity in Depth: Archetypal Explorations of the Persona, Shadow, and Complexes*. Routledge.  <br />
+      <span class="ref-note">→ Provides a functional and archetypal framework for understanding shadow dynamics within personality.</span>
+    </li>
+    <li>Nardi, D. (2011). *Neuroscience of Personality: Brain-Savvy Insights for All Types of People*. Radiance House.  <br />
+      <span class="ref-note">→ Offers empirical evidence on cognitive patterns that correspond to shadow and persona expressions.</span>
+    </li>
+  </ul>
+<p class="ref-more"><a href="/eekhue-core/references/">See all references →</a></p>
+</div>
+
+  </main>
+
+  <footer>
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      
+      <!-- Project Info -->
+      <div class="footer-col">
+        <h4>Project</h4>
+        <nav>
+          <a href="/eekhue-core/about/">About</a>
+          <a href="/eekhue-core/contact/">Contact</a>
+          <a href="/eekhue-core/disclaimer/">Disclaimer</a>
+        </nav>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-col">
+        <h4>Community</h4>
+        <nav>
+          <a href="#">Discord (Invite only)</a>
+          <a href="https://github.com/astra-timinikey/eekhue-core">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Extras
+      <div class="footer-col">
+        <h4>Extras</h4>
+        <nav>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+        </nav>
+      </div>
+      -->
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EekHue: Persona Explorer</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

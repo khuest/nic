@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>Persona: Your Cosmic Wardrobe</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="Explore seven Persona outfits — vibrant styles you choose to shine in any setting, reflecting who you meet and where you go.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/eekhue-core/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/eekhue-core/assets/css/base.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/header.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/footer.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  
+    
+      <link rel="stylesheet" href="/eekhue-core/assets/css/rainbow.css">
+    
+  
+
+  <!-- Social / OG Meta Tags -->
+  
+    
+    
+    
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="🌈 Persona Outfits ✨">
+    <meta property="og:description" content="Dress your Self. Style your world.">
+    <meta property="og:image" content="/eekhue-core/assets/images/persona-hero.png">
+    <meta property="og:url" content="http://localhost:4000/eekhue-core/persona/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🌈 Persona Outfits ✨">
+    <meta name="twitter:description" content="Dress your Self. Style your world.">
+    <meta name="twitter:image" content="/eekhue-core/assets/images/persona-hero.png">
+  
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "/eekhue-core";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    [{"message":"I want a better life!","button":"YES!!","xp":5},{"message":"I can grow through challenges!","button":"Absolutely!","xp":5},{"message":"My shadow doesn’t define me!","button":"Shine on!","xp":5},{"message":"Integration makes me stronger!","button":"True!","xp":5},{"message":"I choose to evolve today!","button":"LET'S GO!","xp":5},{"message":"Every step forward matters!","button":"Step On!","xp":5},{"message":"I am more than my fears!","button":"Fearless!","xp":5},{"message":"Growth begins with me!","button":"Start Now!","xp":5},{"message":"I embrace who I am becoming!","button":"Own It!","xp":5},{"message":"My story is still being written!","button":"Keep Writing!","xp":5},{"message":"I carry the strength of my journey!","button":"Carry On!","xp":5},{"message":"Hope fuels my transformation!","button":"Ignite!","xp":5},{"message":"No setback can stop me!","button":"Rise Again!","xp":5},{"message":"The path is mine to walk!","button":"Walk It!","xp":5}]
+  </script>
+
+  <script src="/eekhue-core/assets/js/header.js" defer></script>  
+  <script src="/eekhue-core/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  
+    
+      <script src="/eekhue-core/assets/js/rainbow.js" defer></script>
+    
+  
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/eekhue-core/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  
+<body>
+  <!-- Header / Top Navigation -->
+<header>
+  <div class="wrap nav">
+    <div class="brand-logo">
+      <a href="/eekhue-core/" class="brand-logo">
+        <img src="/eekhue-core/assets/images/eekhue-logo.png" alt="Logo" class="logo" />
+        <div class="brand">EekHue</div>
+      </a>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="/eekhue-core/quiz/">What Are You?</a>
+
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
+        <button class="dropbtn">Darkness–Light ▼
+          <span class="tooltip">Explore personality insights</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/eekhue-core/persona/">Persona</a>
+          <a href="/eekhue-core/self/">Self</a>
+          <a href="/eekhue-core/shadow/">Shadow</a>
+          <a href="/eekhue-core/growth/">RE:equip</a>
+          <a href="/eekhue-core/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+  
+    
+      <section class="hero hero--minimal">
+        <div class="hero__content">
+          <h1 class="hero__title">🌈 Persona Outfits ✨</h1>
+          
+            <p class="hero__subtitle">Dress your Self. Style your world.</p>
+          
+          
+        </div>
+      </section>
+    
+  
+
+  <main class="main--minimal">
+    <h2 id="-the-persona-layer--outfits-that-adapt">✨ The Persona Layer – <em>Outfits That Adapt</em></h2>
+<hr />
+<p>We all dress up to make an impression — a sharp blazer for work, a bold dress for a party, or comfy jeans for friends. That’s <strong>Persona</strong>: the outfits we choose to navigate life’s scenes, reflecting who we’re meeting and where we’re going. Carl Jung called it our social interface, not a mask to hide behind, but a <strong>tool</strong> to express our Self with confidence.</p>
+
+<p>In <strong>Cosmos Within Theory</strong>, Persona as Outfit (PAO) is your cosmic wardrobe. Each outfit is a vibrant style — like a playlist for your psyche — that you mix and match to fit the moment. From a galactic gala to a quiet coffee date, your Persona outfits let you shine without losing who you are.</p>
+
+<p><em>What will you wear today?</em></p>
+
+<p><br /></p>
+
+<h2 id="-the-rainbow-wardrobe">🌈 The Rainbow Wardrobe</h2>
+<hr />
+<p>Seven Persona outfits, each tied to a color of the rainbow, bring your style to life.</p>
+
+<!-- Rainbow Persona Selector -->
+<div class="rainbow-section">
+  <p class="rainbow-instructions">
+    <span class="desktop-only">Hover a color to reveal its card.</span>
+    <span class="mobile-only">Tap a color to reveal its card.</span>
+  </p>
+
+  <!-- Rainbow Bar -->
+  <div class="rainbow-bar">
+    <button class="red" data-target="creative-performer" aria-label="Creative Performer"></button>
+    <button class="orange" data-target="social-butterfly" aria-label="Social Butterfly"></button>
+    <button class="yellow" data-target="gadget-tinker" aria-label="Gadget Tinker"></button>
+    <button class="green" data-target="charming-naturalist" aria-label="Charming Naturalist"></button>
+    <button class="blue" data-target="corporate-climber" aria-label="Corporate Climber"></button>
+    <button class="indigo" data-target="streetwise-rogue" aria-label="Streetwise Rogue"></button>
+    <button class="violet" data-target="stargazing-dreamer" aria-label="Stargazing Dreamer"></button>
+  </div>
+
+  <!-- Persona Cards Container -->
+  <div class="persona-cards">
+    
+      <!-- Use Jekyll data if available -->
+      
+        
+        
+        <div class="persona-card" id="creative-performer">
+          <h3>🎭 The Mask Creative performer</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Fire</p>
+            <p><strong>Creature:</strong> Phoenix</p>
+            <p><strong>Vibe:</strong> Passion, rebirth, flare</p>
+            <p><strong>Tagline:</strong> <em>"Ignite the stage, rise like fire!"</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Feeling or Sensing</li>
+                
+                  <li>Moderate energy</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Perform artistic acts</li>
+                
+                  <li>Inspire and captivate audiences</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        <div class="persona-card" id="social-butterfly">
+          <h3>🕊️ The Wing Social butterfly</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Air</p>
+            <p><strong>Creature:</strong> Sylph</p>
+            <p><strong>Vibe:</strong> Charm, movement, connection</p>
+            <p><strong>Tagline:</strong> <em>"Every room is your sky to soar!"</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Feeling</li>
+                
+                  <li>Moderate energy</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Spark lively conversations</li>
+                
+                  <li>Bridge social gaps</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        <div class="persona-card" id="gadget-tinker">
+          <h3>⚡ The Circuit Gadget tinker</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Lightning</p>
+            <p><strong>Creature:</strong> Celestial Automaton</p>
+            <p><strong>Vibe:</strong> Innovation, spark, divine logic</p>
+            <p><strong>Tagline:</strong> <em>"Turn sparks into wonders!"</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Thinking</li>
+                
+                  <li>High Intuition</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Invent or repair devices</li>
+                
+                  <li>Solve technical puzzles</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        <div class="persona-card" id="charming-naturalist">
+          <h3>🌿 The Leaf Charming naturalist</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Earth</p>
+            <p><strong>Creature:</strong> Earthkin</p>
+            <p><strong>Vibe:</strong> Growth, grounding, harmony</p>
+            <p><strong>Tagline:</strong> <em>"Rooted in growth, flowing with life."</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Sensing</li>
+                
+                  <li>Balanced energy</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Nurture plants or wildlife</li>
+                
+                  <li>Restore balance in groups</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        <div class="persona-card" id="corporate-climber">
+          <h3>🏯 The Tower Corporate climber</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Metal</p>
+            <p><strong>Creature:</strong> Eastern Dragon</p>
+            <p><strong>Vibe:</strong> Strategy, legacy, ambition</p>
+            <p><strong>Tagline:</strong> <em>"Step by step, the tower is yours."</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Thinking</li>
+                
+                  <li>High energy</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Execute tactical moves</li>
+                
+                  <li>Consolidate power</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        <div class="persona-card" id="streetwise-rogue">
+          <h3>🐾 The Claw Streetwise rogue</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Shadow</p>
+            <p><strong>Creature:</strong> Chimera</p>
+            <p><strong>Vibe:</strong> Adaptation, survival, trickery</p>
+            <p><strong>Tagline:</strong> <em>"Trick the night, survive the game."</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Intuition or Sensing</li>
+                
+                  <li>Low starting energy acceptable</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Slip through danger</li>
+                
+                  <li>Deceive opponents</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        <div class="persona-card" id="stargazing-dreamer">
+          <h3>🌠 The Star Stargazing dreamer</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> Aether</p>
+            <p><strong>Creature:</strong> Unicorn</p>
+            <p><strong>Vibe:</strong> Vision, transcendence, purity</p>
+            <p><strong>Tagline:</strong> <em>"Eyes on the stars, feet on the path."</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                
+                  <li>High Intuition</li>
+                
+                  <li>Low energy tolerance</li>
+                
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                
+                  <li>Contemplate visions</li>
+                
+                  <li>Channel foresight</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+<p>Click a color to explore its outfit parts — head, face, body, lower body, feet — and mix them to create your unique look.</p>
+
+<p><br /></p>
+
+<h2 id="-persona-as-your-style-system">🎮 Persona as Your Style System</h2>
+<hr />
+<p>Think of each Persona as an <strong>outfit set</strong> in a cosmic dressing room. Like in a fashion game, outfits have mechanics:</p>
+
+<!-- Image: Silhouette with a Social Butterfly outfit (yellow scarf, glowing jacket) in a prismatic studio -->
+
+<ul>
+  <li><strong>Vibes</strong> → The cognitive style (like Se for bold expression or Fe for connection) needed to rock the outfit.</li>
+  <li><strong>Perks</strong> → The social strengths it boosts, like charm or creativity.</li>
+  <li><strong>Stat Boosts</strong> → Enhances your psyche’s functions (e.g., +10 Se for living in the moment).</li>
+  <li><strong>Upgrades</strong> → Practice and awareness make the outfit fit better, like tailoring a favorite jacket.</li>
+  <li><strong>Enchantments</strong> → Personal touches (like a starry glow) from integrating your inner Self.</li>
+</ul>
+
+<p>Mix a single piece (e.g., a Creative Performer scarf) for a subtle vibe or a full set for maximum impact. Each choice shapes how you show up, naturally and authentically.</p>
+
+<p><br /></p>
+
+<h2 id="-style-challenges--cosmic-scenes">🌟 Style Challenges &amp; Cosmic Scenes</h2>
+<hr />
+<p>Try your outfits in timed events — daily, weekly, or monthly — like a <strong>Galactic Gala</strong> or <strong>Starlit Showdown</strong>:</p>
+
+<ul>
+  <li><strong>Scenes</strong> → Dress for social moments (e.g., a gala needs Fe for harmony). Submit your outfit for community votes, like a cosmic fashion show.</li>
+  <li><strong>Battles</strong> → Style for challenges (e.g., a monster fight needs Ni for foresight). Outfit stats determine your success.</li>
+  <li><strong>Quick Picks</strong> → Pre-set outfits or a “Random Rainbow Roll” help you jump in fast, avoiding choice overwhelm.</li>
+</ul>
+
+<!-- Image: Gallery of user-submitted outfits for a “Galactic Gala” event -->
+
+<p>Each event teaches you to adapt your Persona, balancing style with your inner Self, just like picking the perfect outfit for a big day.</p>
+
+<p><br /></p>
+
+<h2 id="️-mastering-your-persona">⚡️ Mastering Your Persona</h2>
+<hr />
+<p>Choosing an outfit is easy. <strong>Making it yours</strong> is the art.</p>
+
+<ul>
+  <li><strong>Surface Style</strong> → Wearing an outfit without practice feels stiff, like new shoes.</li>
+  <li><strong>Integrated Style</strong> → When you embrace your inner strengths (and quirks), the outfit feels like a second skin.</li>
+</ul>
+
+<p>Two people might wear the same Persona outfit but style it differently. A Corporate Climber suit might feel formal to one, empowering to another. With practice, any outfit becomes <em>you</em> — a natural extension of your Self, not a mask.</p>
+
+<p>Personas are endless. These seven are your <strong>starter wardrobe</strong>, ready to mix, upgrade, and enchant in your cosmic journey.</p>
+
+<!-- Image: Before/after of a Creative Performer outfit (basic vs. enchanted with starry glow) -->
+
+<p><br /><br /></p>
+
+<div class="references">
+<h2>References</h2>
+  <ul>
+    <li>Jung, C.G. (1981). *The Archetypes and the Collective Unconscious*. Princeton University Press.  <br />
+      <span class="ref-note">→ On archetypes as expressive tools for the psyche.</span>
+    </li>
+    <li>Jung, C.G. (1966). *Two Essays on Analytical Psychology*. Princeton University Press.  <br />
+      <span class="ref-note">→ Covers Persona and individuation concepts.</span>
+    </li>
+    <li>Hillman, J. (1996). *The Soul’s Code: In Search of Character and Calling*. Random House.  <br />
+      <span class="ref-note">→ Explores character development and vocational expression.</span>
+    </li>
+    <li>Campbell, J. (1949). *The Hero with a Thousand Faces*. Princeton University Press.  <br />
+      <span class="ref-note">→ Frames the archetypal journey relevant to Persona and individuation.</span>
+    </li>
+  </ul>
+<p class="ref-more"><a href="/eekhue-core/references/">See all references →</a></p>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      
+      <!-- Project Info -->
+      <div class="footer-col">
+        <h4>Project</h4>
+        <nav>
+          <a href="/eekhue-core/about/">About</a>
+          <a href="/eekhue-core/contact/">Contact</a>
+          <a href="/eekhue-core/disclaimer/">Disclaimer</a>
+        </nav>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-col">
+        <h4>Community</h4>
+        <nav>
+          <a href="#">Discord (Invite only)</a>
+          <a href="https://github.com/astra-timinikey/eekhue-core">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Extras
+      <div class="footer-col">
+        <h4>Extras</h4>
+        <nav>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+        </nav>
+      </div>
+      -->
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EekHue: Persona Explorer</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

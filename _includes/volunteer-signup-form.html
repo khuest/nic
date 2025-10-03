@@ -1,0 +1,33 @@
+<form action="https://formspree.io/f/yourFormID" method="POST" class="signup-form" id="signup">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="_replyto" required>
+  </div>
+
+  <div class="form-group">
+    <label for="type">Participation Type</label>
+    <select id="type" name="type" required>
+      <option value="">Choose your participation type...</option>
+      <option value="pair">Pair (partner/friend)</option>
+      <option value="family">Family</option>
+      <option value="team">Team</option>
+      <option value="solo">Solo (waitlist)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message (optional)</label>
+    <textarea id="message" name="message" rows="4" placeholder="Tell us about your relationship context or any questions you have..."></textarea>
+  </div>
+
+  <!-- Required hidden inputs -->
+  <input type="hidden" name="_subject" value="New RE:route Volunteer Signup">
+  <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you">
+
+  <button type="submit" class="btn btn-primary btn-submit">Apply to Volunteer</button>
+</form>

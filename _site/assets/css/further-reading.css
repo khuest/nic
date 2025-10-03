@@ -1,0 +1,61 @@
+/* ==============================
+   Further Reading Wiki Table
+============================== */
+.further-reading {
+  margin: 3rem 0;
+  padding: 1rem 1.5rem;
+  border: 1px solid #444;
+  background: #1e1e2f; /* dark card background */
+  font-family: 'Roboto Slab', serif;
+  border-radius: 8px;
+}
+
+.further-reading h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.4rem;
+  color: #f0f0f0; /* light header text */
+}
+
+.reading-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  table-layout: auto; /* allow wrapping */
+}
+
+.reading-table th,
+.reading-table td {
+  border: 1px solid #444;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+  color: #ccc; /* default text color */
+}
+
+.reading-table th {
+  background: #2a2a3d; /* slightly darker header */
+  text-align: left;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.reading-table tr:nth-child(even) td {
+  background: #252535; /* subtle stripe for rows */
+}
+
+.reading-table td:first-child {
+  font-weight: 500;
+  color: #ddd; /* left column slightly brighter */
+  white-space: nowrap; /* prevent category from wrapping */
+}
+
+.reading-table a {
+  color: #59a6ff; /* bright link color for dark background */
+  text-decoration: none;
+  word-break: break-word; /* wrap long sequences if needed */
+}
+
+.reading-table a:hover {
+  text-decoration: underline;
+}

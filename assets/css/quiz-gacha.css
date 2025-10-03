@@ -1,0 +1,497 @@
+/* ===============================
+  Gacha Quiz Container
+=============================== */
+#quiz-gacha-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===============================
+  Top Big Frame (Landscape)
+=============================== */
+#gacha-top-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gacha-big-frame {
+  width: 100%;
+  max-width: 800px;
+  min-height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--accent-dark), var(--card));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.frame-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Initial state with video background */
+.initial-state {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.video-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, var(--accent), var(--accent-light));
+  color: var(--text);
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+
+.quiz-state {
+  width: 100%;
+  height: 100%;
+  padding: 0; 
+  /* background: white; */
+  border-radius: 20px;
+  overflow: hidden; 
+}
+
+#quiz-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===============================
+  Bottom Section Layout
+=============================== */
+.gacha-section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--muted);
+  margin: 0;
+  padding-top: 20px;
+}
+
+#gacha-bottom-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+/* Left Side: Stacked Deck */
+#gacha-deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#gacha-deck h3 {
+  font-size: 1.4rem;
+  color: var(--muted);
+  margin: 0;
+  display: none;
+}
+
+.deck-stack {
+  position: relative;
+  width: 140px;
+  height: 200px;
+}
+
+.deck-pile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-in-deck {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Stacked effect - each card slightly offset */
+.card-in-deck:nth-child(1) { transform: translate(0px, 0px); }
+.card-in-deck:nth-child(2) { transform: translate(1px, -1px); }
+.card-in-deck:nth-child(3) { transform: translate(2px, -2px); }
+.card-in-deck:nth-child(4) { transform: translate(3px, -3px); }
+.card-in-deck:nth-child(5) { transform: translate(4px, -4px); }
+.card-in-deck:nth-child(n+6) { transform: translate(5px, -5px); }
+
+.cardback-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+.deck-pile:hover .card-in-deck:last-child {
+  transform: translate(3px, -3px) scale(1.02);
+}
+
+.attempt-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.attempt-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+#gacha-drawn-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Add gap for button spacing */
+}
+
+.deck-stack, .drawn-card-space {
+  width: 140px;
+  height: 200px;
+  position: relative;
+}
+
+/* Empty space placeholder */
+.empty-space {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px dashed var(--border);
+  color: var(--muted);
+}
+
+.empty-space h3 {
+  font-size: 1.3rem;
+  margin: 0 0 10px 0;
+  color: var(--muted);
+}
+
+.empty-card-placeholder {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+/* Drawn card (flipped) */
+.drawn-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cardFlipIn 0.6s ease-out;
+}
+
+.card-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-frame-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.7); 
+  margin: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card-picture {
+  position: absolute;
+  top: 7%;     
+  left: 13.5%;
+  width: 73%;   
+  height: 87%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0px;
+  z-index: 3;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+  z-index: 3;
+  color: var(--text);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.card-overlay h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.card-content h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  line-height: 1.4;
+  display: none;
+}
+
+/* ===============================
+  Buttons
+=============================== */
+.gacha-attempt-btn {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.gacha-attempt-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.gacha-attempt-btn:active {
+  transform: translateY(0);
+}
+
+/* ===============================
+  Dropdown Section
+=============================== */
+#gacha-dropdown-section {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+#gacha-dropdown-section h3 {
+  margin: 5px;
+  color: var(--text);
+  padding: 0;
+}
+
+#gacha-dropdown-section label {
+  display: block;
+  margin-bottom: 0px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+#quiz-selector {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color 0.2s ease;
+}
+
+#quiz-selector:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.dropdown-toggle {
+  margin-top: 20px;
+}
+
+#show-dropdown-btn {
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--muted);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#show-dropdown-btn:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* ===============================
+  Animations
+=============================== */
+@keyframes cardFlipIn {
+  0% {
+    transform: rotateY(-90deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(0deg) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Deck shuffle effect (subtle) */
+.gacha-card-back:nth-child(odd) {
+  animation: subtleFloat 3s ease-in-out infinite;
+}
+
+.gacha-card-back:nth-child(even) {
+  animation: subtleFloat 3s ease-in-out infinite reverse;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+/* ===============================
+  Responsive Design
+=============================== */
+@media (max-width: 800px) {
+  /* .gacha-big-frame {
+    height: 300px;
+  } */
+  
+  #gacha-bottom-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .deck-grid {
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+  }
+  
+  .gacha-card-back {
+    width: 80px;
+    height: 110px;
+    font-size: 1.5rem;
+  }
+  
+  .deck-stack, .drawn-card-space {
+    width: 120px;  /* Match both sizes */
+    height: 170px;
+  }
+  
+  .initial-state h2 {
+    font-size: 1.8rem;
+  }
+  
+  .initial-state p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #quiz-gacha-container {
+    padding: 15px;
+  }
+  
+  /* .gacha-big-frame {
+    height: 250px;
+  } */
+  
+  .initial-state {
+    padding: 20px;
+  }
+  
+  .deck-grid {
+    grid-template-columns: repeat(3, 70px);
+  }
+  
+  .gacha-card-back {
+    width: 70px;
+    height: 95px;
+    font-size: 1.2rem;
+  }
+}

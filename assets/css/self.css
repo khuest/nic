@@ -1,0 +1,114 @@
+/* ===============================
+   Self Page Hero + Main Tree Layout
+=============================== */
+
+
+
+.hero-tree {
+  width: 100%;
+  height: auto;
+}
+
+
+.hero--text-heavy.self-hero .hero-tree {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  max-width: 40%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  z-index: 0;
+}
+
+.hero--text-heavy.self-hero {
+    position: relative;
+    padding: 60px 20px 40px 20px; /* enough bottom padding for tree */
+    background-color: var(--bg);   /* your neutral background color */
+    overflow: visible;
+  }
+
+  .hero-tree-container {
+    position: absolute;
+    bottom: -40px; /* negative of hero’s bottom padding */
+    left: 0;
+    width: 300px;
+    max-width: 40%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-tree-container img.hero-tree {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero--text-heavy.self-hero .hero__content {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    z-index: 1; /* text above the tree */
+  }
+  
+  /* Tree canopy in hero section */
+  .hero--text-heavy.self-hero .hero-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;      /* adjust as needed */
+    max-width: 40%;    /* responsive scaling */
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    z-index: 0;
+  }
+  
+  /* Main section */
+  .main--text-heavy {
+    position: relative;
+    padding: 40px 20px 60px 20px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  
+  /* Roots image in main */
+  .main--text-heavy .hero-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;      /* adjust to align with canopy */
+    max-width: 35%;
+    height: auto;
+    z-index: 0;
+  }
+  
+  /* First H2 after hero slightly indented to align with text */
+  .main--text-heavy h2:first-of-type {
+    margin-left: 0px; /* leave space for roots */
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: var(--text);
+    z-index: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero--text-heavy.self-hero .hero-accent,
+    .main--text-heavy .hero-accent {
+      width: 180px;
+      margin: 0;
+      border-radius: 0;
+    }
+    
+    .main--text-heavy h2:first-of-type {
+      margin-left: 0;
+      text-align: center;
+      z-index: 1;
+    }
+  }
+  

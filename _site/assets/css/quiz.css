@@ -1,0 +1,234 @@
+/* ====================================
+ Main buttons + outputs ==================================== */
+  #fetchBtn, #quiz button {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    margin: 4px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.1s ease, background 0.2s ease;
+  }
+  #fetchBtn:hover, #quiz button:hover {
+    transform: translateY(-2px);
+    background: #5e87e0;
+  }
+  
+  #fetchOutput {
+    background: var(--card);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    overflow-x: auto;
+    font-family: monospace;
+  }
+  
+  
+/* ===============================
+ Quiz styles for card-based flow
+=============================== */
+div[id^="quiz-container"] {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* padding: 20px; */
+  width: 100%;
+}
+
+.quiz-card {
+  display: flex;
+  flex-direction: row; /* image left, content right */
+  gap: 20px;
+  background: var(--card, #fff);
+  color: var(--text, #222);
+  border-radius: 12px;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.2s ease;
+  word-wrap: break-word;
+  align-items: center;
+}
+
+.quiz-card:hover {
+  transform: translateY(-2px);
+}
+
+.quiz-img {
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.quiz-content {
+  flex: 1;
+}
+
+.quiz-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quiz-option {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent, #2563eb);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.quiz-option:hover {
+  background: #5e87e0;
+  transform: translateY(-2px);
+}
+
+.quiz-option.selected {
+  background: #10b981 !important;
+  transform: translateY(-2px);
+}
+
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.quiz-nav button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent, #2563eb);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quiz-nav button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.quiz-progress {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+}
+
+.quiz-result {
+  background: var(--card, #fff);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.quiz-result-img {
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.quiz-traits, .quiz-powers {
+  margin: 15px 0;
+}
+
+.trait-tags, .power-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+  max-width: 100%;
+}
+
+.trait-tag, .power-tag {
+  background: var(--accent, #2563eb);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  white-space: nowrap; 
+}
+
+.power-tag {
+  background: #10b981;
+}
+
+.quiz-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quiz-restart, .quiz-link {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.quiz-restart {
+  background: var(--accent, #2563eb);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.quiz-link {
+  background: #10b981;
+  color: white;
+  display: inline-block;
+}
+
+/* ====================================
+ Mobile layout
+==================================== */
+@media (max-width: 799px) {
+  .quiz-card {
+    flex-direction: column; /* image above content */
+    text-align: center;
+  }
+
+  .quiz-img {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .quiz-content {
+    width: 100%;
+  }
+}
+
+/* Desktop / tablet */
+@media (min-width: 800px) {
+  .quiz-img {
+    width: 200px;          /* or desired width */
+    height: 150px;         /* fixed height for consistent cards */
+    object-fit: cover;     /* crop to fill the box */
+    object-position: center; /* center the important part */
+    border-radius: 8px;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,482 @@
+# MBTI Comparison Data - Introverts (IXXX)
+# Based on Beebe's 8-Function Model - Focus on Intra-Function Dynamics
+
+INFJ:
+  stack: "Ni-Fe-Ti-Se"
+  differences:
+    hero_inferior_axis:
+      title: "Ni-Se: Future Vision vs Present Overwhelm"
+      description: "Lives in symbolic patterns but vulnerable to sensory chaos"
+      examples:
+        - "Watches anime once to extract the pattern, then moves on—Se can't track rewatching"
+        - "Plans website architecture in mind first but doesn't notice price tags while shopping"
+    
+    hero_child_loop:
+      title: "Ni-Ti Loop: Private Theorizing"
+      description: "Bypasses Fe feedback, lost in internal frameworks"
+      examples:
+        - "Spends hours building elegant theories alone without reality-checking with others"
+        - "Becomes coldly analytical about relationships, detached from actual feelings"
+    
+    parent_overextension:
+      title: "Fe Overgiving: Harmony at Self-Cost"
+      description: "Exhausts maintaining everyone's emotional state"
+      examples:
+        - "Mediates all conflicts until burnout, then resents lack of reciprocation"
+        - "Pre-structures environments to avoid sensory overwhelm for others"
+    
+    parent_inferior_protection:
+      title: "Fe Shields Se: Controlled Environments"
+      description: "Uses harmony maintenance to avoid chaotic situations"
+      examples:
+        - "Chooses quiet cafes to protect against sensory overload"
+        - "Maintains group peace so no one creates unpredictable drama"
+    
+    hero_inflation:
+      title: "Ni Tunnel Vision: Prophetic Certainty"
+      description: "Becomes dogmatically certain about future trajectory"
+      examples:
+        - "'I already know how this ends' dismissively, refuses other input"
+        - "Isolates when vision isn't validated by others"
+
+  similarities:
+    shared_with_infp:
+      title: "Ni-Fi Introverted Perceivers"
+      points:
+        - "Both retreat inward under stress"
+        - "Struggle with authenticity and meaning-making"
+        - "Parent function tries to protect vulnerable inferior"
+    
+    shared_with_intj:
+      title: "Both Ni Heroes"
+      points:
+        - "See long-term patterns with confidence"
+        - "Impatient with present-moment distractions"
+        - "Hero-Child loops bypass external feedback"
+    
+    shared_with_isfj:
+      title: "Both Fe Parents"
+      points:
+        - "Feel responsible for group harmony"
+        - "Can overextend in caregiving role"
+        - "Mediate conflict to restore peace"
+
+INFP:
+  stack: "Fi-Ne-Si-Te"
+  differences:
+    hero_inferior_axis:
+      title: "Fi-Te: Authentic Values vs External Structure"
+      description: "Lives by internal compass but vulnerable to imposed organization"
+      examples:
+        - "Makes decisions purely on what feels right, resists productivity systems"
+        - "Creative work flows naturally but can't force structure on it"
+    
+    hero_child_loop:
+      title: "Fi-Si Loop: Nostalgic Self-Absorption"
+      description: "Bypasses Ne exploration, trapped in past feelings"
+      examples:
+        - "Replays old emotional wounds in detail, stuck in what should have been"
+        - "Romanticizes past relationships, can't see present possibilities"
+    
+    parent_overextension:
+      title: "Ne Overexploration: Scattered Possibilities"
+      description: "Exhausts exploring every potential path authentically"
+      examples:
+        - "Starts five creative projects, none feel 'right' enough to finish"
+        - "Explores career options endlessly, can't commit because none match internal ideal"
+    
+    parent_inferior_protection:
+      title: "Ne Shields Te: Avoiding Commitment"
+      description: "Uses possibility-scanning to escape structure demands"
+      examples:
+        - "Keeps options open to avoid being locked into rigid system"
+        - "Explores alternatives when asked to organize or plan"
+    
+    hero_inflation:
+      title: "Fi Moral Superiority: 'Only I Understand'"
+      description: "Becomes self-righteous about personal authenticity"
+      examples:
+        - "'You're all fake, I'm the only real one' isolation"
+        - "Judges others harshly for not being true to themselves"
+
+  similarities:
+    shared_with_infj:
+      title: "Both Introverted Idealists"
+      points:
+        - "Seek meaning and authenticity"
+        - "Retreat under stress to process internally"
+        - "Both have inferior sensing struggles"
+    
+    shared_with_isfp:
+      title: "Both Fi Heroes"
+      points:
+        - "Make decisions based on personal values"
+        - "Struggle with external organization"
+        - "Hero-Child loops bypass external world"
+    
+    shared_with_enfp:
+      title: "Both Fi-Ne Users"
+      points:
+        - "Explore authentic possibilities"
+        - "Resist inauthentic social demands"
+        - "Parent helps Hero explore values in real world"
+
+INTJ:
+  stack: "Ni-Te-Fi-Se"
+  differences:
+    hero_inferior_axis:
+      title: "Ni-Se: System Mastery vs Sensory Dismissal"
+      description: "Sees structural patterns but dismisses immediate details"
+      examples:
+        - "Redesigns entire systems mentally but ignores physical workspace aesthetics"
+        - "Plans years ahead with certainty but forgets to eat during work"
+    
+    hero_child_loop:
+      title: "Ni-Fi Loop: Isolated Idealism"
+      description: "Bypasses Te reality-testing, trapped in perfect vision"
+      examples:
+        - "Holds impossible standards, refuses to compromise with messy reality"
+        - "Withdraws from world because no one meets the ideal"
+    
+    parent_overextension:
+      title: "Te Over-Organizing: Ruthless Efficiency"
+      description: "Exhausts structuring everything and everyone"
+      examples:
+        - "Organizes people like chess pieces, burns out when they don't comply"
+        - "Forces systems on family/team even when inappropriate"
+    
+    parent_inferior_protection:
+      title: "Te Shields Se: Controlled Environments"
+      description: "Uses structure to avoid sensory chaos"
+      examples:
+        - "Schedules everything to prevent spontaneous sensory overwhelm"
+        - "Creates efficient routines to minimize present-moment demands"
+    
+    hero_inflation:
+      title: "Ni Arrogance: 'I Already Know'"
+      description: "Becomes dismissive of others' input"
+      examples:
+        - "'I saw this coming, why didn't you listen?' condescension"
+        - "Refuses to explain vision because 'you wouldn't understand'"
+
+  similarities:
+    shared_with_infj:
+      title: "Both Ni-Se Axis"
+      points:
+        - "Live in future patterns, struggle with present"
+        - "Hero inflation leads to prophetic certainty"
+        - "Inferior creates sensory anxiety"
+    
+    shared_with_entj:
+      title: "Both Ni-Te Users"
+      points:
+        - "Strategic execution-focused"
+        - "Parent organizes to serve Hero's vision"
+        - "Impatient with emotional processing"
+    
+    shared_with_istp:
+      title: "Both Introverted Thinkers"
+      points:
+        - "Independent problem-solvers"
+        - "Prefer working alone"
+        - "Hero-Child loops bypass social feedback"
+
+INTP:
+  stack: "Ti-Ne-Si-Fe"
+  differences:
+    hero_inferior_axis:
+      title: "Ti-Fe: Pure Logic vs Social Clumsiness"
+      description: "Masters internal consistency but disconnected from group harmony"
+      examples:
+        - "Builds elegant theories alone but can't read social cues in conversation"
+        - "Debates logically without noticing emotional impact on others"
+    
+    hero_child_loop:
+      title: "Ti-Si Loop: Isolated Data Mining"
+      description: "Bypasses Ne exploration, trapped in past logical patterns"
+      examples:
+        - "Reviews old data obsessively, can't see new possibilities"
+        - "Perfects existing frameworks endlessly instead of exploring novel ideas"
+    
+    parent_overextension:
+      title: "Ne Over-Exploration: Analysis Paralysis"
+      description: "Exhausts examining every angle before deciding"
+      examples:
+        - "Generates 20 possible solutions, can't commit to testing any"
+        - "Explores tangents endlessly, loses original question"
+    
+    parent_inferior_protection:
+      title: "Ne Shields Fe: Intellectual Deflection"
+      description: "Uses idea-exploration to avoid emotional demands"
+      examples:
+        - "Pivots to abstract debate when conversation gets emotionally intense"
+        - "Hides behind 'what if' scenarios instead of addressing feelings"
+    
+    hero_inflation:
+      title: "Ti Superiority: 'Logical Purity'"
+      description: "Becomes arrogant about intellectual precision"
+      examples:
+        - "'You're all thinking emotionally, I'm the only logical one'"
+        - "Dismisses others as intellectually inferior"
+
+  similarities:
+    shared_with_istp:
+      title: "Both Ti Heroes"
+      points:
+        - "Value logical precision above all"
+        - "Detached analytical approach"
+        - "Hero inflation leads to superiority"
+    
+    shared_with_entp:
+      title: "Both Ti-Ne Users"
+      points:
+        - "Explore ideas for intellectual fun"
+        - "Parent helps Hero test logic"
+        - "Question conventional wisdom"
+    
+    shared_with_infp:
+      title: "Both Introverted Perceivers"
+      points:
+        - "Prefer internal processing over action"
+        - "Resist external structure"
+        - "Hero-Child loops isolate from world"
+
+ISTJ:
+  stack: "Si-Te-Fi-Ne"
+  differences:
+    hero_inferior_axis:
+      title: "Si-Ne: Proven Methods vs Possibility Anxiety"
+      description: "Masters detailed memory but overwhelmed by unknowns"
+      examples:
+        - "Follows established procedures confidently but anxious about innovative approaches"
+        - "Remembers all specifics but sees catastrophic outcomes in new situations"
+    
+    hero_child_loop:
+      title: "Si-Fi Loop: Nostalgic Martyrdom"
+      description: "Bypasses Te action, trapped in duty-bound past"
+      examples:
+        - "'I've always done it this way, and I've suffered for it' resentfully"
+        - "Holds onto old wounds, refuses to try new approaches"
+    
+    parent_overextension:
+      title: "Te Over-Organization: Rule Enforcement"
+      description: "Exhausts maintaining order and procedures"
+      examples:
+        - "Enforces every rule rigidly until burnout or rebellion from others"
+        - "Takes on all organizational burden, resents lack of recognition"
+    
+    parent_inferior_protection:
+      title: "Te Shields Ne: Structured Safety"
+      description: "Uses systems to prevent chaotic possibilities"
+      examples:
+        - "Creates detailed plans to eliminate uncertainty"
+        - "Enforces routines to avoid unpredictable changes"
+    
+    hero_inflation:
+      title: "Si Rigidity: 'This Is How It's Done'"
+      description: "Becomes dogmatically attached to proven methods"
+      examples:
+        - "'We've always done it this way' as absolute authority"
+        - "Refuses adaptation even when context changes"
+
+  similarities:
+    shared_with_isfj:
+      title: "Both Si Heroes"
+      points:
+        - "Value detailed memory and tradition"
+        - "Hero inflation creates rigidity"
+        - "Inferior creates anxiety about unknowns"
+    
+    shared_with_estj:
+      title: "Both Si-Te Users"
+      points:
+        - "Organize based on proven methods"
+        - "Parent enforces structure"
+        - "Value efficiency and reliability"
+    
+    shared_with_intj:
+      title: "Both Introverted Judgers"
+      points:
+        - "Independent and self-directed"
+        - "Hero-Child loops bypass external input"
+        - "Prefer working alone"
+
+ISFJ:
+  stack: "Si-Fe-Ti-Ne"
+  differences:
+    hero_inferior_axis:
+      title: "Si-Ne: Familiar Comfort vs Spatial Chaos"
+      description: "Masters sensory memory but poor spatial awareness"
+      examples:
+        - "Remembers every detail of past events but physically clumsy in new spaces"
+        - "Rewatches familiar shows for comfort but anxious about exploring unknown activities"
+    
+    hero_child_loop:
+      title: "Si-Ti Loop: Isolated Detail-Fixation"
+      description: "Bypasses Fe connection, trapped in private analysis"
+      examples:
+        - "Obsesses over specifics alone, organizing data without checking with others"
+        - "Becomes pedantic about details, loses sight of people's needs"
+    
+    parent_overextension:
+      title: "Fe Over-Nurturing: Silent Martyrdom"
+      description: "Exhausts caring for everyone's comfort"
+      examples:
+        - "Maintains all routines for family until complete burnout, then silent resentment"
+        - "Sacrifices own needs repeatedly to keep peace, feels invisible"
+    
+    parent_inferior_protection:
+      title: "Fe Shields Ne: Stable Harmony"
+      description: "Uses relationship maintenance to prevent chaotic changes"
+      examples:
+        - "Keeps everyone comfortable so no one suggests risky new plans"
+        - "Mediates constantly to avoid unpredictable conflicts"
+    
+    hero_inflation:
+      title: "Si Martyrdom: 'I Remember Everything'"
+      description: "Weaponizes detailed memory of sacrifices"
+      examples:
+        - "'I did X for you on this date, and you forgot' with exact recall"
+        - "Uses past loyalty as leverage for present demands"
+
+  similarities:
+    shared_with_istj:
+      title: "Both Si-Te Axis"
+      points:
+        - "Value proven methods and details"
+        - "Hero provides precise memory"
+        - "Inferior creates anxiety about chaos"
+    
+    shared_with_esfj:
+      title: "Both Si-Fe Users"
+      points:
+        - "Maintain traditions for community"
+        - "Parent nurtures to protect Si comfort"
+        - "Remember personal details about loved ones"
+    
+    shared_with_infj:
+      title: "Both Fe Parents"
+      points:
+        - "Mediate conflict to restore harmony"
+        - "Parent overextension leads to burnout"
+        - "Feel responsible for others' well-being"
+
+ISTP:
+  stack: "Ti-Se-Ni-Fe"
+  differences:
+    hero_inferior_axis:
+      title: "Ti-Fe: Mechanical Logic vs Emotional Confusion"
+      description: "Masters technical systems but disconnected from social needs"
+      examples:
+        - "Fixes complex machines effortlessly but doesn't notice when someone is upset"
+        - "Solves crisis with calm precision but confused by emotional reactions afterward"
+    
+    hero_child_loop:
+      title: "Ti-Ni Loop: Isolated Certainty"
+      description: "Bypasses Se action, trapped in internal predictions"
+      examples:
+        - "Theorizes how things will work without actually testing in real world"
+        - "Becomes convinced of single outcome, stops experimenting"
+    
+    parent_overextension:
+      title: "Se Over-Reaction: Crisis Junkie"
+      description: "Exhausts handling every immediate problem"
+      examples:
+        - "Takes on every emergency, burns out from constant reactivity"
+        - "Feels responsible for fixing all immediate physical crises"
+    
+    parent_inferior_protection:
+      title: "Se Shields Fe: Action Over Talk"
+      description: "Uses physical problem-solving to avoid emotional discussions"
+      examples:
+        - "Fixes broken things instead of addressing relationship issues"
+        - "Stays busy with hands-on work to escape social demands"
+    
+    hero_inflation:
+      title: "Ti Arrogance: 'I Know How It Works'"
+      description: "Becomes dismissive of non-technical input"
+      examples:
+        - "'You don't understand the mechanics' condescension"
+        - "Refuses to consider emotional factors in decisions"
+
+  similarities:
+    shared_with_intp:
+      title: "Both Ti Heroes"
+      points:
+        - "Value logical precision"
+        - "Hero inflation leads to intellectual superiority"
+        - "Detached from emotional expression"
+    
+    shared_with_estp:
+      title: "Both Ti-Se Users"
+      points:
+        - "Master physical environments through logic"
+        - "Parent provides immediate tactical awareness"
+        - "Solve problems through action"
+    
+    shared_with_intj:
+      title: "Both Introverted Judgers"
+      points:
+        - "Independent problem-solvers"
+        - "Hero-Child loops bypass social input"
+        - "Prefer solo work"
+
+ISFP:
+  stack: "Fi-Se-Ni-Te"
+  differences:
+    hero_inferior_axis:
+      title: "Fi-Te: Authentic Flow vs Imposed Structure"
+      description: "Lives by personal values but resists external organization"
+      examples:
+        - "Creates art naturally from inner truth but can't force it on schedule"
+        - "Makes choices by feel but struggles with project management systems"
+    
+    hero_child_loop:
+      title: "Fi-Ni Loop: Isolated Idealism"
+      description: "Bypasses Se action, trapped in perfect vision"
+      examples:
+        - "Imagines ideal authentic life but doesn't take concrete steps"
+        - "Holds impossible standards for self, withdraws from imperfect reality"
+    
+    parent_overextension:
+      title: "Se Over-Expression: Sensory Escapism"
+      description: "Exhausts seeking authentic experiences"
+      examples:
+        - "Pursues aesthetic experiences constantly, burns out from sensory overload"
+        - "Creates art compulsively to express Fi, neglects practical needs"
+    
+    parent_inferior_protection:
+      title: "Se Shields Te: Present Over Plans"
+      description: "Uses present-moment focus to avoid organizational demands"
+      examples:
+        - "Stays absorbed in current creative work to escape scheduling"
+        - "Focuses on immediate sensory beauty instead of long-term structure"
+    
+    hero_inflation:
+      title: "Fi Superiority: 'Only I Am Real'"
+      description: "Becomes self-righteous about authenticity"
+      examples:
+        - "'Everyone else is fake, I'm the only genuine one'"
+        - "Judges others harshly for compromising values"
+
+  similarities:
+    shared_with_infp:
+      title: "Both Fi Heroes"
+      points:
+        - "Make decisions based on personal values"
+        - "Hero inflation creates moral superiority"
+        - "Struggle with external structure"
+    
+    shared_with_esfp:
+      title: "Both Fi-Se Users"
+      points:
+        - "Express authenticity through sensory action"
+        - "Parent helps Hero manifest values in real world"
+        - "Live in present moment"
+    
+    shared_with_istp:
+      title: "Both Introverted Perceivers"
+      points:
+        - "Prefer solo activities"
+        - "Hero-Child loops isolate from world"
+        - "Both have Fe/Te inferior struggles"

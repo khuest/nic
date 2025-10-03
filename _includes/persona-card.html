@@ -1,0 +1,45 @@
+<!-- Persona Card (like TCG) -->
+<div class="card" style="--header-color: {{ info.color_hex }}; --body-color: #f9f9f9;">
+  
+    <!-- Header -->
+    <div class="card-header" style="background: var(--header-color)">
+      <h3>{{ key | capitalize | replace: "-", " " }} ⚡{{ info.energy }}</h3>
+      <span class="element">{{ info.element }}</span>
+    </div>
+  
+    <!-- Artwork -->
+    <div class="card-artwork">
+      <img src="{{ site.baseurl }}/images/{{ info.image }}" alt="{{ info.image_alt_text }}" />
+    </div>
+  
+    <!-- Stats -->
+    <div class="card-stats">
+      <p>🔮 {{ info.intuition }} 👣 {{ info.sensing }} 🧠 {{ info.thinking }} 💖 {{ info.feeling }}</p>
+    </div>
+  
+    <!-- Mid-zone (element + benefits) -->
+    <div class="card-benefits">
+      <p><strong>Element:</strong> {{ info.element }} — {{ info.symbol }}</p>
+      <p><strong>Worldly Benefits:</strong> 
+        {% if info.stat_gains %}{{ info.stat_gains | join: ", " }}{% else %}Fame, Fortune, Influence{% endif %}
+      </p>
+    </div>
+  
+    <!-- Card Body -->
+    <div class="card-body" style="background: var(--body-color)">
+      <ul class="card-hooks">
+        {% if info.abilities %}
+          <li><strong>Abilities:</strong> {{ info.abilities | join: ", " }}</li>
+        {% endif %}
+        {% if info.vibe %}
+          <li><strong>Vibe:</strong> {{ info.vibe }}</li>
+        {% endif %}
+      </ul>
+  
+      <!-- Flavor Text -->
+      <div class="card-flavor">
+        <p>“{{ info.tagline }}”</p>
+      </div>
+    </div>
+  </div>
+  

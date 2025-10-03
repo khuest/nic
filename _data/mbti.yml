@@ -1,0 +1,207 @@
+INFJ:
+  archetype: Visionary
+  image: infj.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 9
+  sensing: 2
+  thinking: 4
+  feeling: 7
+  battle_gift: Pierces hearts with insight
+  armor_reflex: Self-erases to protect harmony
+  tagline: "A lantern in the storm."
+
+ENFJ:
+  archetype: Guide
+  image: enfj.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 7
+  sensing: 2
+  thinking: 4
+  feeling: 9
+  battle_gift: Inspires armies with empathy
+  armor_reflex: Overextends for the tribe
+  tagline: "Your hope is my mission."
+
+INTJ:
+  archetype: Strategist
+  image: intj.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 9
+  sensing: 2
+  thinking: 7
+  feeling: 4
+  battle_gift: Master of unseen plans
+  armor_reflex: Rejects feelings as weakness
+  tagline: "I already saw this ending."
+
+ENTJ:
+  archetype: Commander
+  image: entj.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 7
+  sensing: 2
+  thinking: 9
+  feeling: 4
+  battle_gift: Tactical domination
+  armor_reflex: Commands even when unneeded
+  tagline: "Lead, or be led."
+
+INTP:
+  archetype: Architect
+  image: intp.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 7
+  sensing: 2
+  thinking: 9
+  feeling: 4
+  battle_gift: Infinite mental blueprints
+  armor_reflex: Retreats into analysis
+  tagline: "The world is a puzzle worth solving."
+
+ENTP:
+  archetype: Inventor
+  image: entp.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 9
+  sensing: 2
+  thinking: 7
+  feeling: 4
+  battle_gift: Chaos sparks creation
+  armor_reflex: Argues for the thrill
+  tagline: "Every lock begs for a key."
+
+ISTP:
+  archetype: Operator
+  image: istp.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 2
+  sensing: 9
+  thinking: 7
+  feeling: 4
+  battle_gift: Precision in the moment
+  armor_reflex: Cuts off emotion to act
+  tagline: "Silence speaks through skill."
+
+ESTP:
+  archetype: Performer
+  image: estp.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 2
+  sensing: 9
+  thinking: 7
+  feeling: 4
+  battle_gift: Thrives in high-stakes chaos
+  armor_reflex: Rushes before reflecting
+  tagline: "Life is best played at full speed."
+
+ISFP:
+  archetype: Artisan
+  image: isfp.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Soul expressed in color
+  armor_reflex: Withdraws under pressure
+  tagline: "Beauty is my quiet weapon."
+
+ESFP:
+  archetype: Entertainer
+  image: esfp.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Lights up any arena
+  armor_reflex: Spends energy too fast
+  tagline: "Joy is my battlefield."
+
+ISTJ:
+  archetype: Inspector
+  image: istj.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 2
+  sensing: 9
+  thinking: 7
+  feeling: 4
+  battle_gift: Steadfast defender
+  armor_reflex: Resists needed change
+  tagline: "The rules protect us all."
+
+ESTJ:
+  archetype: Organizer
+  image: estj.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 2
+  sensing: 7
+  thinking: 9
+  feeling: 4
+  battle_gift: Commands structure into being
+  armor_reflex: Over-controls the moment
+  tagline: "Order is victory."
+
+ISFJ:
+  archetype: Caretaker
+  image: isfj.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Quiet, unwavering nurture
+  armor_reflex: Overgives until empty
+  tagline: "I guard what I love."
+
+ESFJ:
+  archetype: Ambassador
+  image: esfj.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Heartfelt shield of community
+  armor_reflex: Pleases until broken
+  tagline: "Together, we thrive."
+
+INFP:
+  archetype: Dreamweaver
+  image: infp.png
+  iamge_alt_text: "placeholder"
+  energy: 1-3 pax
+  intuition: 9
+  sensing: 2
+  thinking: 4
+  feeling: 7
+  battle_gift: Weaves worlds of meaning
+  armor_reflex: Retreats into fantasy
+  tagline: "A fragile hope, fiercely kept."
+
+ENFP:
+  archetype: Pathfinder
+  image: enfp.png
+  iamge_alt_text: "placeholder"
+  energy: ≥4 pax
+  intuition: 9
+  sensing: 2
+  thinking: 4
+  feeling: 7
+  battle_gift: Sparks endless adventures
+  armor_reflex: Scatters energy too wide
+  tagline: "The map is alive in my heart."

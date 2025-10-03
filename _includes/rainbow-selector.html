@@ -1,0 +1,125 @@
+<!-- Rainbow Persona Selector -->
+<div class="rainbow-section">
+  <p class="rainbow-instructions">
+    <span class="desktop-only">Hover a color to reveal its card.</span>
+    <span class="mobile-only">Tap a color to reveal its card.</span>
+  </p>
+
+  <!-- Rainbow Bar -->
+  <div class="rainbow-bar">
+    <button class="red" data-target="creative-performer" aria-label="Creative Performer"></button>
+    <button class="orange" data-target="social-butterfly" aria-label="Social Butterfly"></button>
+    <button class="yellow" data-target="gadget-tinker" aria-label="Gadget Tinker"></button>
+    <button class="green" data-target="charming-naturalist" aria-label="Charming Naturalist"></button>
+    <button class="blue" data-target="corporate-climber" aria-label="Corporate Climber"></button>
+    <button class="indigo" data-target="streetwise-rogue" aria-label="Streetwise Rogue"></button>
+    <button class="violet" data-target="stargazing-dreamer" aria-label="Stargazing Dreamer"></button>
+  </div>
+
+  <!-- Persona Cards Container -->
+  <div class="persona-cards">
+    {% if site.data.persona %}
+      <!-- Use Jekyll data if available -->
+      {% for persona in site.data.persona %}
+        {% assign key = persona[0] %}
+        {% assign info = persona[1] %}
+        <div class="persona-card" id="{{ key }}">
+          <h3>{{ info.symbol }} {{ key | replace: '-', ' ' | capitalize }}</h3>
+          <div class="persona-content">
+            <p><strong>Element:</strong> {{ info.element }}</p>
+            <p><strong>Creature:</strong> {{ info.mythical_creature }}</p>
+            <p><strong>Vibe:</strong> {{ info.vibe }}</p>
+            <p><strong>Tagline:</strong> <em>"{{ info.tagline }}"</em></p>
+            
+            <div class="persona-stats">
+              <h4>Requirements:</h4>
+              <ul>
+                {% for req in info.requirements %}
+                  <li>{{ req }}</li>
+                {% endfor %}
+              </ul>
+              
+              <h4>Abilities:</h4>
+              <ul>
+                {% for ability in info.abilities %}
+                  <li>{{ ability }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <!-- Fallback static content -->
+      <div class="persona-card" id="creative-performer">
+        <h3>🎨 Creative Performer</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Fire</p>
+          <p><strong>Creature:</strong> Phoenix</p>
+          <p><strong>Vibe:</strong> Passion, rebirth, flare</p>
+          <p><strong>Tagline:</strong> <em>"Ignite the stage, rise like fire!"</em></p>
+        </div>
+      </div>
+
+      <div class="persona-card" id="social-butterfly">
+        <h3>🦋 Social Butterfly</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Air</p>
+          <p><strong>Creature:</strong> Sylph</p>
+          <p><strong>Vibe:</strong> Charm, movement, connection</p>
+          <p><strong>Tagline:</strong> <em>"Every room is your sky to soar!"</em></p>
+        </div>
+      </div>
+
+      <div class="persona-card" id="gadget-tinker">
+        <h3>⚡ Gadget Tinker</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Lightning</p>
+          <p><strong>Creature:</strong> Celestial Automaton</p>
+          <p><strong>Vibe:</strong> Innovation, spark, divine logic</p>
+          <p><strong>Tagline:</strong> <em>"Turn sparks into wonders!"</em></p>
+        </div>
+      </div>
+
+      <div class="persona-card" id="charming-naturalist">
+        <h3>🌿 Charming Naturalist</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Earth</p>
+          <p><strong>Creature:</strong> Earthkin</p>
+          <p><strong>Vibe:</strong> Growth, grounding, harmony</p>
+          <p><strong>Tagline:</strong> <em>"Rooted in growth, flowing with life."</em></p>
+        </div>
+      </div>
+
+      <div class="persona-card" id="corporate-climber">
+        <h3>🏢 Corporate Climber</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Metal</p>
+          <p><strong>Creature:</strong> Eastern Dragon</p>
+          <p><strong>Vibe:</strong> Strategy, legacy, ambition</p>
+          <p><strong>Tagline:</strong> <em>"Step by step, the tower is yours."</em></p>
+        </div>
+      </div>
+
+      <div class="persona-card" id="streetwise-rogue">
+        <h3>🗡️ Streetwise Rogue</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Shadow</p>
+          <p><strong>Creature:</strong> Chimera</p>
+          <p><strong>Vibe:</strong> Adaptation, survival, trickery</p>
+          <p><strong>Tagline:</strong> <em>"Trick the night, survive the game."</em></p>
+        </div>
+      </div>
+
+      <div class="persona-card" id="stargazing-dreamer">
+        <h3>🌌 Stargazing Dreamer</h3>
+        <div class="persona-content">
+          <p><strong>Element:</strong> Aether</p>
+          <p><strong>Creature:</strong> Unicorn</p>
+          <p><strong>Vibe:</strong> Vision, transcendence, purity</p>
+          <p><strong>Tagline:</strong> <em>"Eyes on the stars, feet on the path."</em></p>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

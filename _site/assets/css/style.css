@@ -1,0 +1,732 @@
+/* ==============================
+   :root variables
+   ============================== */
+   :root {
+    --bg: #0b1020;
+    --card: #121a33;
+    --text: #e8ecf3;
+    --muted: #9fb0c7;
+    --accent: #7aa2f7;
+    --border: #24314f;
+    --shadow: 0 6px 30px rgba(0,0,0,.35);
+    --radius: 16px;
+    --maxw: 960px;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #0e1726;
+      --muted: #586273;
+      --accent: #2563eb;
+      --border: #e6eaf2;
+      --shadow: 0 6px 30px rgba(0,0,0,.08);
+    }
+  }
+  
+  /* ==============================
+     Reset & Body
+     ============================== */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; }
+  body { background: var(--bg); color: var(--text); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  /* ==============================
+     Header + nav + dropdown
+     ============================== */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  header .wrap.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 20px;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none; /* remove underline from <a> */
+    color: inherit;        /* keep text color */
+  }  
+  header .logo { height: 48px; width: auto; }
+  .menu a { margin-left: 16px; padding: 8px 12px; border-radius: 10px; }
+  .menu a.cta { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+
+  .nav .shop-link {
+    display: none; /* hide initially */
+  }  
+  
+  /* Responsive header */
+  @media (max-width: 600px) {
+    header .wrap.nav {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 12px 20px;
+    }
+    header .logo { height: 36px; }
+    .sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      margin-bottom: 20px;
+    }
+    
+    main {
+      margin-left: 0;
+      padding: 20px;
+    }
+    
+  }
+
+   .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 16px;
+  }
+  
+  .dropbtn:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--card);
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    z-index: 10;
+    margin-top: 4px;
+  }
+  
+  .dropdown-content a {
+    color: var(--text);
+    padding: 10px 16px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--accent);
+    color: #fff;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* shows the dropdown on hover */
+  }
+
+  /* Tooltip styling */
+  .tooltip {
+    visibility: hidden;
+    background-color: var(--card);
+    color: var(--text);
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 20;
+    top: 50%;       /* vertically centered */
+    right: 110%;    /* place it to the left of the button */
+    transform: translateY(-50%);
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+  }
+  
+  .dropbtn:hover .tooltip {
+    visibility: visible;
+  }
+  
+  .hamburger {
+    display: none; /* show only on small screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .hamburger div {
+    height: 4px;
+    background-color: var(--text);
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 600px) {
+    .menu { display: none; } /* hide normal menu */
+    .hamburger { display: flex; } /* show hamburger */
+  }
+
+  /* Show menu when hamburger is clicked */
+  .menu.open {
+    display: flex !important; /* force menu visible */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 12px;
+    background: var(--card);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  
+
+  
+/* ==============================
+   Sidebar
+   ============================== */
+   .sidebar {
+    width: 220px;
+    position: fixed;
+    top: 80px; /* below header */
+    left: 0;
+    padding: 20px;
+    background: var(--card);
+    border-right: 1px solid var(--border);
+    height: calc(100% - 80px);
+    overflow-y: auto;
+  }
+  
+  .sidebar h4 {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 8px 0;
+  }
+  
+  .sidebar ul li a {
+    color: var(--text);
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .sidebar ul li a:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  
+  @media (max-width: 600px) {
+      .sidebar {
+        position: static;
+        width: 100%;      /* full width */
+        height: auto;     /* shrink naturally */
+        border-right: none;
+        margin-bottom: 20px;
+        padding: 12px 16px; /* optional: tighter padding */
+      }
+
+      main {
+        margin-left: 0;   /* remove space for sidebar */
+        padding: 20px;
+      }
+    }
+  
+  /* ==============================
+     Layout Wrappers
+     ============================== */
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  
+  /* ==============================
+     Hero Section
+     ============================== */
+  .hero { padding: 72px 20px 36px; text-align: center; }
+  h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; }
+  p.lead { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); background: var(--card); border-radius: 999px; font-size: 14px; }
+  
+
+/* ==============================
+   Persona Cards (floating overlays)
+============================== */
+
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+
+@media (hover: none) and (pointer: coarse) {
+  .desktop-only { display: none; }
+  .mobile-only { display: inline; }
+}
+
+/* Card wrapper - hidden until triggered */
+.persona-card {
+  position: absolute;         /* overlay style, not grid */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 220px;
+  height: 340px;
+  background: #fdfdfb;
+  border: 3px solid #000;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 15px rgba(0,0,0,.25);
+  overflow: hidden;
+  opacity: 0;                 /* start hidden */
+  pointer-events: none;       /* no interaction until shown */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+/* When JS adds an "active" class */
+.persona-card.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Persona Header */
+.persona-card h3 {
+  margin: 0;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: var(--header-color, #666);
+  border-bottom: 2px solid #000;
+}
+
+/* Persona Body */
+.persona-card p {
+  flex-grow: 1;
+  padding: 10px;
+  margin: 0;
+  font-size: 0.8rem;
+  color: #222;
+  background: var(--body-color, #f8f8f8);
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Hover glow (future when whole card clickable) */
+.persona-card:hover {
+  box-shadow: 
+    0 0 10px 3px rgba(0,0,0,0.25),
+    0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+/* Rainbow Color Themes */
+#creative-performer   { --header-color: #e63946; --body-color: #ffe5e5; } /* Red */
+#social-butterfly    { --header-color: #ff9f1c; --body-color: #fff2e0; } /* Orange */
+#gadget-tinker       { --header-color: #ffd60a; --body-color: #fffbe5; } /* Yellow */
+#charming-naturalist { --header-color: #2ec4b6; --body-color: #e5fafa; } /* Green */
+#corporate-climber   { --header-color: #4361ee; --body-color: #e8f0ff; } /* Blue */
+#streetwise-rogue    { --header-color: #5a189a; --body-color: #f3e8ff; } /* Indigo */
+#stargazing-dreamer  { --header-color: #7209b7; --body-color: #f8e5ff; } /* Violet */
+
+/* Pretty rainbow arc */
+.rainbow-bar {
+  width: 400px;
+  height: 200px;
+  border-radius: 200px 200px 0 0;
+  background: conic-gradient(
+    red 0deg 51deg,
+    orange 51deg 102deg,
+    yellow 102deg 153deg,
+    green 153deg 204deg,
+    blue 204deg 255deg,
+    indigo 255deg 306deg,
+    violet 306deg 360deg
+  );
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transparent click zones aligned to arc */
+.rainbow-zone {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80px;
+  height: 180px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transform-origin: bottom center;
+}
+
+/* Rotate each zone to match rainbow slices */
+.rainbow-zone:nth-child(1) { transform: rotate(-60deg) translateX(-50%); }
+.rainbow-zone:nth-child(2) { transform: rotate(-40deg) translateX(-50%); }
+.rainbow-zone:nth-child(3) { transform: rotate(-20deg) translateX(-50%); }
+.rainbow-zone:nth-child(4) { transform: rotate(0deg)   translateX(-50%); }
+.rainbow-zone:nth-child(5) { transform: rotate(20deg)  translateX(-50%); }
+.rainbow-zone:nth-child(6) { transform: rotate(40deg)  translateX(-50%); }
+.rainbow-zone:nth-child(7) { transform: rotate(60deg)  translateX(-50%); }
+
+
+
+
+/* ==============================
+   Grid for Self
+============================== */
+.grid {
+  display: grid;
+  gap: 18px;
+  padding: 30px 20px 60px;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: calc(4 * 200px + 3 * 18px);
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); max-width: calc(2 * 200px + 1 * 18px); }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; max-width: 100%; justify-items: center;}
+}
+
+/* ==============================
+   Self Card
+============================== */
+.card-link { text-decoration: none; color: inherit; display: block; }
+.card-link:hover { text-decoration: none; }
+
+/* Card container */
+.card {
+  background: #fdfdfb;
+  border: 3px solid #000;
+  border-radius: 14px;
+  width: 200px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px rgba(0,0,0,.25);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;   /* take full column width */
+    max-width: 500px; /* optional: limit so it's not too wide */
+    margin: 0 auto;   /* center the card */
+  }
+}
+
+/* Hover glow and lift */
+.card-link:hover .card {
+  transform: translateY(-6px);
+  cursor: pointer;
+  box-shadow: 
+    0 0 8px 2px rgba(0,0,0,0.25),
+    0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
+}
+
+/* ==============================
+   Card Header
+============================== */
+.card-header {
+  background: var(--header-color);
+  color: var(--card);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  height: 24px;        /* fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-header h3 { margin: 0; font-size: inherit; font-weight: inherit; }
+
+/* ==============================
+   Artwork
+============================== */
+.card img {
+  width: 100%;
+  height: 144px;      /* fixed height */
+  object-fit: cover;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+
+}
+
+.card img::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+/* ==============================
+   Stats row
+============================== */
+.card-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff8;
+  border-bottom: 1px solid #000;
+  padding: 4px 2px;
+  font-size: clamp(0.55rem,1.2vw,0.75rem);
+  font-weight: bold;
+  color: #111;
+  text-shadow: 0 0 1px #fff;
+  white-space: nowrap;
+  height: 20px;      /* fixed height */
+}
+
+/* ==============================
+   Card body
+============================== */
+.card-body {
+  background: var(--body-color);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: #222;
+  font-size: clamp(0.55rem,1.2vw,0.75rem);
+  overflow: hidden;
+}
+
+/* Hooks: always top, fills space above tagline */
+.card-hooks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 6px 0;
+  font-size: clamp(0.5rem,1vw,0.65rem);
+  line-height: 1.3;
+  color: #222;
+  flex-grow: 1;
+}
+
+/* Tagline: always bottom, fixed height */
+.card-flavor {
+  font-style: italic;
+  font-size: clamp(0.45rem,0.9vw,0.6rem);
+  color: #444;
+  border-top: 1px solid var(--border, #000);
+  margin: 0;
+  padding-top: 4px;
+  text-align: center;
+  flex-shrink: 0;
+  height: 32px; /* fixed height for uniformity */
+}
+
+  
+
+  /* ====================================
+     Main content + buttons + outputs
+     ==================================== */
+  main {
+    margin-left: 240px; /* leave space for sidebar */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .self-page main {
+    margin-left: 0; /* no offset needed */
+  }
+
+  button { padding: 10px 16px; font-size: 16px; cursor: pointer; }
+  #output {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2563eb;
+    transition: transform 0.15s ease, color 0.2s ease;
+    text-align: center;
+  }
+
+  #helloBtn, #resetBtn {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    margin: 8px;
+    transition: transform 0.1s ease, background 0.2s ease;
+    box-shadow: var(--shadow);
+  }
+  
+  #helloBtn:hover, #resetBtn:hover {
+    background: #5e87e0; /* slightly darker accent */
+    transform: translateY(-2px);
+  }
+
+  #fetchBtn, #quiz button {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    margin: 4px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.1s ease, background 0.2s ease;
+  }
+  #fetchBtn:hover, #quiz button:hover {
+    transform: translateY(-2px);
+    background: #5e87e0;
+  }
+  
+  #fetchOutput {
+    background: var(--card);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    overflow-x: auto;
+    font-family: monospace;
+  }
+  
+  /* ==============================
+     Markdown Elements
+     ============================== */
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+  th { background-color: var(--card); }
+  tr:nth-child(even) { background-color: color-mix(in hsl, var(--card) 90%, transparent); }
+  /* Lists */
+  ul, ol {
+    padding-left: 20px;
+    margin: 12px 0;
+    list-style-position: inside;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  /* Nested lists fix */
+  ul ul, ol ol {
+    margin-left: 20px;
+  }
+
+  /* Code blocks */
+  pre {
+    background-color: #0a0f1e;
+    color: #e6edf3;
+    padding: 16px;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid #1d2946;
+    margin: 16px 0;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Inline code */
+  code {
+    background-color: rgba(122, 162, 247, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Make sure code inside pre uses the same background */
+  pre code {
+    background: none;
+    padding: 0;
+  }
+  img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
+  blockquote { border-left: 3px solid var(--accent); padding-left: 12px; color: var(--muted); margin: 12px 0; }
+  .small-logo {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  video, audio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  
+/* ==============================
+ Footer
+============================== */   
+ footer {
+  background: var(--card);
+  border-top: 4px solid var(--accent);
+  text-align: center;
+  padding: 16px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-muted, #666);
+}
+ 
+ footer p {
+  margin: 0;
+}
+ 
+ .footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav a {
+  margin: 0 8px;
+  color: var(--text-muted, #666);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.socials a {
+  margin: 0 6px;
+  font-size: 18px;
+  color: var(--text-muted, #666);
+}
+
+.socials a:hover {
+  color: var(--accent);
+}

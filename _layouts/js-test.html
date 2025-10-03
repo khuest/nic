@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.png" type="image/png">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <!-- Base styles (global) -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+  <!-- Header & Footer styles only -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/quiz-gacha.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/quiz.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/test.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/xp.css">
+
+  <script>
+    const BASEURL = "{{ site.baseurl }}";
+  
+    // Load quiz data from _data/quiz/ folder
+    window.siteQuizData = {};
+    {% for quiz_file in site.data.quiz %}
+    window.siteQuizData["{{ quiz_file[1].slug }}"] = {{ quiz_file[1] | jsonify }};
+    {% endfor %}
+  </script>
+
+  <!-- Header & Quiz JS only -->
+  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/quiz-gacha.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/quiz.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/test.js" defer></script>
+  <script>
+  const xpMessages = {{ site.data.motivation.xp_messages | jsonify }};
+</script>
+  <script src="{{ site.baseurl }}/assets/js/xp.js" defer></script>
+  
+</head>
+
+<body>
+
+  {% include header.html %}
+  <main>
+  
+  <!-- Space for new quiz-gacha -->
+  {% include quiz-gacha.html %}
+
+  <div id="debug"></div>
+  
+  <section class="quiz-spam-section">
+    <div id="spamMessage" class="spam-message">I want a better life!</div>
+    <button id="spamBtn" class="spam-btn">YES!!</button>
+  </section>
+
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+  
+  {% include xp.html %}
+  
+  </footer>
+</body>
+</html>

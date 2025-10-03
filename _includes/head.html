@@ -1,0 +1,100 @@
+<!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>{{ page.title | default: site.title }}</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  {% if page.css %}
+    {% for cssfile in page.css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ cssfile }}">
+    {% endfor %}
+  {% endif %}
+
+  <!-- Social / OG Meta Tags -->
+  {% unless page.social_meta == false %}
+    {% assign og_title = page.hero_title | default: page.title | default: site.title %}
+    {% assign og_description = page.hero_subtitle | default: page.description | default: site.description %}
+    {% assign hero_filename = page.hero_image | default: "default-og-image.png" %}
+    {% assign og_image = site.baseurl | append: "/assets/images/" | append: hero_filename %}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ og_title }}">
+    <meta property="og:description" content="{{ og_description }}">
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ og_title }}">
+    <meta name="twitter:description" content="{{ og_description }}">
+    <meta name="twitter:image" content="{{ og_image }}">
+  {% endunless %}
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "{{ site.baseurl }}";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    {{ site.data.motivation.xp_messages | jsonify }}
+  </script>
+
+  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>  
+  <script src="{{ site.baseurl }}/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  {% if page.js %}
+    {% for jsfile in page.js %}
+      <script src="{{ site.baseurl }}/assets/js/{{ jsfile }}" defer></script>
+    {% endfor %}
+  {% endif %}
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  

@@ -1,0 +1,104 @@
+title: "Which Dessert Are You?"
+card-title: "Dessert"
+slug: "dessert-quiz"
+description: "Are you a bold brownie, a dreamy cheesecake, a playful donut, or a classic ice cream sundae? Take this sweet quiz to find out."
+picture: "dessert.png"
+
+questions:
+  - id: q1
+    text: "What’s your ideal Friday night vibe?"
+    image: "friday.jpg"
+    options:
+      - text: "Hanging with friends, full of energy 🎉"
+        value: "donut"
+      - text: "Cozy at home, Netflix + chill 🍿"
+        value: "brownie"
+      - text: "Romantic dinner with someone special 💕"
+        value: "cheesecake"
+      - text: "Fun and spontaneous adventure 🌟"
+        value: "sundae"
+
+  - id: q2
+    text: "Pick a flavor profile:"
+    image: "flavor.jpg"
+    options:
+      - text: "Rich and chocolatey 🍫"
+        value: "brownie"
+      - text: "Smooth and creamy 🍰"
+        value: "cheesecake"
+      - text: "Sweet and colorful 🍩"
+        value: "donut"
+      - text: "Cool and refreshing 🍨"
+        value: "sundae"
+
+  - id: q3
+    text: "How do your friends describe you?"
+    image: "friends.jpg"
+    options:
+      - text: "Dependable and comforting"
+        value: "brownie"
+      - text: "Elegant and charming"
+        value: "cheesecake"
+      - text: "Playful and fun-loving"
+        value: "donut"
+      - text: "Creative and mix-it-up"
+        value: "sundae"
+
+  - id: q4
+    text: "What’s your go-to mood booster?"
+    image: "booster.jpg"
+    options:
+      - text: "Good music 🎶"
+        value: "donut"
+      - text: "Warm blanket 🛋️"
+        value: "brownie"
+      - text: "Candlelight bath 🕯️"
+        value: "cheesecake"
+      - text: "Trying something new ✨"
+        value: "sundae"
+
+  - id: q5
+    text: "Which color palette feels most *you*?"
+    image: "colors.jpg"
+    options:
+      - text: "Deep browns and warm neutrals"
+        value: "brownie"
+      - text: "Creamy whites and soft pastels"
+        value: "cheesecake"
+      - text: "Bright pinks and sprinkles"
+        value: "donut"
+      - text: "Rainbow mix, bold and fun"
+        value: "sundae"
+
+results:
+  brownie:
+    title: "Brownie 🍫"
+    description: "You’re comforting, reliable, and everyone’s favorite cozy vibe. You keep things grounded but still deliver joy in every bite. People know they can count on you when they need warmth and stability."
+    image: "brownie.jpg"
+    traits: ["Comforting", "Reliable", "Grounded", "Warm", "Classic"]
+    sweet_powers: ["Mood Soother", "Dependable Energy", "Rich Presence", "Grounded Spirit", "Comfort Vibes"]
+    redirect: "/persona/brownie.html"
+
+  cheesecake:
+    title: "Cheesecake 🍰"
+    description: "Smooth, classy, and irresistible — that’s you. You know how to leave a lasting impression with your charm and elegance. People are drawn to your balance of sweetness and sophistication."
+    image: "cheesecake.jpg"
+    traits: ["Charming", "Elegant", "Memorable", "Balanced", "Sophisticated"]
+    sweet_powers: ["Charm Glow", "Smooth Talker", "Lasting Impression", "Balance Keeper", "Delight Factor"]
+    redirect: "/persona/cheesecake.html"
+
+  donut:
+    title: "Donut 🍩"
+    description: "You’re playful, fun, and always the life of the party. With your colorful personality and endless energy, you light up any room you enter. People can’t help but smile when you’re around."
+    image: "donut.jpg"
+    traits: ["Playful", "Energetic", "Colorful", "Lively", "Spontaneous"]
+    sweet_powers: ["Joy Spreader", "Energy Burst", "Color Splash", "Mood Lifter", "Play Vibes"]
+    redirect: "/persona/donut.html"
+
+  sundae:
+    title: "Ice Cream Sundae 🍨"
+    description: "You’re creative, adventurous, and full of surprises. People love your mix of fun flavors and spontaneity. Life with you is never boring — you always know how to turn an ordinary day into something special."
+    image: "sundae.jpg"
+    traits: ["Creative", "Adventurous", "Surprising", "Fun", "Inventive"]
+    sweet_powers: ["Flavor Mix", "Adventure Spark", "Joy Creator", "Cool Energy", "Surprise Factor"]
+    redirect: "/persona/sundae.html"

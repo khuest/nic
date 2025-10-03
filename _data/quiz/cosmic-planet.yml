@@ -1,0 +1,104 @@
+title: "Which Cosmic Planet Are You?"
+card-title: "Cosmic Planet"
+slug: "cosmic-planet"
+description: "Find out whether your soul aligns with fiery Mars, dreamy Neptune, radiant Venus, or wise Saturn."
+picture: "cosmic-planet.png"
+
+questions:
+  - id: q1
+    text: "How do you usually vibe in a group?"
+    image: "group.jpg"
+    options:
+      - text: "Take charge and push forward 💪"
+        value: "mars"
+      - text: "Keep it chill and dreamy 🌊"
+        value: "neptune"
+      - text: "Spread love and harmony 💕"
+        value: "venus"
+      - text: "Lay down structure and order 📏"
+        value: "saturn"
+
+  - id: q2
+    text: "Pick your ideal weekend activity:"
+    image: "weekend.jpg"
+    options:
+      - text: "Adventure or workout"
+        value: "mars"
+      - text: "Daydreaming or art-making"
+        value: "neptune"
+      - text: "Date night or social gathering"
+        value: "venus"
+      - text: "Planning and building projects"
+        value: "saturn"
+
+  - id: q3
+    text: "What’s your hidden strength?"
+    image: "strength.jpg"
+    options:
+      - text: "Bravery in tough moments"
+        value: "mars"
+      - text: "Intuition that feels magical"
+        value: "neptune"
+      - text: "Charm that brings people together"
+        value: "venus"
+      - text: "Discipline when it counts"
+        value: "saturn"
+
+  - id: q4
+    text: "How do you handle failure?"
+    image: "failure.jpg"
+    options:
+      - text: "Get back up and fight harder"
+        value: "mars"
+      - text: "Drift, reflect, and find new meaning"
+        value: "neptune"
+      - text: "Lean on friends for comfort"
+        value: "venus"
+      - text: "Analyze mistakes and improve"
+        value: "saturn"
+
+  - id: q5
+    text: "Which aesthetic matches your energy?"
+    image: "aesthetic.jpg"
+    options:
+      - text: "Red and bold ⚡"
+        value: "mars"
+      - text: "Blue and mystical 🌌"
+        value: "neptune"
+      - text: "Pink and golden 🌹"
+        value: "venus"
+      - text: "Black and silver ⌛"
+        value: "saturn"
+
+results:
+  mars:
+    title: "Mars 🔴"
+    description: "You’re bold, fiery, and full of drive. People feel your energy the second you walk in. Like Mars, you thrive in action and competition. Just don’t forget to balance intensity with patience."
+    image: "mars.jpg"
+    traits: ["Energetic", "Brave", "Passionate", "Direct", "Competitive"]
+    cosmic_gifts: ["Fearless Drive", "Raw Energy", "Quick Action", "Bold Spirit", "Leadership"]
+    redirect: "/persona/mars.html"
+
+  neptune:
+    title: "Neptune 🌊"
+    description: "You’re dreamy, intuitive, and creative. You float between worlds of imagination and reality. Like Neptune, you inspire others with your depth and artistry. Your challenge is staying grounded."
+    image: "neptune.jpg"
+    traits: ["Dreamy", "Intuitive", "Creative", "Compassionate", "Mystical"]
+    cosmic_gifts: ["Deep Intuition", "Boundless Imagination", "Artistic Flow", "Empathy", "Spiritual Insight"]
+    redirect: "/persona/neptune.html"
+
+  venus:
+    title: "Venus 💕"
+    description: "You radiate love, beauty, and connection. Like Venus, you attract harmony and joy. People naturally gather around your warmth. Just be mindful not to lose yourself in pleasing others."
+    image: "venus.jpg"
+    traits: ["Loving", "Charming", "Harmonious", "Social", "Magnetic"]
+    cosmic_gifts: ["Magnetic Charm", "Heart-Centered Energy", "Beauty Sense", "Connection", "Harmony"]
+    redirect: "/persona/venus.html"
+
+  saturn:
+    title: "Saturn ⌛"
+    description: "You’re disciplined, wise, and grounded. Like Saturn, you value structure and growth through challenges. You’re the rock others lean on. Just watch out for being too rigid with yourself."
+    image: "saturn.jpg"
+    traits: ["Wise", "Grounded", "Disciplined", "Resilient", "Responsible"]
+    cosmic_gifts: ["Patience", "Strategic Thinking", "Long-Term Vision", "Steadfastness", "Endurance"]
+    redirect: "/persona/saturn.html"

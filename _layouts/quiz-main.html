@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  <script id="quiz-data" type="application/json">
+    {
+      {% for quiz_file in site.data.quiz %}
+      "{{ quiz_file[1].slug }}": {{ quiz_file[1] | jsonify }}{% if forloop.last == false %},{% endif %}
+      {% endfor %}
+    }
+  </script>
+
+  {% include header.html %}
+  <main class="main--{{ page.hero_style | default: 'standard' }}">
+    <section class="hero">
+      <h1>{{ page.hero_title }}</h1>
+      <p class="lead">{{ page.hero_subtitle }}</p>
+    </section>
+    
+  
+    <!-- Space for new quiz-gacha -->
+    {% include quiz-gacha.html %}
+  
+    {{ content }}
+
+    <section class="quiz-spam-section">
+      <div id="spamMessage" class="spam-message">I want a better life!</div>
+      <button id="spamBtn" class="spam-btn">YES!!</button>
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+  
+  {% include xp.html %}
+  
+  </footer>
+</body>
+</html>

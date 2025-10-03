@@ -1,0 +1,55 @@
+/* Collapsible Section Styles - Dark Theme */
+.collapsible-section {
+  margin: 2rem 0;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0rem 0;
+  border-bottom: 2px solid var(--border);
+  transition: border-color 0.3s ease;
+}
+
+.collapsible-header:hover {
+  border-color: var(--accent);
+}
+
+.collapsible-header h2 {
+  margin: 0;
+  flex: 1;
+  color: var(--text);
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--muted);
+  user-select: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  min-width: 30px;
+  text-align: right;
+  position: relative;
+  top: 20px;
+}
+
+.collapsible-header:hover .toggle-icon {
+  color: var(--accent-light);
+}
+
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  max-height: 5000px;
+  opacity: 1;
+  padding: 1rem 0;
+}
+
+.collapsible-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}

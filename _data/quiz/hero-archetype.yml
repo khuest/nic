@@ -1,0 +1,143 @@
+title: "What Legendary Hero Archetype Are You?"
+card-title: "Hero Archetype"
+slug: "hero-archetype"
+description: "Discover whether you’re destined to be a Warrior, Sage, Trickster, or Healer on your heroic journey."
+picture: "hero-archetype.png"
+
+questions:
+  - id: q1
+    text: "How do you begin your journey?"
+    image: "journey.jpg"
+    options:
+      - text: "With sword in hand ⚔️"
+        value: "warrior"
+      - text: "With scrolls and wisdom 📜"
+        value: "sage"
+      - text: "With wit and mischief 😏"
+        value: "trickster"
+      - text: "With compassion and care 🌿"
+        value: "healer"
+
+  - id: q2
+    text: "What do you value most?"
+    image: "values.jpg"
+    options:
+      - text: "Honor and victory"
+        value: "warrior"
+      - text: "Knowledge and truth"
+        value: "sage"
+      - text: "Freedom and fun"
+        value: "trickster"
+      - text: "Harmony and healing"
+        value: "healer"
+
+  - id: q3
+    text: "When conflict arises, you..."
+    image: "conflict.jpg"
+    options:
+      - text: "Charge into battle"
+        value: "warrior"
+      - text: "Seek understanding first"
+        value: "sage"
+      - text: "Outsmart your opponent"
+        value: "trickster"
+      - text: "Find peaceful resolution"
+        value: "healer"
+
+  - id: q4
+    text: "What role do you play in a group?"
+    image: "team.jpg"
+    options:
+      - text: "Protector and fighter"
+        value: "warrior"
+      - text: "Advisor and strategist"
+        value: "sage"
+      - text: "Comic relief and innovator"
+        value: "trickster"
+      - text: "Caretaker and supporter"
+        value: "healer"
+
+  - id: q5
+    text: "What drives you forward?"
+    image: "motivation.jpg"
+    options:
+      - text: "Glory and justice"
+        value: "warrior"
+      - text: "Curiosity and insight"
+        value: "sage"
+      - text: "Adventure and laughter"
+        value: "trickster"
+      - text: "Love and empathy"
+        value: "healer"
+
+  - id: q6
+    text: "What is your greatest strength?"
+    image: "strength.jpg"
+    options:
+      - text: "Courage and endurance"
+        value: "warrior"
+      - text: "Wisdom and foresight"
+        value: "sage"
+      - text: "Creativity and adaptability"
+        value: "trickster"
+      - text: "Kindness and patience"
+        value: "healer"
+
+  - id: q7
+    text: "What’s your weakness?"
+    image: "weakness.jpg"
+    options:
+      - text: "Hot-headedness"
+        value: "warrior"
+      - text: "Overthinking"
+        value: "sage"
+      - text: "Recklessness"
+        value: "trickster"
+      - text: "Self-sacrifice"
+        value: "healer"
+
+  - id: q8
+    text: "Which symbol calls to you?"
+    image: "symbols.jpg"
+    options:
+      - text: "Shield"
+        value: "warrior"
+      - text: "Lantern"
+        value: "sage"
+      - text: "Mask"
+        value: "trickster"
+      - text: "Staff"
+        value: "healer"
+
+results:
+  warrior:
+    title: "The Warrior ⚔️"
+    description: "You are a protector and fighter at heart. Brave, strong, and relentless, you thrive when facing challenges head-on. You embody resilience and inspire others with your courage. While you may struggle with temper, your loyalty and sense of honor make you a steadfast ally."
+    image: "warrior.jpg"
+    traits: ["Brave", "Loyal", "Protective", "Honorable", "Resilient"]
+    legendary_gifts: ["Unyielding Strength", "Shield of Valor", "Battle Instincts", "Leadership", "Endurance"]
+    redirect: "/persona/warrior.html"
+
+  sage:
+    title: "The Sage 📜"
+    description: "You are guided by knowledge, reflection, and wisdom. Your gift is foresight—seeing beyond the surface and into deeper truths. Calm under pressure, you prefer reason over conflict. While you may sometimes overanalyze, your clarity and guidance light the way for others."
+    image: "sage.jpg"
+    traits: ["Wise", "Patient", "Strategic", "Insightful", "Calm"]
+    legendary_gifts: ["Prophecy", "Arcane Knowledge", "Guiding Light", "Mental Clarity", "Strategic Vision"]
+    redirect: "/persona/sage.html"
+
+  trickster:
+    title: "The Trickster 😏"
+    description: "You thrive on humor, creativity, and cleverness. Unpredictable and inventive, you challenge the rules and inspire others to see the world differently. Sometimes reckless, you’re a spark of energy that keeps adventures lively and unexpected."
+    image: "trickster.jpg"
+    traits: ["Creative", "Playful", "Unpredictable", "Adaptable", "Energetic"]
+    legendary_gifts: ["Illusions", "Quick Wit", "Boundless Energy", "Cunning Plans", "Chaos Magic"]
+    redirect: "/persona/trickster.html"
+
+  healer:
+    title: "The Healer 🌿"
+    description: "Your gift is compassion. You bring balance, peace, and restoration to those around you. Gentle yet strong, you embody patience and empathy. While you may neglect your own needs, your ability to mend hearts and souls makes you essential in any journey."
+    image: "healer.jpg"
+    traits: ["Compassionate", "Patient", "Gentle", "Supportive", "Healing"]
+    legendary_gifts: ["Restorative Touch", "Emotional Empathy", "Natural Harmony", "Protective Aura", "Renewal Magic"]
+    redirect: "/persona/healer.html"

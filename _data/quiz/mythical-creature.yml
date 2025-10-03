@@ -1,0 +1,173 @@
+title: "What Mythical Creature Are You?"
+card-title: "Mythical Creature"
+slug: "mythical-creature"
+description: "Uncover your inner dragon, phoenix, unicorn, or griffin through this mystical journey."
+picture: "mythical-creature.png"
+
+questions:
+  - id: q1
+    text: "How do you face obstacles?"
+    image: "obstacles.jpg"
+    options:
+      - text: "With fiery determination 🔥"
+        value: "dragon"
+      - text: "With grace and rebirth 🌸"
+        value: "phoenix"
+      - text: "With calm wisdom 🦄"
+        value: "unicorn"
+      - text: "With strategic planning 🦅"
+        value: "griffin"
+
+  - id: q2
+    text: "Where do you feel most at home?"
+    image: "landscapes.jpg"
+    options:
+      - text: "Mountain caves ⛰️"
+        value: "dragon"
+      - text: "High in the sky ☁️"
+        value: "phoenix"
+      - text: "Enchanted forests 🌲"
+        value: "unicorn"
+      - text: "Ancient ruins 🏛️"
+        value: "griffin"
+
+  - id: q3
+    text: "What is your greatest strength?"
+    image: "strength.jpg"
+    options:
+      - text: "Raw power and dominance"
+        value: "dragon"
+      - text: "Ability to transform and adapt"
+        value: "phoenix"
+      - text: "Purity of heart and healing"
+        value: "unicorn"
+      - text: "Wisdom and keen insight"
+        value: "griffin"
+
+  - id: q4
+    text: "How do others see you?"
+    image: "perception.jpg"
+    options:
+      - text: "Intimidating but respected"
+        value: "dragon"
+      - text: "Inspiring and transformative"
+        value: "phoenix"
+      - text: "Gentle and trustworthy"
+        value: "unicorn"
+      - text: "Noble and mysterious"
+        value: "griffin"
+
+  - id: q5
+    text: "What motivates you most?"
+    image: "motivation.jpg"
+    options:
+      - text: "Building and protecting your legacy"
+        value: "dragon"
+      - text: "Rising above past failures"
+        value: "phoenix"
+      - text: "Helping others find their path"
+        value: "unicorn"
+      - text: "Seeking ancient knowledge"
+        value: "griffin"
+
+  - id: q6
+    text: "What's your approach to conflict?"
+    image: "conflict.jpg"
+    options:
+      - text: "Meet it head-on with overwhelming force"
+        value: "dragon"
+      - text: "Transform the situation entirely"
+        value: "phoenix"
+      - text: "Seek peaceful resolution"
+        value: "unicorn"
+      - text: "Analyze and strike strategically"
+        value: "griffin"
+
+  - id: q7
+    text: "What element calls to you?"
+    image: "elements.jpg"
+    options:
+      - text: "Fire - passionate and consuming 🔥"
+        value: "dragon"
+      - text: "Air - free and transformative 💨"
+        value: "phoenix"
+      - text: "Water - flowing and healing 💧"
+        value: "unicorn"
+      - text: "Earth - grounded and enduring 🌍"
+        value: "griffin"
+
+  - id: q8
+    text: "What's your ideal treasure?"
+    image: "treasure.jpg"
+    options:
+      - text: "Gold and precious gems"
+        value: "dragon"
+      - text: "Experiences and memories"
+        value: "phoenix"
+      - text: "Love and friendship"
+        value: "unicorn"
+      - text: "Ancient wisdom and secrets"
+        value: "griffin"
+
+  - id: q9
+    text: "How do you handle change?"
+    image: "change.jpg"
+    options:
+      - text: "Resist it unless it benefits me"
+        value: "dragon"
+        cf_value: "Si"  # Introverted Sensing - prefers familiar patterns
+      - text: "Embrace it as opportunity for growth"
+        value: "phoenix"
+        cf_value: "Ne"  # Extraverted Intuition - thrives on new possibilities
+      - text: "Accept it with gentle patience"
+        value: "unicorn"
+        cf_value: "Ni"  # Introverted Intuition - trusts the natural flow
+      - text: "Study it carefully before adapting"
+        value: "griffin"
+        cf_value: "Ti"  # Introverted Thinking - needs to understand first
+
+  - id: q10
+    text: "What's your ultimate goal?"
+    image: "goals.jpg"
+    options:
+      - text: "To rule and be remembered"
+        value: "dragon"
+      - text: "To inspire transformation in others"
+        value: "phoenix"
+      - text: "To bring healing to the world"
+        value: "unicorn"
+      - text: "To unlock the mysteries of existence"
+        value: "griffin"
+
+results:
+  dragon:
+    title: "Mighty Dragon 🐉"
+    description: "You are a force of nature - powerful, ambitious, and fiercely protective of what you hold dear. Like the ancient dragons, you command respect through strength and have an innate ability to lead. Your passionate nature burns bright, and you're not afraid to fight for what you believe in. Others may find you intimidating, but they also recognize your incredible capabilities and unwavering loyalty to those who earn your trust."
+    image: "dragon.jpg"
+    traits: ["Powerful", "Ambitious", "Protective", "Passionate", "Natural Leader"]
+    mythical_powers: ["Fire Breath", "Ancient Wisdom", "Treasure Guardian", "Flight", "Intimidation"]
+    redirect: "/persona/dragon.html"
+    
+  phoenix:
+    title: "Rising Phoenix 🔥"
+    description: "You embody the spirit of renewal and transformation. Like the legendary phoenix, you have an incredible ability to rise from challenges stronger than before. You inspire others through your resilience and your capacity to reinvent yourself. Change doesn't frighten you - it excites you as an opportunity for growth. Your presence brings hope to those around you, showing them that no setback is permanent."
+    image: "phoenix.jpg"
+    traits: ["Resilient", "Transformative", "Inspiring", "Adaptable", "Hopeful"]
+    mythical_powers: ["Rebirth", "Healing Tears", "Purifying Fire", "Eternal Life", "Inspiration"]
+    redirect: "/persona/phoenix.html"
+    
+  unicorn:
+    title: "Sacred Unicorn 🦄"
+    description: "You are a rare and precious soul with a pure heart and gentle spirit. Like the mystical unicorn, you possess an innate ability to heal and bring peace to chaotic situations. Your wisdom comes not from books but from deep intuition and connection to the natural world. Others are drawn to your authentic nature and find comfort in your presence. You have a gift for seeing the best in people and helping them find their true path."
+    image: "unicorn.jpg"
+    traits: ["Pure-hearted", "Intuitive", "Healing", "Gentle", "Wise"]
+    mythical_powers: ["Healing Magic", "Purification", "Forest Communication", "Truth Detection", "Divine Protection"]
+    redirect: "/persona/unicorn.html"
+    
+  griffin:
+    title: "Noble Griffin 🦅"
+    description: "You combine the best of two worlds - the strength and courage of a lion with the keen vision and freedom of an eagle. Like the majestic griffin, you are a guardian of ancient wisdom and possess both intelligence and nobility. You approach life strategically, preferring to observe and understand before acting. Your regal bearing commands respect, and others often seek your counsel when facing difficult decisions."
+    image: "griffin.jpg"
+    traits: ["Strategic", "Noble", "Wise", "Protective", "Visionary"]
+    mythical_powers: ["Divine Sight", "Guardian Strength", "Ancient Knowledge", "Sky Mastery", "Treasure Sensing"]
+    redirect: "/persona/griffin.html"

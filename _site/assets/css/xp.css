@@ -1,0 +1,149 @@
+/* ==============================
+ XP Progress Bar (Bottom HUD Style)
+============================= */
+.xp-bar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px; /* a bit taller for readability */
+  background: #1a1a1a;
+  z-index: 9999;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  transition: width 0.3s ease;
+}
+
+/* XP Label (overlay inside bar, left side) */
+.xp-label {
+  position: fixed;
+  bottom: 0;         /* same baseline as bar */
+  left: 12px;
+  height: 24px;      /* match bar height */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  z-index: 10000;    /* above bar fill */
+}
+
+/* XP Milestone Message (overlay inside bar, centered) */
+.xp-message {
+  position: fixed;
+  bottom: 0;         /* same baseline as bar */
+  left: 50%;
+  height: 24px;      /* match bar height */
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  z-index: 10000;    /* above bar fill */
+}
+
+/* XP floating badge for rewards */
+.xp-badge {
+  position: fixed;
+  bottom: 40px;      /* sits just above the bar */
+  right: 1rem;
+  background: rgba(44, 182, 125, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 0 8px rgba(127, 90, 240, 0.6);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 10000;
+}
+
+.xp-badge.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* XP Replay Button */
+.xp-replay {
+  position: fixed;
+  bottom: 28px; /* just above XP bar */
+  right: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.xp-replay:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+
+/* ==============================
+ XP Spam Button & Container (motivational click)
+============================= */
+.quiz-spam-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* center horizontally */
+  align-items: center;
+  margin: 20px 0;           
+  position: relative;
+  padding: 8px 0;
+  height: 125px;      
+  overflow: hidden;       
+}
+
+.quiz-spam-section .spam-message {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(12px, 4vw, 24px); /* adjusts with screen width */
+  font-weight: bold;
+  color: var(--accent);
+  padding: 16px 0;
+  margin-bottom: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+
+  white-space: nowrap;   /* ✅ prevents line breaks */
+  overflow: hidden;      /* ensures text stays inside */
+  text-overflow: ellipsis; /* optional: show … if clipped */
+  transition: transform 0.2s ease;
+}
+
+  
+/* Button styling (unchanged, still centered) */
+.quiz-spam-section .spam-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.quiz-spam-section .spam-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}

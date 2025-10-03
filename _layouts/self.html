@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  {% include header.html %}
+  <script>
+// Load MBTI comparison data for JavaScript
+window.mbtiCompareData = {
+  {% for entry in site.data.mbti-compare-introverts %}
+    "{{ entry[0] }}": {
+      stack: "{{ entry[1].stack }}",
+      differences: {
+        {% for diff_key in entry[1].differences %}
+          {{ diff_key[0] }}: {
+            title: "{{ diff_key[1].title }}",
+            description: "{{ diff_key[1].description }}",
+            examples: {{ diff_key[1].examples | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      },
+      similarities: {
+        {% for sim_key in entry[1].similarities %}
+          {{ sim_key[0] }}: {
+            title: "{{ sim_key[1].title }}",
+            points: {{ sim_key[1].points | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %},
+  {% for entry in site.data.mbti-compare-extraverts %}
+    "{{ entry[0] }}": {
+      stack: "{{ entry[1].stack }}",
+      differences: {
+        {% for diff_key in entry[1].differences %}
+          {{ diff_key[0] }}: {
+            title: "{{ diff_key[1].title }}",
+            description: "{{ diff_key[1].description }}",
+            examples: {{ diff_key[1].examples | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      },
+      similarities: {
+        {% for sim_key in entry[1].similarities %}
+          {{ sim_key[0] }}: {
+            title: "{{ sim_key[1].title }}",
+            points: {{ sim_key[1].points | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+};
+</script>
+
+  <!-- Hero with tree image -->
+  <section class="hero hero--text-heavy self-hero">
+    <div class="hero__content hero__content--split">
+      <div class="hero__text">
+        <h1 class="hero__title">{{ page.hero_title }}</h1>
+        {% if page.hero_subtitle %}
+          <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
+        {% endif %}
+        {% if page.pill %}
+          <div class="pill">{{ page.pill }}</div>
+        {% endif %}
+      </div>
+      
+      
+    </div>
+    {% if page.hero_image %}
+    <div class="hero-tree-container">
+      <img src="{{ site.baseurl }}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_title }}" class="hero-tree">
+    </div>
+    {% endif %}
+  </section>
+
+  <!-- Main content with roots -->
+  <main class="main--text-heavy">
+    {% if page.hero_image %}
+    <div class="hero-accent-container">
+      <img src="{{ site.baseurl }}/assets/images/self-hero-roots.jpg" alt="Roots of the Self" class="hero-accent">
+    </div>
+    {% endif %}
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>

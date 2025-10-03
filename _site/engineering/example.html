@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>This will show at the title bar of browser</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="A minimal, fast GitHub Pages starter.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/eekhue-core/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/eekhue-core/assets/css/base.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/header.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/footer.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  
+
+  <!-- Social / OG Meta Tags -->
+  
+    
+    
+    
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Welcome to My GitHub Page 🚀">
+    <meta property="og:description" content="This is a minimal example using Jekyll + CSS hosted on GitHub Pages.">
+    <meta property="og:image" content="/eekhue-core/assets/images/default-og-image.png">
+    <meta property="og:url" content="http://localhost:4000/eekhue-core/engineering/example.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Welcome to My GitHub Page 🚀">
+    <meta name="twitter:description" content="This is a minimal example using Jekyll + CSS hosted on GitHub Pages.">
+    <meta name="twitter:image" content="/eekhue-core/assets/images/default-og-image.png">
+  
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "/eekhue-core";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    [{"message":"I want a better life!","button":"YES!!","xp":5},{"message":"I can grow through challenges!","button":"Absolutely!","xp":5},{"message":"My shadow doesn’t define me!","button":"Shine on!","xp":5},{"message":"Integration makes me stronger!","button":"True!","xp":5},{"message":"I choose to evolve today!","button":"LET'S GO!","xp":5},{"message":"Every step forward matters!","button":"Step On!","xp":5},{"message":"I am more than my fears!","button":"Fearless!","xp":5},{"message":"Growth begins with me!","button":"Start Now!","xp":5},{"message":"I embrace who I am becoming!","button":"Own It!","xp":5},{"message":"My story is still being written!","button":"Keep Writing!","xp":5},{"message":"I carry the strength of my journey!","button":"Carry On!","xp":5},{"message":"Hope fuels my transformation!","button":"Ignite!","xp":5},{"message":"No setback can stop me!","button":"Rise Again!","xp":5},{"message":"The path is mine to walk!","button":"Walk It!","xp":5}]
+  </script>
+
+  <script src="/eekhue-core/assets/js/header.js" defer></script>  
+  <script src="/eekhue-core/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/eekhue-core/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  
+<body>
+  <!-- Header / Top Navigation -->
+<header>
+  <div class="wrap nav">
+    <div class="brand-logo">
+      <a href="/eekhue-core/" class="brand-logo">
+        <img src="/eekhue-core/assets/images/eekhue-logo.png" alt="Logo" class="logo" />
+        <div class="brand">EekHue</div>
+      </a>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="/eekhue-core/quiz/">What Are You?</a>
+
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
+        <button class="dropbtn">Darkness–Light ▼
+          <span class="tooltip">Explore personality insights</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/eekhue-core/persona/">Persona</a>
+          <a href="/eekhue-core/self/">Self</a>
+          <a href="/eekhue-core/shadow/">Shadow</a>
+          <a href="/eekhue-core/growth/">RE:equip</a>
+          <a href="/eekhue-core/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+  
+    
+      <section class="hero hero--standard">
+        <div class="hero__content">
+          <h1 class="hero__title">Welcome to My GitHub Page 🚀</h1>
+          
+            <p class="hero__subtitle">This is a minimal example using Jekyll + CSS hosted on GitHub Pages.</p>
+          
+          
+        </div>
+      </section>
+    
+  
+
+  <main class="main--standard">
+    <h1 id="example-h1">Example H1</h1>
+
+<h2 id="completed-tasks">Completed Tasks</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Implement <strong>authentication system</strong></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Setup <em>CI/CD</em> pipeline</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Write unit tests for backend</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create API documentation</li>
+</ul>
+
+<h2 id="numbered-listing-with-links">Numbered Listing (with links)</h2>
+<ol>
+  <li>Closely monitor quarterly performance. <a href="sprint-01.md">Sprint 01</a></li>
+  <li>Adjust budgets dynamically based on real-time financial data.</li>
+  <li>Invest in risk mitigation strategies for supply chain. <a href="sprint-02.md">Sprint 02</a></li>
+</ol>
+
+<h2 id="others-relative-links">Others (relative links)</h2>
+<p><a href="../finance/">Finance Reports</a></p>
+
+<h2 id="using-emojis">Using Emojis</h2>
+<p>Budget reviewed by Finance Dept. ✅</p>
+
+<h3 id="using-tables-h3">Using Tables (H3)</h3>
+<p>| Feature | Status |
+|———|——–|
+| Content | Placeholder |</p>
+
+<h2 id="using-quoted-blocks">Using Quoted Blocks</h2>
+<blockquote>
+  <p>“Budgeting is about predicting the future with the best information available today.”<br />
+– Finance Team Lead</p>
+</blockquote>
+
+<h2 id="visuals">Visuals</h2>
+<p><img src="https://via.placeholder.com/400x150.png?text=Q1+Campaign+Banner" alt="Campaign Banner" />
+<img src="/eekhue-core/images/logo.png" alt="Campaign Logo" class="small-logo" /></p>
+
+<h2 id="video">Video</h2>
+<video controls="" width="600">
+  <source src="../media/promo.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<h2 id="audio">Audio</h2>
+<audio controls="">
+  <source src="../media/meow.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<h2 id="code-snippet-example">Code Snippet Example</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Authentication check</span>
+<span class="kd">function</span> <span class="nx">isLoggedIn</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">user</span> <span class="o">&amp;&amp;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">token</span> <span class="o">&amp;&amp;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">token</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="js-test">JS Test</h3>
+<p>Click the button below to test JavaScript:</p>
+<p><button id="helloBtn">Click Me</button>
+<button id="resetBtn">Reset Count</button></p>
+<p id="output"></p>
+
+<hr />
+
+<h3 id="http-fetch">HTTP Fetch</h3>
+<p><button id="fetchBtn">Fetch Data</button></p>
+<pre id="fetchOutput"></pre>
+
+<hr />
+
+<p>Take a short personality quiz:</p>
+<div id="quiz">
+  <p>Q1: Which best describes you?</p>
+  <button data-question="q1" data-answer="gadget">🔧 I like tinkering with gadgets</button>
+  <button data-question="q1" data-answer="idea">💡 I like coming up with ideas</button>
+</div>
+
+<p id="quiz-output"></p>
+
+<!-- Hidden field to hold JSON answers -->
+<p><input type="hidden" id="quizData" value="{}" /></p>
+
+  </main>
+
+  <footer>
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      
+      <!-- Project Info -->
+      <div class="footer-col">
+        <h4>Project</h4>
+        <nav>
+          <a href="/eekhue-core/about/">About</a>
+          <a href="/eekhue-core/contact/">Contact</a>
+          <a href="/eekhue-core/disclaimer/">Disclaimer</a>
+        </nav>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-col">
+        <h4>Community</h4>
+        <nav>
+          <a href="#">Discord (Invite only)</a>
+          <a href="https://github.com/astra-timinikey/eekhue-core">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Extras
+      <div class="footer-col">
+        <h4>Extras</h4>
+        <nav>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+        </nav>
+      </div>
+      -->
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EekHue: Persona Explorer</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

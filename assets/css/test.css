@@ -1,0 +1,30 @@
+/* ====================================
+ Main buttons + outputs 
+==================================== */
+ #fetchBtn button {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    margin: 4px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.1s ease, background 0.2s ease;
+  }
+
+  #fetchBtn:hover button:hover {
+    transform: translateY(-2px);
+    background: #5e87e0;
+  }
+  
+  #fetchOutput {
+    background: var(--card);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    overflow-x: auto;
+    font-family: monospace;
+  }

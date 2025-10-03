@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Title -->
+  <title>RE:equip</title>
+
+  <!-- Page Description -->
+  <meta name="description" content="Equip your Self through Persona, Shadow, and Anima/Animus — the wardrobe of individuation.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/eekhue-core/assets/images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/eekhue-core/assets/css/base.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/header.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/footer.css">
+  <link rel="stylesheet" href="/eekhue-core/assets/css/xp.css">
+
+  <!-- Per-page additional CSS -->
+  
+    
+      <link rel="stylesheet" href="/eekhue-core/assets/css/">
+    
+  
+
+  <!-- Social / OG Meta Tags -->
+  
+    
+    
+    
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RE:equip ⚔️">
+    <meta property="og:description" content="Outfits, tools, summons — a psyche prepared for the journey.">
+    <meta property="og:image" content="/eekhue-core/assets/images/default-og-image.png">
+    <meta property="og:url" content="http://localhost:4000/eekhue-core/growth/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RE:equip ⚔️">
+    <meta name="twitter:description" content="Outfits, tools, summons — a psyche prepared for the journey.">
+    <meta name="twitter:image" content="/eekhue-core/assets/images/default-og-image.png">
+  
+
+  <!-- Global JS -->
+  <script>
+    const BASEURL = "/eekhue-core";
+  </script>
+  <!-- XP Messages Data -->
+  <script id="xp-messages" type="application/json">
+    [{"message":"I want a better life!","button":"YES!!","xp":5},{"message":"I can grow through challenges!","button":"Absolutely!","xp":5},{"message":"My shadow doesn’t define me!","button":"Shine on!","xp":5},{"message":"Integration makes me stronger!","button":"True!","xp":5},{"message":"I choose to evolve today!","button":"LET'S GO!","xp":5},{"message":"Every step forward matters!","button":"Step On!","xp":5},{"message":"I am more than my fears!","button":"Fearless!","xp":5},{"message":"Growth begins with me!","button":"Start Now!","xp":5},{"message":"I embrace who I am becoming!","button":"Own It!","xp":5},{"message":"My story is still being written!","button":"Keep Writing!","xp":5},{"message":"I carry the strength of my journey!","button":"Carry On!","xp":5},{"message":"Hope fuels my transformation!","button":"Ignite!","xp":5},{"message":"No setback can stop me!","button":"Rise Again!","xp":5},{"message":"The path is mine to walk!","button":"Walk It!","xp":5}]
+  </script>
+
+  <script src="/eekhue-core/assets/js/header.js" defer></script>  
+  <script src="/eekhue-core/assets/js/xp.js" defer></script> 
+
+  <!-- Per-page additional JS -->
+  
+    
+      <script src="/eekhue-core/assets/js/" defer></script>
+    
+  
+
+  <!-- Add this to your _includes/head.html or main layout -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/eekhue-core/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available, could show update notification
+                    console.log('New content available! Please refresh.');
+                  }
+                });
+              });
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    }
+    </script>
+     
+  </head>
+  
+<body>
+  <!-- Header / Top Navigation -->
+<header>
+  <div class="wrap nav">
+    <div class="brand-logo">
+      <a href="/eekhue-core/" class="brand-logo">
+        <img src="/eekhue-core/assets/images/eekhue-logo.png" alt="Logo" class="logo" />
+        <div class="brand">EekHue</div>
+      </a>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="/eekhue-core/quiz/">What Are You?</a>
+
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
+        <button class="dropbtn">Darkness–Light ▼
+          <span class="tooltip">Explore personality insights</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="/eekhue-core/persona/">Persona</a>
+          <a href="/eekhue-core/self/">Self</a>
+          <a href="/eekhue-core/shadow/">Shadow</a>
+          <a href="/eekhue-core/growth/">RE:equip</a>
+          <a href="/eekhue-core/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+  
+    
+      <section class="hero hero--text-heavy">
+        <div class="hero__content">
+          <h1 class="hero__title">RE:equip ⚔️</h1>
+          
+            <p class="hero__subtitle">Outfits, tools, summons — a psyche prepared for the journey.</p>
+          
+          
+        </div>
+      </section>
+    
+  
+
+  <main class="main--text-heavy">
+    <h2 id="what-will-you-carry">What Will You Carry?</h2>
+<hr />
+<p>Every great hero faces the same questions:<br />
+<em>What outfit will you wear?</em><br />
+<em>What power will you wield?</em><br />
+<em>Who will walk beside you?</em></p>
+
+<p>Carl Jung described individuation as three key encounters:</p>
+<ul>
+  <li><strong>Integrating the Persona</strong> → Making outfits naturally yours.</li>
+  <li><strong>Assimilating the Shadow</strong> → Befriending what we once denied.</li>
+  <li><strong>Encountering the Anima/Animus</strong> → Reconciling the inner Other, finding balance.</li>
+</ul>
+
+<p>In RE:equip, these aren’t abstract ideas —<br />
+they become your <strong>outfit, weapons, and companions</strong>.<br />
+The gear you choose shapes the journey you take.</p>
+
+<p><br /></p>
+
+<h2 id="-persona-as-outfits">👗 Persona as Outfits</h2>
+<hr />
+<p>The Persona is your cosmic wardrobe — the outfits you choose to navigate life’s scenes and express your inner Self.</p>
+
+<ul>
+  <li><strong>Vibes</strong> shape how you move and connect.</li>
+  <li><strong>Perks</strong> enhance your strengths.</li>
+  <li><strong>Enchantments</strong> add personal flair.</li>
+  <li><strong>Integrating the Persona</strong> → Making outfits naturally yours.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="️-shadow-as-weapons--artifacts">⚔️ Shadow as Weapons &amp; Artifacts</h2>
+<hr />
+<p>The Shadow is what we reject, deny, or suppress.<br />
+In RE:equip, these appear as <strong>weapons, artifacts, or accessories</strong> lying dormant in the arsenal.</p>
+
+<ul>
+  <li>A sword feared, yet powerful.</li>
+  <li>A cursed relic that tempts.</li>
+  <li>A hidden strength, long forgotten.</li>
+</ul>
+
+<p><strong>Assimilating the Shadow</strong> means befriending what once was denied, learning to wield it responsibly.</p>
+
+<p><br /></p>
+
+<h2 id="-animaanimus-as-summons--companions">🐉 Anima/Animus as Summons &amp; Companions</h2>
+<hr />
+<p>The Anima/Animus is the inner Other — bridging qualities we resist yet long for.<br />
+Here it becomes a <strong>summoned ally, mythical creature, or mentor figure</strong>.</p>
+
+<ul>
+  <li>A guide whose wisdom feels foreign.</li>
+  <li>A creature that challenges and protects.</li>
+  <li>A companion that expands your horizon.</li>
+</ul>
+
+<p><strong>Encountering the Anima/Animus</strong> means reconciling with this Other, finding balance in its presence.</p>
+
+<p><br /></p>
+
+<h2 id="-the-wardrobe-of-the-psyche">🎽 The Wardrobe of the Psyche</h2>
+<hr />
+<p>To RE:equip is to <strong>step into awareness</strong>.<br />
+Every armor piece, weapon, and summon is part of you.<br />
+Equipping is not escape — it is integration.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <p>“Before you can equip, you must know who you are equipping.”</p>
+</blockquote>
+
+<p>Your first step is not here.<br />
+It begins in <a href="/eekhue-core/quiz/"><strong>What Are You?</strong></a> —<br />
+discover your base traits before choosing your gear.</p>
+
+<p><br /><br /></p>
+
+<div class="references">
+<h2>References</h2>
+  <ul>
+    <li>Jung, C. G. (1968). *The Archetypes and the Collective Unconscious* (Collected Works, Vol. 9, Part 1). Princeton University Press.  <br />
+  <span class="ref-note">→ On anima and animus as archetypal figures of the inner Other.  </span>
+    </li>
+    <li>Jung, C. G. (1963). *Memories, Dreams, Reflections*. Vintage Books.  <br />
+  <span class="ref-note">→ An autobiographical account where Jung frames individuation as a lifelong journey.  </span>
+    </li>
+    <li>Beebe, J. (1994). *Integrity in Depth: Archetypal Explorations of the Persona, Shadow, and Complexes*. Routledge.  <br />
+  <span class="ref-note">→ On archetypal roles and cognitive functions as tools for navigating life situations — supports the “re-equip” metaphor.  </span>
+    </li>
+    <li>Nardi, D. (2011). *Neuroscience of Personality: Brain-Savvy Insights for All Types of People*. Radiance House.  <br />
+  <span class="ref-note">→ Maps cognitive functions to brain activity, showing how different mental “tools” can be flexibly accessed, aligning with the re-equip concept.  </span>
+    </li>
+  </ul>
+<p class="ref-more"><a href="/eekhue-core/references/">See all references →</a></p>
+</div>
+
+  </main>
+
+  <footer>
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      
+      <!-- Project Info -->
+      <div class="footer-col">
+        <h4>Project</h4>
+        <nav>
+          <a href="/eekhue-core/about/">About</a>
+          <a href="/eekhue-core/contact/">Contact</a>
+          <a href="/eekhue-core/disclaimer/">Disclaimer</a>
+        </nav>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-col">
+        <h4>Community</h4>
+        <nav>
+          <a href="#">Discord (Invite only)</a>
+          <a href="https://github.com/astra-timinikey/eekhue-core">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Extras
+      <div class="footer-col">
+        <h4>Extras</h4>
+        <nav>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+        </nav>
+      </div>
+      -->
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 EekHue: Persona Explorer</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
